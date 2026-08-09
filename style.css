@@ -67,6 +67,39 @@ header {
     width: 54px;
     height: 54px;
     object-fit: contain;
+
+    /* ثابت ماندن محل لوگو */
+    transform-origin: center center;
+
+    /* اجرای انیمیشن */
+    animation: logoRotateX 4s infinite ease-in-out;
+}
+
+
+/* چرخش لوگو حول محور X */
+
+@keyframes logoRotateX {
+
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(90deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    75% {
+        transform: rotateY(90deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+
 }
 
 .brand-name {
