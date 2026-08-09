@@ -163,7 +163,7 @@ header {
        چرخش کاملاً پیوسته
        بدون مکث
     */
-    animation: coinFlip 3s linear infinite;
+    animation: coinFlip 4s linear infinite;
 
     backface-visibility: visible;
 }
