@@ -31,7 +31,7 @@ a {
 
 
 /* =====================================================
-   هدر
+   HEADER
 ===================================================== */
 
 header {
@@ -43,11 +43,10 @@ header {
 
     z-index: 1000;
 
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    box-shadow:
+        0 2px 15px rgba(0, 0, 0, 0.15);
 }
 
-
-/* نوار اصلی هدر */
 
 .navbar {
     width: 90%;
@@ -65,57 +64,12 @@ header {
 }
 
 
-/* =====================================================
-   لوگو
-===================================================== */
+/* نام سایت در نوار بالا */
 
-.brand {
-    display: flex;
-
-    align-items: center;
-
-    gap: 13px;
-
-    /*
-       ایجاد فضای سه‌بعدی برای
-       چرخش مثل سکه
-    */
-    perspective: 800px;
-}
-
-
-/* تصویر لوگو */
-
-.brand img {
-    width: 54px;
-
-    height: 54px;
-
-    object-fit: contain;
-
-    /*
-       مرکز چرخش لوگو
-    */
-    transform-origin: center center;
-
-    /*
-       چرخش سکه‌ای
-    */
-    animation: coinFlip 5s infinite ease-in-out;
-
-    /*
-       جلوگیری از تغییر جای لوگو
-    */
-    display: block;
-}
-
-
-/* نام کنار لوگو */
-
-.brand-name {
+.site-name {
     color: white;
 
-    font-size: 21px;
+    font-size: 22px;
 
     font-weight: bold;
 
@@ -124,70 +78,7 @@ header {
 
 
 /* =====================================================
-   انیمیشن چرخش مثل سکه
-===================================================== */
-
-@keyframes coinFlip {
-
-    /*
-       شروع
-    */
-    0% {
-        transform: rotateY(0deg);
-    }
-
-
-    /*
-       شروع چرخش
-    */
-    15% {
-        transform: rotateY(90deg);
-    }
-
-
-    /*
-       پشت لوگو
-    */
-    25% {
-        transform: rotateY(180deg);
-    }
-
-
-    /*
-       کمی مکث
-    */
-    45% {
-        transform: rotateY(180deg);
-    }
-
-
-    /*
-       برگشت
-    */
-    60% {
-        transform: rotateY(270deg);
-    }
-
-
-    /*
-       رسیدن به حالت اولیه
-    */
-    70% {
-        transform: rotateY(360deg);
-    }
-
-
-    /*
-       مکث تا شروع چرخش بعدی
-    */
-    100% {
-        transform: rotateY(360deg);
-    }
-}
-
-
-/* =====================================================
-   منوی اصلی
+   MENU
 ===================================================== */
 
 .menu {
@@ -195,12 +86,12 @@ header {
 
     align-items: center;
 
-    gap: 28px;
+    gap: 27px;
 }
 
 
 .menu a {
-    color: #ffffff;
+    color: white;
 
     font-size: 14px;
 
@@ -214,7 +105,7 @@ header {
 
 
 /* =====================================================
-   بخش اصلی سایت
+   HERO
 ===================================================== */
 
 .hero {
@@ -222,8 +113,10 @@ header {
 
     background:
         linear-gradient(
-            rgba(12, 24, 35, 0.92),
-            rgba(12, 24, 35, 0.95)
+            135deg,
+            #111c27 0%,
+            #1d3040 50%,
+            #101820 100%
         );
 
     color: white;
@@ -245,16 +138,107 @@ header {
 
     align-items: center;
 
-    justify-content: space-between;
+    justify-content: center;
 
-    gap: 50px;
+    gap: 90px;
 }
 
 
-/* متن Hero */
+/* =====================================================
+   لوگوی بزرگ داخل هدر اصلی
+===================================================== */
+
+.hero-logo {
+    width: 216px;
+
+    height: 216px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /*
+       ایجاد عمق سه‌بعدی
+    */
+    perspective: 800px;
+}
+
+
+.hero-logo img {
+    width: 216px;
+
+    height: 216px;
+
+    object-fit: contain;
+
+    display: block;
+
+    /*
+       نقطه چرخش در مرکز لوگو
+    */
+    transform-origin: center center;
+
+    /*
+       چرخش مثل سکه
+    */
+    animation:
+        coinFlip 5s infinite ease-in-out;
+
+    /*
+       حفظ کیفیت سه‌بعدی
+    */
+    backface-visibility: visible;
+}
+
+
+/* =====================================================
+   انیمیشن لوگو مثل سکه
+===================================================== */
+
+@keyframes coinFlip {
+
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    15% {
+        transform: rotateY(90deg);
+    }
+
+    25% {
+        transform: rotateY(180deg);
+    }
+
+    45% {
+        transform: rotateY(180deg);
+    }
+
+    60% {
+        transform: rotateY(270deg);
+    }
+
+    70% {
+        transform: rotateY(360deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+
+/* =====================================================
+   متن داخل HERO
+===================================================== */
 
 .hero-text {
     flex: 1;
+
+    text-align: right;
 }
 
 
@@ -286,7 +270,7 @@ header {
 
 
 /* =====================================================
-   دکمه
+   BUTTON
 ===================================================== */
 
 .btn {
@@ -309,7 +293,7 @@ header {
 
 
 .btn:hover {
-    background: #ffffff;
+    background: white;
 
     transform: translateY(-2px);
 }
@@ -352,7 +336,7 @@ section {
 
 
 /* =====================================================
-   درباره من
+   ABOUT
 ===================================================== */
 
 .about-box {
@@ -375,7 +359,46 @@ section {
 
 
 /* =====================================================
-   خدمات حقوقی
+   EXPERIENCE
+===================================================== */
+
+.experience-box {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+.experience-item {
+    padding: 18px 0;
+
+    border-bottom:
+        1px solid #eee;
+}
+
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+
+.experience-item h3 {
+    color: #172533;
+}
+
+
+.experience-item p {
+    color: #666;
+}
+
+
+/* =====================================================
+   SERVICES
 ===================================================== */
 
 .services {
@@ -436,45 +459,7 @@ section {
 
 
 /* =====================================================
-   سوابق
-===================================================== */
-
-.experience-box {
-    background: white;
-
-    padding: 40px;
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.06);
-}
-
-
-.experience-item {
-    padding: 18px 0;
-
-    border-bottom: 1px solid #eee;
-}
-
-
-.experience-item:last-child {
-    border-bottom: none;
-}
-
-
-.experience-item h3 {
-    color: #172533;
-}
-
-
-.experience-item p {
-    color: #666;
-}
-
-
-/* =====================================================
-   مقالات
+   ARTICLES
 ===================================================== */
 
 .articles {
@@ -526,7 +511,7 @@ section {
 
 
 /* =====================================================
-   برنامه‌ها
+   APPS
 ===================================================== */
 
 .apps-box {
@@ -567,7 +552,7 @@ section {
 
 
 /* =====================================================
-   نظرات کاربران
+   TESTIMONIALS
 ===================================================== */
 
 .testimonials {
@@ -613,8 +598,13 @@ section {
 }
 
 
+.send-review {
+    text-align: center;
+}
+
+
 /* =====================================================
-   تماس
+   CONTACT
 ===================================================== */
 
 .contact {
@@ -647,7 +637,7 @@ section {
 
 
 /* =====================================================
-   فوتر
+   FOOTER
 ===================================================== */
 
 footer {
@@ -664,7 +654,7 @@ footer {
 
 
 /* =====================================================
-   نمایش در تبلت
+   TABLET
 ===================================================== */
 
 @media (max-width: 900px) {
@@ -673,34 +663,41 @@ footer {
         gap: 15px;
     }
 
-
     .menu a {
         font-size: 12px;
     }
 
 
     .hero-content {
-        flex-direction: column;
-
-        text-align: center;
+        gap: 50px;
     }
 
 
-    .hero-text p {
-        margin: auto;
+    .hero-logo {
+        width: 180px;
+        height: 180px;
+    }
+
+
+    .hero-logo img {
+        width: 180px;
+        height: 180px;
+    }
+
+
+    .hero-text h1 {
+        font-size: 40px;
     }
 
 
     .services-grid,
     .articles-grid,
     .testimonials-grid {
-
         grid-template-columns: 1fr;
     }
 
 
     .apps-box {
-
         flex-direction: column;
 
         text-align: center;
@@ -709,13 +706,12 @@ footer {
 
 
 /* =====================================================
-   نمایش در موبایل
+   MOBILE
 ===================================================== */
 
 @media (max-width: 650px) {
 
     .navbar {
-
         height: auto;
 
         min-height: 75px;
@@ -729,7 +725,6 @@ footer {
 
 
     .menu {
-
         flex-wrap: wrap;
 
         justify-content: center;
@@ -739,57 +734,64 @@ footer {
 
 
     .menu a {
-
         font-size: 12px;
     }
 
 
-    .brand img {
-
-        width: 50px;
-
-        height: 50px;
-    }
-
-
-    .brand-name {
-
-        font-size: 19px;
-    }
-
-
     .hero {
+        min-height: 650px;
+    }
 
-        min-height: 500px;
+
+    .hero-content {
+        flex-direction: column;
+
+        gap: 30px;
+
+        text-align: center;
+    }
+
+
+    .hero-logo {
+        width: 160px;
+
+        height: 160px;
+    }
+
+
+    .hero-logo img {
+        width: 160px;
+
+        height: 160px;
+    }
+
+
+    .hero-text {
+        text-align: center;
     }
 
 
     .hero-text h1 {
-
         font-size: 34px;
     }
 
 
     .hero-text h2 {
-
         font-size: 20px;
     }
 
 
     .hero-text p {
-
         font-size: 15px;
     }
 
 
     section {
-
         padding: 55px 0;
     }
 
 
     .section-title h2 {
-
         font-size: 26px;
     }
 
@@ -797,25 +799,23 @@ footer {
     .about-box,
     .experience-box,
     .apps-box {
-
         padding: 25px;
     }
 }
 
 
 /* =====================================================
-   کاهش انیمیشن برای کاربرانی که آن را غیرفعال کرده‌اند
+   کاهش انیمیشن برای کاربرانی که انیمیشن را
+   غیرفعال کرده‌اند
 ===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .brand img {
-
+    .hero-logo img {
         animation: none;
     }
 
     html {
-
         scroll-behavior: auto;
     }
 }
