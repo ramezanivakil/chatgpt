@@ -1,0 +1,552 @@
+/* ================================
+   تنظیمات عمومی
+================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+    line-height: 1.9;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* ================================
+   هدر
+================================ */
+
+header {
+    background: #111c27;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1150px;
+    height: 82px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* لوگو */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand img {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+}
+
+.brand-name {
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+/* منوی اصلی */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu a {
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #d8b46a;
+}
+
+
+/* ================================
+   بخش اصلی / Hero
+================================ */
+
+.hero {
+    min-height: 600px;
+
+    background:
+        linear-gradient(
+            rgba(12, 24, 35, 0.92),
+            rgba(12, 24, 35, 0.95)
+        );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+/* متن Hero */
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    color: #d8b46a;
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.hero-text p {
+    color: #d9d9d9;
+    font-size: 17px;
+    max-width: 650px;
+}
+
+
+/* دکمه */
+
+.btn {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 12px 32px;
+
+    background: #d8b46a;
+    color: #111c27;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffffff;
+}
+
+
+/* ================================
+   بخش‌های عمومی
+================================ */
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    color: #172533;
+    font-size: 30px;
+}
+
+.section-title span {
+    display: block;
+
+    width: 60px;
+    height: 3px;
+
+    background: #d8b46a;
+
+    margin: 12px auto;
+}
+
+
+/* ================================
+   درباره من
+================================ */
+
+.about-box {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.about-box p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* ================================
+   خدمات
+================================ */
+
+.services {
+    background: #eef0f3;
+}
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+}
+
+.service-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #172533;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* ================================
+   سوابق
+================================ */
+
+.experience-box {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.experience-item {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-item h3 {
+    color: #172533;
+}
+
+.experience-item p {
+    color: #666;
+}
+
+
+/* ================================
+   مقالات
+================================ */
+
+.articles {
+    background: #eef0f3;
+}
+
+.articles-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.article-card {
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.article-card h3 {
+    color: #172533;
+    margin-bottom: 12px;
+}
+
+.article-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* ================================
+   برنامه‌ها
+================================ */
+
+.apps-box {
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.apps-text {
+    flex: 1;
+}
+
+.apps-text h3 {
+    color: #172533;
+    margin-bottom: 10px;
+}
+
+.apps-text p {
+    color: #666;
+}
+
+
+/* ================================
+   نظرات کاربران
+================================ */
+
+.testimonials {
+    background: #eef0f3;
+}
+
+.testimonials-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.testimonial {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.testimonial p {
+    color: #555;
+    font-size: 14px;
+}
+
+.testimonial-name {
+    margin-top: 15px;
+
+    color: #172533;
+
+    font-weight: bold;
+}
+
+
+/* ================================
+   تماس
+================================ */
+
+.contact {
+    background: #111c27;
+    color: white;
+}
+
+.contact .section-title h2 {
+    color: white;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-item {
+    margin: 12px 0;
+    color: #ddd;
+}
+
+.contact-item strong {
+    color: #d8b46a;
+}
+
+
+/* ================================
+   فوتر
+================================ */
+
+footer {
+    background: #0b131b;
+
+    color: #aaa;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   موبایل
+================================ */
+
+@media (max-width: 900px) {
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin: auto;
+    }
+
+    .services-grid,
+    .articles-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .apps-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+        min-height: 75px;
+
+        flex-direction: column;
+
+        padding: 12px 0;
+
+        gap: 10px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+    }
+
+    section {
+        padding: 55px 0;
+    }
+
+    .about-box,
+    .experience-box,
+    .apps-box {
+        padding: 25px;
+    }
+}
