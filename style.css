@@ -47,7 +47,6 @@ header {
         0 2px 15px rgba(0, 0, 0, 0.15);
 }
 
-
 .navbar {
     width: 90%;
     max-width: 1150px;
@@ -57,20 +56,17 @@ header {
     margin: auto;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
 
 
-/* نام سایت در نوار بالا */
+/* نام سایت */
 
 .site-name {
     color: white;
 
     font-size: 22px;
-
     font-weight: bold;
 
     white-space: nowrap;
@@ -83,12 +79,10 @@ header {
 
 .menu {
     display: flex;
-
     align-items: center;
 
     gap: 27px;
 }
-
 
 .menu a {
     color: white;
@@ -97,7 +91,6 @@ header {
 
     transition: 0.3s;
 }
-
 
 .menu a:hover {
     color: #d8b46a;
@@ -122,22 +115,17 @@ header {
     color: white;
 
     display: flex;
-
     align-items: center;
 }
 
-
 .hero-content {
     width: 90%;
-
     max-width: 1150px;
 
     margin: auto;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     gap: 90px;
@@ -145,94 +133,60 @@ header {
 
 
 /* =====================================================
-   لوگوی بزرگ داخل هدر اصلی
+   لوگوی بزرگ
 ===================================================== */
 
 .hero-logo {
     width: 216px;
-
     height: 216px;
 
     flex-shrink: 0;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
-    /*
-       ایجاد عمق سه‌بعدی
-    */
     perspective: 800px;
 }
 
-
 .hero-logo img {
     width: 216px;
-
     height: 216px;
 
     object-fit: contain;
 
     display: block;
 
-    /*
-       نقطه چرخش در مرکز لوگو
-    */
     transform-origin: center center;
 
     /*
-       چرخش مثل سکه
+       چرخش کاملاً پیوسته
+       بدون مکث
     */
-    animation:
-        coinFlip 5s infinite ease-in-out;
+    animation: coinFlip 3s linear infinite;
 
-    /*
-       حفظ کیفیت سه‌بعدی
-    */
     backface-visibility: visible;
 }
 
 
 /* =====================================================
-   انیمیشن لوگو مثل سکه
+   چرخش مثل سکه - کاملاً پیوسته
 ===================================================== */
 
 @keyframes coinFlip {
 
-    0% {
+    from {
         transform: rotateY(0deg);
     }
 
-    15% {
-        transform: rotateY(90deg);
-    }
-
-    25% {
-        transform: rotateY(180deg);
-    }
-
-    45% {
-        transform: rotateY(180deg);
-    }
-
-    60% {
-        transform: rotateY(270deg);
-    }
-
-    70% {
-        transform: rotateY(360deg);
-    }
-
-    100% {
+    to {
         transform: rotateY(360deg);
     }
 }
 
 
 /* =====================================================
-   متن داخل HERO
+   متن HERO
 ===================================================== */
 
 .hero-text {
@@ -241,13 +195,11 @@ header {
     text-align: right;
 }
 
-
 .hero-text h1 {
     font-size: 48px;
 
     margin-bottom: 10px;
 }
-
 
 .hero-text h2 {
     color: #d8b46a;
@@ -258,7 +210,6 @@ header {
 
     margin-bottom: 25px;
 }
-
 
 .hero-text p {
     color: #d9d9d9;
@@ -291,7 +242,6 @@ header {
     transition: 0.3s;
 }
 
-
 .btn:hover {
     background: white;
 
@@ -307,13 +257,11 @@ section {
     padding: 80px 0;
 }
 
-
 .section-title {
     text-align: center;
 
     margin-bottom: 45px;
 }
-
 
 .section-title h2 {
     color: #172533;
@@ -321,12 +269,10 @@ section {
     font-size: 30px;
 }
 
-
 .section-title span {
     display: block;
 
     width: 60px;
-
     height: 3px;
 
     background: #d8b46a;
@@ -350,7 +296,6 @@ section {
         0 5px 25px rgba(0, 0, 0, 0.06);
 }
 
-
 .about-box p {
     font-size: 16px;
 
@@ -373,7 +318,6 @@ section {
         0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
-
 .experience-item {
     padding: 18px 0;
 
@@ -381,16 +325,13 @@ section {
         1px solid #eee;
 }
 
-
 .experience-item:last-child {
     border-bottom: none;
 }
 
-
 .experience-item h3 {
     color: #172533;
 }
-
 
 .experience-item p {
     color: #666;
@@ -405,7 +346,6 @@ section {
     background: #eef0f3;
 }
 
-
 .services-grid {
     display: grid;
 
@@ -414,7 +354,6 @@ section {
 
     gap: 25px;
 }
-
 
 .service-card {
     background: white;
@@ -431,11 +370,9 @@ section {
     transition: 0.3s;
 }
 
-
 .service-card:hover {
     transform: translateY(-6px);
 }
-
 
 .service-icon {
     font-size: 35px;
@@ -443,13 +380,11 @@ section {
     margin-bottom: 15px;
 }
 
-
 .service-card h3 {
     color: #172533;
 
     margin-bottom: 10px;
 }
-
 
 .service-card p {
     color: #666;
@@ -466,7 +401,6 @@ section {
     background: #eef0f3;
 }
 
-
 .articles-grid {
     display: grid;
 
@@ -475,7 +409,6 @@ section {
 
     gap: 25px;
 }
-
 
 .article-card {
     background: white;
@@ -490,18 +423,15 @@ section {
     transition: 0.3s;
 }
 
-
 .article-card:hover {
     transform: translateY(-5px);
 }
-
 
 .article-card h3 {
     color: #172533;
 
     margin-bottom: 12px;
 }
-
 
 .article-card p {
     color: #666;
@@ -533,18 +463,15 @@ section {
     gap: 30px;
 }
 
-
 .apps-text {
     flex: 1;
 }
-
 
 .apps-text h3 {
     color: #172533;
 
     margin-bottom: 10px;
 }
-
 
 .apps-text p {
     color: #666;
@@ -559,7 +486,6 @@ section {
     background: #eef0f3;
 }
 
-
 .testimonials-grid {
     display: grid;
 
@@ -568,7 +494,6 @@ section {
 
     gap: 25px;
 }
-
 
 .testimonial {
     background: white;
@@ -581,13 +506,11 @@ section {
         0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
-
 .testimonial p {
     color: #555;
 
     font-size: 14px;
 }
-
 
 .testimonial-name {
     margin-top: 15px;
@@ -596,7 +519,6 @@ section {
 
     font-weight: bold;
 }
-
 
 .send-review {
     text-align: center;
@@ -613,23 +535,19 @@ section {
     color: white;
 }
 
-
 .contact .section-title h2 {
     color: white;
 }
 
-
 .contact-info {
     text-align: center;
 }
-
 
 .contact-item {
     margin: 12px 0;
 
     color: #ddd;
 }
-
 
 .contact-item strong {
     color: #d8b46a;
@@ -667,35 +585,29 @@ footer {
         font-size: 12px;
     }
 
-
     .hero-content {
         gap: 50px;
     }
-
 
     .hero-logo {
         width: 180px;
         height: 180px;
     }
 
-
     .hero-logo img {
         width: 180px;
         height: 180px;
     }
 
-
     .hero-text h1 {
         font-size: 40px;
     }
-
 
     .services-grid,
     .articles-grid,
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
-
 
     .apps-box {
         flex-direction: column;
@@ -723,7 +635,6 @@ footer {
         gap: 10px;
     }
 
-
     .menu {
         flex-wrap: wrap;
 
@@ -732,16 +643,13 @@ footer {
         gap: 8px 15px;
     }
 
-
     .menu a {
         font-size: 12px;
     }
 
-
     .hero {
         min-height: 650px;
     }
-
 
     .hero-content {
         flex-direction: column;
@@ -751,50 +659,39 @@ footer {
         text-align: center;
     }
 
-
     .hero-logo {
         width: 160px;
-
         height: 160px;
     }
-
 
     .hero-logo img {
         width: 160px;
-
         height: 160px;
     }
-
 
     .hero-text {
         text-align: center;
     }
 
-
     .hero-text h1 {
         font-size: 34px;
     }
-
 
     .hero-text h2 {
         font-size: 20px;
     }
 
-
     .hero-text p {
         font-size: 15px;
     }
-
 
     section {
         padding: 55px 0;
     }
 
-
     .section-title h2 {
         font-size: 26px;
     }
-
 
     .about-box,
     .experience-box,
@@ -805,8 +702,7 @@ footer {
 
 
 /* =====================================================
-   کاهش انیمیشن برای کاربرانی که انیمیشن را
-   غیرفعال کرده‌اند
+   کاهش انیمیشن در صورت تنظیمات کاربر
 ===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
