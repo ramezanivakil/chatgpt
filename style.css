@@ -749,7 +749,7 @@ header {
 
 /* نام */
 
-.hero-modern-content h1 {
+ {
 
     margin: 0 0 12px;
 
@@ -2221,14 +2221,14 @@ footer {
 
     .hero-modern-content h1 {
 
-        font-size: 1.8rem;
+        font-size: 1.7rem;
 
     }
 
 
     .hero-title-line {
 
-        font-size: .95rem;
+        font-size: 1.3rem;
 
     }
 
@@ -2246,7 +2246,7 @@ footer {
 
         padding: 2px 0;
 
-        font-size: .75rem;
+        font-size: 1.1rem;
 
     }
 
