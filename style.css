@@ -804,9 +804,9 @@ header {
 
     margin: 2px 0;
 
-    color: rgba(255,255,255,.94);
+    color: #fff;
 
-    font-size: 1.4rem;
+    font-size: 1.1rem;
 
     font-weight: 700;
 
@@ -860,7 +860,7 @@ header {
         rgba(255,255,255,.055);
 
     color:
-        rgba(255,255,255,.88);
+        #fff;
 
     font-size: .86rem;
 
@@ -1014,9 +1014,9 @@ header {
 
     right: 10px;
 
-    width: 120px;
+    width: 105px;
 
-    height: 120px;
+    height: 105px;
 
     display: flex;
 
@@ -1151,7 +1151,7 @@ header {
 
 .hero-badge span {
 
-    color: rgba(255,255,255,.65);
+    color: #fff;
 
     font-size: .74rem;
 
@@ -1198,7 +1198,7 @@ header {
 
     align-items: center;
 
-    color: rgba(255,255,255,.55);
+    color: #fff;
 
     font-size: .75rem;
 
@@ -2208,9 +2208,9 @@ footer {
 
     .hero-modern-logo {
 
-        width: 86px;
+        width: 78px;
 
-        height: 86px;
+        height: 78px;
 
         top: 3px;
 
@@ -2228,7 +2228,7 @@ footer {
 
     .hero-title-line {
 
-        font-size: 1.1rem;
+        font-size: .95rem;
 
     }
 
@@ -2246,7 +2246,7 @@ footer {
 
         padding: 6px 8px;
 
-        font-size: 1.0rem;
+        font-size: .75rem;
 
     }
 
@@ -2388,14 +2388,14 @@ footer {
 
     .hero-title-line {
 
-        font-size: .94rem;
+        font-size: .84rem;
 
     }
 
 
     .hero-credentials span {
 
-        font-size: .88rem;
+        font-size: .68rem;
 
     }
 
