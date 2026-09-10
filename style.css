@@ -806,7 +806,7 @@ header {
 
     color: rgba(255,255,255,.94);
 
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 
     font-weight: 700;
 
@@ -2388,14 +2388,14 @@ footer {
 
     .hero-title-line {
 
-        font-size: .84rem;
+        font-size: .94rem;
 
     }
 
 
     .hero-credentials span {
 
-        font-size: .68rem;
+        font-size: .88rem;
 
     }
 
