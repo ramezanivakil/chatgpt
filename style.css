@@ -1,6 +1,7 @@
 /* =========================================================
-   CSS کامل وب‌سایت دفتر وکالت
-   نسخه بازطراحی‌شده
+   WEBSITE
+   محمدرضا محمدی رمضانی
+   Lawyer Personal Website
    ========================================================= */
 
 
@@ -10,55 +11,42 @@
 
 :root {
 
+    --navy-dark: #07111f;
+    --navy: #0b132b;
+    --navy-light: #17233d;
+
+    --gold: #d4af37;
+    --gold-light: #f3d36a;
+    --gold-dark: #a77d18;
+
+    --white: #ffffff;
+    --white-soft: #f8fafc;
+
+    --text-dark: #0f172a;
+    --text-gray: #64748b;
+
+    --border: #e2e8f0;
+
+    --background: #f7f8fa;
+
     --font-heading: 'CustomTitr', Tahoma, sans-serif;
     --font-accent: 'CustomComps', Tahoma, sans-serif;
     --font-body: 'CustomZar', Tahoma, sans-serif;
 
-    --navy-dark: #07111f;
-    --navy: #0b132b;
-    --navy-light: #172554;
-    --navy-soft: #1e293b;
+    --shadow-small:
+        0 5px 18px rgba(15, 23, 42, 0.07);
 
-    --gold: #f5b942;
-    --gold-light: #ffe08a;
-    --gold-dark: #c58b16;
+    --shadow-medium:
+        0 12px 35px rgba(15, 23, 42, 0.10);
 
-    --white: #ffffff;
-    --off-white: #f8fafc;
+    --shadow-large:
+        0 25px 60px rgba(15, 23, 42, 0.18);
 
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-light: #cbd5e1;
-
-    --border: #e2e8f0;
-
-    --bg-main: #f8fafc;
-    --bg-card: #ffffff;
-    --bg-section: #f1f5f9;
-
-    --shadow-sm:
-        0 4px 15px rgba(15, 23, 42, 0.06);
-
-    --shadow-md:
-        0 12px 30px rgba(15, 23, 42, 0.10);
-
-    --shadow-lg:
-        0 25px 60px rgba(15, 23, 42, 0.16);
-
-    --gold-shadow:
-        0 8px 25px rgba(245, 185, 66, 0.30);
-
-    --radius-sm: 8px;
-    --radius-md: 14px;
-    --radius-lg: 22px;
-
-    --transition:
-        all 0.35s cubic-bezier(.4, 0, .2, 1);
 }
 
 
 /* =========================================================
-   2. FONTS
+   2. CUSTOM FONTS
    ========================================================= */
 
 @font-face {
@@ -71,6 +59,7 @@
 
     font-weight: normal;
     font-style: normal;
+
     font-display: swap;
 }
 
@@ -85,6 +74,7 @@
 
     font-weight: normal;
     font-style: normal;
+
     font-display: swap;
 }
 
@@ -99,6 +89,7 @@
 
     font-weight: normal;
     font-style: normal;
+
     font-display: swap;
 }
 
@@ -113,12 +104,14 @@
 
     margin: 0;
     padding: 0;
+
 }
 
 
 html {
 
     scroll-behavior: smooth;
+
 }
 
 
@@ -126,23 +119,23 @@ body {
 
     font-family: var(--font-body);
 
-    font-size: 1rem;
-
     background:
-        var(--bg-main);
+        var(--background);
 
     color:
-        var(--text-primary);
+        var(--text-dark);
 
     line-height: 1.8;
 
     overflow-x: hidden;
+
 }
 
 
 img {
 
     max-width: 100%;
+
 }
 
 
@@ -151,12 +144,14 @@ input,
 textarea {
 
     font-family: inherit;
+
 }
 
 
 a {
 
-    color: inherit;
+    text-decoration: none;
+
 }
 
 
@@ -169,7 +164,6 @@ h6 {
 
     font-family: var(--font-heading);
 
-    line-height: 1.5;
 }
 
 
@@ -182,6 +176,7 @@ header {
     position: fixed;
 
     top: 0;
+    right: 0;
     left: 0;
 
     width: 100%;
@@ -202,6 +197,7 @@ header {
 
     box-shadow:
         0 4px 25px rgba(15, 23, 42, 0.06);
+
 }
 
 
@@ -214,7 +210,7 @@ header {
     margin: 0 auto;
 
     padding:
-        0.65rem 1.5rem;
+        8px 24px;
 
     display: flex;
 
@@ -222,27 +218,26 @@ header {
 
     justify-content: space-between;
 
-    gap: 1rem;
 }
 
 
 .logo {
 
-    display: flex;
-
-    align-items: center;
-
-    text-decoration: none;
-
     color:
-        var(--navy-dark) !important;
+        var(--navy) !important;
 
     font-family:
         var(--font-accent);
 
-    font-size: 1rem;
+    font-size:
+        0.95rem;
 
-    font-weight: 700;
+    font-weight:
+        700;
+
+    white-space:
+        nowrap;
+
 }
 
 
@@ -251,11 +246,12 @@ header {
     display: flex;
 
     align-items: center;
+
 }
 
 
 /* =========================================================
-   5. SOCIAL ICONS HEADER
+   5. SOCIAL ICONS
    ========================================================= */
 
 .header-social-bar {
@@ -267,6 +263,7 @@ header {
     gap: 9px;
 
     direction: ltr;
+
 }
 
 
@@ -284,28 +281,22 @@ header {
 
     overflow: hidden;
 
-    flex-shrink: 0;
-
     padding: 0;
 
     cursor: pointer;
-
-    text-decoration: none;
-
-    color:
-        var(--navy-dark);
 
     background:
         #ffffff;
 
     border:
-        1px solid rgba(15, 23, 42, 0.75);
+        1px solid var(--navy);
 
     box-shadow:
         0 3px 10px rgba(15, 23, 42, 0.08);
 
     transition:
-        var(--transition);
+        all 0.3s ease;
+
 }
 
 
@@ -317,25 +308,19 @@ header {
     object-fit: cover;
 
     display: block;
+
 }
 
 
 .header-social-item:hover {
 
     transform:
-        translateY(-3px) scale(1.07);
-
-    color:
-        #ffffff;
-
-    background:
-        var(--navy-dark);
-
-    border-color:
-        var(--navy-dark);
+        translateY(-3px)
+        scale(1.08);
 
     box-shadow:
-        0 8px 20px rgba(15, 23, 42, 0.18);
+        0 8px 18px rgba(15, 23, 42, 0.18);
+
 }
 
 
@@ -345,54 +330,38 @@ header {
 
 @keyframes ringBell {
 
-    0%,
-    100% {
-
-        transform:
-            rotate(0deg);
+    0% {
+        transform: rotate(0deg);
     }
 
-    10% {
-
-        transform:
-            rotate(15deg);
+    8% {
+        transform: rotate(12deg);
     }
 
-    20% {
-
-        transform:
-            rotate(-15deg);
+    16% {
+        transform: rotate(-12deg);
     }
 
-    30% {
+    24% {
+        transform: rotate(10deg);
+    }
 
-        transform:
-            rotate(12deg);
+    32% {
+        transform: rotate(-10deg);
     }
 
     40% {
-
-        transform:
-            rotate(-12deg);
+        transform: rotate(5deg);
     }
 
-    50% {
-
-        transform:
-            rotate(7deg);
+    48% {
+        transform: rotate(0deg);
     }
 
-    60% {
-
-        transform:
-            rotate(-7deg);
+    100% {
+        transform: rotate(0deg);
     }
 
-    70% {
-
-        transform:
-            rotate(0);
-    }
 }
 
 
@@ -400,12 +369,15 @@ header {
 
     animation:
         ringBell 2.5s infinite ease-in-out;
+
 }
 
 
 .header-social-item.call-btn:hover {
 
-    animation: none;
+    animation:
+        none;
+
 }
 
 
@@ -419,27 +391,28 @@ header {
 
     inset: 0;
 
-    z-index: 2000;
+    z-index: 3000;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    padding: 1rem;
+    padding: 20px;
 
     background:
-        rgba(7, 17, 31, 0.72);
+        rgba(3, 10, 20, 0.70);
 
     backdrop-filter:
-        blur(7px);
+        blur(6px);
 
     opacity: 0;
 
     visibility: hidden;
 
     transition:
-        var(--transition);
+        all 0.3s ease;
+
 }
 
 
@@ -448,44 +421,47 @@ header {
     opacity: 1;
 
     visibility: visible;
+
 }
 
 
 .modal-card {
 
-    width: min(90%, 390px);
-
-    padding:
-        2rem 1.5rem;
-
     position: relative;
 
-    text-align: center;
+    width: 100%;
+
+    max-width: 390px;
+
+    padding:
+        38px 25px 30px;
+
+    border-radius: 20px;
 
     background:
         #ffffff;
 
-    border:
-        1px solid rgba(245, 185, 66, 0.35);
-
-    border-radius:
-        var(--radius-lg);
+    text-align: center;
 
     box-shadow:
-        0 30px 70px rgba(0, 0, 0, 0.25);
+        var(--shadow-large);
 
     transform:
-        scale(0.85);
+        scale(0.85)
+        translateY(20px);
 
     transition:
-        transform 0.35s ease;
+        transform 0.3s ease;
+
 }
 
 
 .modal-overlay.active .modal-card {
 
     transform:
-        scale(1);
+        scale(1)
+        translateY(0);
+
 }
 
 
@@ -496,16 +472,25 @@ header {
     top: 10px;
     left: 15px;
 
+    width: 35px;
+    height: 35px;
+
     border: none;
 
-    background: none;
+    background:
+        transparent;
 
     color:
-        var(--text-secondary);
+        var(--text-gray);
 
-    font-size: 1.6rem;
+    font-size:
+        28px;
+
+    line-height:
+        1;
 
     cursor: pointer;
+
 }
 
 
@@ -515,53 +500,56 @@ header {
     height: 65px;
 
     margin:
-        0 auto 1rem;
+        0 auto 15px;
+
+    border-radius: 50%;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    border-radius: 50%;
-
     color:
-        #ffffff;
+        var(--navy);
 
     background:
         linear-gradient(
             135deg,
             var(--gold-light),
-            var(--gold),
-            var(--gold-dark)
+            var(--gold)
         );
 
-    box-shadow:
-        var(--gold-shadow);
+    font-size:
+        25px;
 
-    font-size: 1.5rem;
+    box-shadow:
+        0 8px 25px rgba(212, 175, 55, 0.35);
+
 }
 
 
 .modal-card h3 {
 
     margin-bottom:
-        0.4rem;
+        8px;
 
     font-size:
         1.35rem;
+
 }
 
 
 .modal-card p {
 
     margin-bottom:
-        1.2rem;
+        18px;
 
     color:
-        var(--text-secondary);
+        var(--text-gray);
 
     font-size:
         0.95rem;
+
 }
 
 
@@ -570,24 +558,22 @@ header {
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
-
-    gap: 10px;
-
-    padding:
-        0.8rem 1rem;
 
     direction: ltr;
 
-    background:
-        #f8fafc;
+    padding:
+        10px 13px;
 
     border:
         1px solid var(--border);
 
     border-radius:
         10px;
+
+    background:
+        #f8fafc;
+
 }
 
 
@@ -595,6 +581,10 @@ header {
 
     color:
         var(--gold-dark);
+
+    font-family:
+        Tahoma,
+        sans-serif;
 
     font-size:
         1.25rem;
@@ -604,19 +594,20 @@ header {
 
     letter-spacing:
         1px;
+
 }
 
 
 .copy-btn {
 
-    padding:
-        0.45rem 0.75rem;
+    width: 38px;
+    height: 38px;
 
     border:
         1px solid var(--border);
 
     border-radius:
-        7px;
+        8px;
 
     background:
         #ffffff;
@@ -625,17 +616,19 @@ header {
         pointer;
 
     transition:
-        var(--transition);
+        all 0.2s ease;
+
 }
 
 
 .copy-btn:hover {
 
     background:
-        var(--navy-dark);
+        var(--navy);
 
     color:
         #ffffff;
+
 }
 
 
@@ -644,7 +637,7 @@ header {
     display: block;
 
     margin-top:
-        0.7rem;
+        10px;
 
     color:
         #16a34a;
@@ -652,14 +645,12 @@ header {
     font-size:
         0.85rem;
 
-    font-weight:
-        700;
-
     opacity:
         0;
 
     transition:
-        opacity 0.3s;
+        opacity 0.3s ease;
+
 }
 
 
@@ -667,11 +658,12 @@ header {
 
     opacity:
         1;
+
 }
 
 
 /* =========================================================
-   8. MODERN HERO
+   8. HERO
    ========================================================= */
 
 .hero-modern {
@@ -679,132 +671,152 @@ header {
     position: relative;
 
     min-height:
-        720px;
+        700px;
+
+    width: 100%;
+
+    overflow: hidden;
 
     padding:
-        125px 1.5rem 70px;
+        100px 25px 65px;
 
     display: flex;
 
     align-items: center;
 
-    overflow: hidden;
-
-    isolation: isolate;
-
-    color:
-        #ffffff;
-
     background:
-
         radial-gradient(
-            circle at 15% 20%,
-            rgba(245, 185, 66, 0.10),
-            transparent 30%
+            circle at 78% 45%,
+            rgba(212, 175, 55, 0.12),
+            transparent 25%
         ),
-
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(37, 99, 235, 0.12),
-            transparent 35%
-        ),
-
         linear-gradient(
             135deg,
-            #050b14 0%,
+            #050c18 0%,
             #0b132b 45%,
-            #111c35 70%,
-            #07111f 100%
+            #17233d 100%
         );
+
 }
 
 
-/* خطوط تزئینی */
+/* =========================================================
+   9. HERO DECORATIONS
+   ========================================================= */
 
-.hero-modern::before {
-
-    content: '';
+.hero-pattern {
 
     position: absolute;
 
     inset: 0;
 
-    z-index: -2;
-
     opacity:
-        0.13;
+        0.07;
 
     background-image:
-
         linear-gradient(
-            90deg,
-            rgba(255,255,255,0.06) 1px,
+            rgba(255,255,255,0.5) 1px,
             transparent 1px
         ),
-
         linear-gradient(
-            rgba(255,255,255,0.06) 1px,
+            90deg,
+            rgba(255,255,255,0.5) 1px,
             transparent 1px
         );
 
     background-size:
         55px 55px;
 
-    mask-image:
-        linear-gradient(
-            to bottom,
-            transparent,
-            black 25%,
-            black 75%,
-            transparent
-        );
+    pointer-events:
+        none;
+
 }
 
 
-/* درخشش طلایی */
-
-.hero-modern::after {
-
-    content: '';
+.hero-decoration {
 
     position: absolute;
 
-    width: 600px;
-    height: 600px;
+    border:
+        1px solid rgba(212, 175, 55, 0.18);
+
+    border-radius:
+        50%;
+
+    pointer-events:
+        none;
+
+}
+
+
+.hero-decoration-one {
+
+    width:
+        550px;
+
+    height:
+        550px;
 
     right:
         -250px;
 
     top:
-        -250px;
+        -180px;
 
-    z-index: -1;
+}
 
-    border-radius:
-        50%;
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(245,185,66,0.15),
-            transparent 68%
-        );
+.hero-decoration-two {
 
-    pointer-events:
-        none;
+    width:
+        330px;
+
+    height:
+        330px;
+
+    left:
+        -180px;
+
+    bottom:
+        -130px;
+
+}
+
+
+.hero-decoration-three {
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    left:
+        15%;
+
+    top:
+        15%;
+
+    border-style:
+        dashed;
+
 }
 
 
 /* =========================================================
-   9. HERO CONTAINER
+   10. HERO CONTAINER
    ========================================================= */
 
 .hero-modern-container {
 
+    position: relative;
+
+    z-index: 5;
+
     width: 100%;
 
     max-width:
-        1320px;
+        1300px;
 
     margin:
         0 auto;
@@ -813,93 +825,45 @@ header {
         grid;
 
     grid-template-columns:
-        1.05fr 0.95fr;
+        1fr 0.95fr;
+
+    gap:
+        50px;
 
     align-items:
         center;
 
-    gap:
-        4rem;
-
-    position:
-        relative;
-
-    z-index:
-        2;
 }
 
 
 /* =========================================================
-   10. HERO CONTENT
+   11. HERO CONTENT
    ========================================================= */
 
 .hero-modern-content {
 
-    position:
-        relative;
+    position: relative;
 
-    z-index:
-        5;
-
-    text-align:
-        right;
-}
-
-
-.hero-eyebrow {
+    z-index: 5;
 
     display:
-        inline-flex;
+        flex;
+
+    flex-direction:
+        column;
 
     align-items:
-        center;
+        flex-start;
 
-    gap:
-        10px;
-
-    margin-bottom:
-        1.2rem;
-
-    padding:
-        0.45rem 1rem;
-
-    color:
-        var(--gold-light);
-
-    border:
-        1px solid rgba(245,185,66,0.35);
-
-    border-radius:
-        50px;
-
-    background:
-        rgba(245,185,66,0.07);
-
-    font-family:
-        var(--font-body);
-
-    font-size:
-        1rem;
-
-    font-weight:
-        700;
-
-    box-shadow:
-        0 5px 20px rgba(0,0,0,0.12);
 }
 
 
-.hero-eyebrow i {
-
-    color:
-        var(--gold);
-}
-
+/* نام */
 
 .hero-modern-content h1 {
 
-    margin-bottom:
-        1rem;
+    margin:
+        0 0 14px;
 
     color:
         #ffffff;
@@ -908,21 +872,56 @@ header {
         var(--font-heading);
 
     font-size:
-        clamp(2.1rem, 4vw, 4rem);
+        clamp(2.2rem, 4vw, 4rem);
 
     font-weight:
         900;
 
     line-height:
-        1.35;
+        1.3;
 
     letter-spacing:
-        -1px;
+        -0.5px;
 
     text-shadow:
-        0 5px 25px rgba(0,0,0,0.35);
+        0 4px 20px rgba(0,0,0,0.30);
+
 }
 
+
+/* خط طلایی */
+
+.hero-modern-content h1::after {
+
+    content:
+        "";
+
+    display:
+        block;
+
+    width:
+        90px;
+
+    height:
+        3px;
+
+    margin-top:
+        12px;
+
+    border-radius:
+        10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--gold-light),
+            var(--gold)
+        );
+
+}
+
+
+/* عنوان‌های شغلی */
 
 .hero-title-line {
 
@@ -933,59 +932,48 @@ header {
         center;
 
     gap:
-        12px;
+        10px;
 
-    margin-bottom:
-        0.75rem;
+    margin:
+        3px 0;
 
     color:
-        #ffffff;
+        rgba(255,255,255,0.94);
+
+    font-family:
+        var(--font-body);
 
     font-size:
-        clamp(1.05rem, 1.7vw, 1.3rem);
+        1.15rem;
 
     font-weight:
         700;
+
+    line-height:
+        1.8;
+
 }
 
 
 .hero-title-line i {
 
     width:
-        30px;
+        27px;
 
     color:
-        var(--gold);
+        var(--gold-light);
+
+    text-align:
+        center;
 
     font-size:
         1rem;
 
-    text-align:
-        center;
-}
-
-
-.hero-description {
-
-    max-width:
-        680px;
-
-    margin:
-        1.3rem 0;
-
-    color:
-        #cbd5e1;
-
-    font-size:
-        1.05rem;
-
-    line-height:
-        2;
 }
 
 
 /* =========================================================
-   11. HERO CREDENTIALS
+   12. HERO CREDENTIALS
    ========================================================= */
 
 .hero-credentials {
@@ -997,14 +985,15 @@ header {
         wrap;
 
     gap:
-        10px;
+        9px;
 
-    margin:
-        1.4rem 0;
+    margin-top:
+        18px;
+
 }
 
 
-.credential {
+.hero-credentials span {
 
     display:
         inline-flex;
@@ -1016,50 +1005,39 @@ header {
         8px;
 
     padding:
-        0.45rem 0.85rem;
-
-    color:
-        #e2e8f0;
+        8px 13px;
 
     border:
-        1px solid rgba(255,255,255,0.13);
+        1px solid rgba(212,175,55,0.32);
 
     border-radius:
         8px;
 
     background:
-        rgba(255,255,255,0.045);
+        rgba(255,255,255,0.055);
+
+    color:
+        rgba(255,255,255,0.88);
 
     font-size:
         0.9rem;
 
-    transition:
-        var(--transition);
+    backdrop-filter:
+        blur(8px);
+
 }
 
 
-.credential i {
+.hero-credentials i {
 
     color:
-        var(--gold);
-}
+        var(--gold-light);
 
-
-.credential:hover {
-
-    border-color:
-        rgba(245,185,66,0.4);
-
-    background:
-        rgba(245,185,66,0.08);
-
-    transform:
-        translateY(-2px);
 }
 
 
 /* =========================================================
-   12. HERO BUTTONS
+   13. HERO BUTTONS
    ========================================================= */
 
 .hero-actions {
@@ -1074,17 +1052,18 @@ header {
         12px;
 
     margin-top:
-        1.6rem;
+        24px;
+
 }
 
 
-.hero-btn {
+.hero-actions a {
 
     min-width:
-        170px;
+        160px;
 
     padding:
-        0.85rem 1.4rem;
+        11px 22px;
 
     display:
         inline-flex;
@@ -1098,82 +1077,83 @@ header {
     gap:
         9px;
 
-    text-decoration:
-        none;
-
     border-radius:
-        10px;
+        9px;
 
     font-size:
         1rem;
 
     font-weight:
-        800;
+        700;
 
     transition:
-        var(--transition);
+        all 0.3s ease;
+
 }
 
 
-.hero-btn-primary {
+.btn-primary {
 
     color:
-        #111827 !important;
+        #101828;
 
     background:
         linear-gradient(
             135deg,
-            #ffe08a,
-            #f5b942,
-            #c58b16
+            #f3d36a,
+            #d4af37
         );
 
     box-shadow:
-        0 10px 30px rgba(245,185,66,0.22);
+        0 8px 25px rgba(212,175,55,0.20);
+
 }
 
 
-.hero-btn-primary:hover {
+.btn-primary:hover {
 
     transform:
         translateY(-3px);
 
     box-shadow:
-        0 15px 35px rgba(245,185,66,0.35);
+        0 13px 30px rgba(212,175,55,0.30);
+
 }
 
 
-.hero-btn-secondary {
+.btn-secondary {
 
     color:
         #ffffff;
 
-    background:
-        rgba(255,255,255,0.045);
-
     border:
-        1px solid rgba(255,255,255,0.25);
+        1px solid rgba(255,255,255,0.30);
+
+    background:
+        rgba(255,255,255,0.07);
+
+    backdrop-filter:
+        blur(8px);
+
 }
 
 
-.hero-btn-secondary:hover {
+.btn-secondary:hover {
 
     transform:
         translateY(-3px);
 
-    border-color:
-        var(--gold);
-
-    color:
-        var(--gold-light);
-
     background:
-        rgba(245,185,66,0.08);
+        rgba(255,255,255,0.15);
+
+    border-color:
+        rgba(255,255,255,0.50);
+
 }
 
 
 /* =========================================================
-   13. HERO LOCATIONS
+   14. HERO LOCATIONS
    ========================================================= */
 
 .hero-locations {
@@ -1191,28 +1171,27 @@ header {
         8px;
 
     margin-top:
-        1.5rem;
+        19px;
 
     color:
-        #94a3b8;
+        rgba(255,255,255,0.68);
 
     font-size:
         0.9rem;
+
 }
 
 
 .hero-locations i {
 
     color:
-        var(--gold);
+        var(--gold-light);
 
-    margin-left:
-        4px;
 }
 
 
 /* =========================================================
-   14. HERO VISUAL
+   15. HERO VISUAL
    ========================================================= */
 
 .hero-modern-visual {
@@ -1221,7 +1200,7 @@ header {
         relative;
 
     min-height:
-        540px;
+        560px;
 
     display:
         flex;
@@ -1231,10 +1210,43 @@ header {
 
     justify-content:
         center;
+
 }
 
 
-/* حلقه‌های تزئینی */
+/* نور پشت تصویر */
+
+.hero-glow {
+
+    position:
+        absolute;
+
+    width:
+        430px;
+
+    height:
+        430px;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,0.24) 0%,
+            rgba(212,175,55,0.08) 35%,
+            transparent 70%
+        );
+
+    filter:
+        blur(3px);
+
+}
+
+
+/* =========================================================
+   16. CIRCLES
+   ========================================================= */
 
 .hero-circle {
 
@@ -1244,52 +1256,56 @@ header {
     border-radius:
         50%;
 
-    pointer-events:
-        none;
+    border:
+        1px solid rgba(212,175,55,0.25);
+
 }
 
 
 .hero-circle-one {
 
     width:
-        440px;
+        500px;
 
     height:
-        440px;
+        500px;
 
-    border:
-        1px solid rgba(245,185,66,0.22);
 }
 
 
 .hero-circle-two {
 
     width:
-        350px;
+        400px;
 
     height:
-        350px;
+        400px;
 
-    border:
-        1px dashed rgba(255,255,255,0.14);
+    border-style:
+        dashed;
+
+    opacity:
+        0.65;
+
 }
 
 
 .hero-circle-three {
 
     width:
-        270px;
+        300px;
 
     height:
-        270px;
+        300px;
 
     border:
-        1px solid rgba(245,185,66,0.16);
+        2px solid rgba(212,175,55,0.12);
+
 }
 
 
 /* =========================================================
-   15. HERO PROFILE
+   17. PROFILE
    ========================================================= */
 
 .hero-profile-wrapper {
@@ -1298,78 +1314,41 @@ header {
         relative;
 
     z-index:
-        5;
+        4;
 
     width:
-        430px;
+        100%;
 
     max-width:
-        90%;
-}
+        500px;
 
-
-.hero-profile-wrapper::before {
-
-    content:
-        '';
-
-    position:
-        absolute;
-
-    inset:
-        10%;
-
-    z-index:
-        -1;
-
-    border-radius:
-        50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(245,185,66,0.18),
-            transparent 65%
-        );
-
-    filter:
-        blur(20px);
 }
 
 
 .hero-profile {
 
+    display:
+        block;
+
     width:
         100%;
 
     max-height:
-        560px;
+        570px;
 
     object-fit:
         contain;
 
-    display:
-        block;
-
     filter:
         drop-shadow(
-            0 25px 35px rgba(0,0,0,0.45)
+            0 20px 30px rgba(0,0,0,0.45)
         );
 
-    transition:
-        transform 0.5s ease;
-}
-
-
-.hero-profile-wrapper:hover .hero-profile {
-
-    transform:
-        translateY(-8px);
 }
 
 
 /* =========================================================
-   16. ROTATING LOGO
+   18. ROTATING LOGO
    ========================================================= */
 
 .hero-modern-logo {
@@ -1378,19 +1357,19 @@ header {
         absolute;
 
     z-index:
-        8;
+        7;
 
     top:
-        5%;
+        18px;
 
     right:
-        0;
+        20px;
 
     width:
-        105px;
+        125px;
 
     height:
-        105px;
+        125px;
 
     display:
         flex;
@@ -1403,6 +1382,7 @@ header {
 
     perspective:
         1000px;
+
 }
 
 
@@ -1417,40 +1397,37 @@ header {
     object-fit:
         contain;
 
-    display:
-        block;
-
     transform-style:
         preserve-3d;
 
     animation:
-        coinRotation 6s linear infinite;
+        flipCoin 6s linear infinite;
 
     filter:
         drop-shadow(
-            0 0 15px rgba(245,185,66,0.40)
+            0 0 14px rgba(212,175,55,0.45)
         );
+
 }
 
 
-@keyframes coinRotation {
+@keyframes flipCoin {
 
-    from {
-
+    0% {
         transform:
             rotateY(0deg);
     }
 
-    to {
-
+    100% {
         transform:
             rotateY(360deg);
     }
+
 }
 
 
 /* =========================================================
-   17. FLOATING BADGES
+   19. HERO BADGES
    ========================================================= */
 
 .hero-badge {
@@ -1459,7 +1436,7 @@ header {
         absolute;
 
     z-index:
-        10;
+        8;
 
     display:
         flex;
@@ -1468,69 +1445,123 @@ header {
         center;
 
     gap:
-        8px;
+        10px;
 
     padding:
-        0.65rem 0.9rem;
+        10px 14px;
+
+    min-width:
+        175px;
+
+    border:
+        1px solid rgba(212,175,55,0.35);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(7,17,31,0.82);
 
     color:
         #ffffff;
 
-    background:
-        rgba(9, 20, 36, 0.88);
-
-    border:
-        1px solid rgba(245,185,66,0.35);
-
-    border-radius:
-        10px;
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.28);
 
     backdrop-filter:
-        blur(8px);
+        blur(12px);
 
-    box-shadow:
-        0 15px 35px rgba(0,0,0,0.25);
-
-    font-size:
-        0.85rem;
-
-    font-weight:
-        700;
 }
 
 
 .hero-badge i {
 
+    width:
+        35px;
+
+    height:
+        35px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
     color:
-        var(--gold);
+        var(--navy);
+
+    background:
+        var(--gold-light);
+
+}
+
+
+.hero-badge div {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    line-height:
+        1.35;
+
+}
+
+
+.hero-badge strong {
+
+    color:
+        #ffffff;
 
     font-size:
-        1rem;
+        0.88rem;
+
+}
+
+
+.hero-badge span {
+
+    color:
+        rgba(255,255,255,0.65);
+
+    font-size:
+        0.78rem;
+
 }
 
 
 .hero-badge-one {
 
     left:
-        0;
+        5px;
 
-    top:
-        20%;
+    bottom:
+        75px;
+
 }
 
 
 .hero-badge-two {
 
     right:
-        -15px;
+        0;
 
     bottom:
-        18%;
+        25px;
+
 }
 
 
 /* =========================================================
-   18. SCROLL INDICATOR
+   20. HERO SCROLL
    ========================================================= */
 
 .hero-scroll {
@@ -1538,8 +1569,11 @@ header {
     position:
         absolute;
 
+    z-index:
+        10;
+
     bottom:
-        15px;
+        18px;
 
     left:
         50%;
@@ -1547,54 +1581,101 @@ header {
     transform:
         translateX(-50%);
 
-    z-index:
-        10;
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    gap:
+        3px;
 
     color:
         rgba(255,255,255,0.55);
 
     font-size:
-        1rem;
+        0.78rem;
 
-    text-decoration:
-        none;
+    transition:
+        all 0.3s ease;
 
-    animation:
-        scrollBounce 2s infinite;
 }
 
 
-@keyframes scrollBounce {
+.hero-scroll i {
 
-    0%,
-    100% {
+    color:
+        var(--gold);
 
+    animation:
+        scrollDown 1.5s infinite ease-in-out;
+
+}
+
+
+@keyframes scrollDown {
+
+    0% {
         transform:
-            translate(-50%, 0);
+            translateY(0);
     }
 
     50% {
-
         transform:
-            translate(-50%, 8px);
+            translateY(5px);
     }
+
+    100% {
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+.hero-scroll:hover {
+
+    color:
+        #ffffff;
+
 }
 
 
 /* =========================================================
-   19. SECTION TITLES
+   21. SECTION TITLE
    ========================================================= */
 
 .section-title {
 
-    max-width:
-        800px;
-
-    margin:
-        0 auto 3rem;
-
     text-align:
         center;
+
+    margin-bottom:
+        42px;
+
+}
+
+
+.section-kicker {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        0.9rem;
+
+    font-weight:
+        700;
+
 }
 
 
@@ -1610,64 +1691,52 @@ header {
         12px;
 
     color:
-        var(--navy-dark);
+        var(--navy);
 
     font-size:
-        clamp(1.5rem, 3vw, 2rem);
+        1.85rem;
+
 }
 
 
 .section-title h2::after {
 
     content:
-        '';
+        "";
 
     position:
         absolute;
 
+    right:
+        50%;
+
     bottom:
         0;
 
-    left:
-        50%;
-
     width:
-        80px;
+        75px;
 
     height:
         4px;
 
     transform:
-        translateX(-50%);
+        translateX(50%);
 
     border-radius:
-        20px;
+        10px;
 
     background:
         linear-gradient(
             90deg,
             var(--gold-dark),
-            var(--gold-light),
-            var(--gold-dark)
+            var(--gold-light)
         );
-}
 
-
-.section-title p {
-
-    margin-top:
-        0.8rem;
-
-    color:
-        var(--text-secondary);
-
-    font-size:
-        1rem;
 }
 
 
 /* =========================================================
-   20. SERVICES SECTION
+   22. SERVICES
    ========================================================= */
 
 .services {
@@ -1676,107 +1745,21 @@ header {
         relative;
 
     padding:
-        85px 1.5rem;
-
-    overflow:
-        hidden;
+        75px 25px;
 
     background:
-        linear-gradient(
-            180deg,
-            #f8fafc 0%,
-            #eef2f7 100%
-        );
+        #f5f7fa;
 
     border-top:
-        1px solid var(--border);
+        1px solid #e8edf2;
 
     border-bottom:
-        1px solid var(--border);
+        1px solid #e8edf2;
+
 }
 
-
-.services::before {
-
-    content:
-        '';
-
-    position:
-        absolute;
-
-    width:
-        350px;
-
-    height:
-        350px;
-
-    right:
-        -180px;
-
-    top:
-        50px;
-
-    border-radius:
-        50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(245,185,66,0.10),
-            transparent 70%
-        );
-
-    pointer-events:
-        none;
-}
-
-
-.services::after {
-
-    content:
-        '';
-
-    position:
-        absolute;
-
-    width:
-        300px;
-
-    height:
-        300px;
-
-    left:
-        -160px;
-
-    bottom:
-        0;
-
-    border-radius:
-        50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(15,23,42,0.05),
-            transparent 70%
-        );
-
-    pointer-events:
-        none;
-}
-
-
-/* =========================================================
-   21. CARDS GRID
-   ========================================================= */
 
 .cards-grid {
-
-    position:
-        relative;
-
-    z-index:
-        2;
 
     width:
         100%;
@@ -1794,12 +1777,13 @@ header {
         repeat(3, 1fr);
 
     gap:
-        1.8rem;
+        25px;
+
 }
 
 
 /* =========================================================
-   22. PROFESSIONAL SERVICE CARD
+   23. SERVICE CARD
    ========================================================= */
 
 .card {
@@ -1807,8 +1791,8 @@ header {
     position:
         relative;
 
-    min-height:
-        385px;
+    overflow:
+        hidden;
 
     display:
         flex;
@@ -1816,30 +1800,30 @@ header {
     flex-direction:
         column;
 
-    overflow:
-        hidden;
-
     background:
         #ffffff;
 
     border:
-        1px solid rgba(15,23,42,0.08);
+        1px solid #e4e8ee;
 
     border-radius:
-        18px;
+        17px;
 
     box-shadow:
-        var(--shadow-sm);
+        0 7px 25px rgba(15,23,42,0.055);
 
     transition:
-        var(--transition);
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
 }
 
 
 .card::before {
 
     content:
-        '';
+        "";
 
     position:
         absolute;
@@ -1847,34 +1831,32 @@ header {
     top:
         0;
 
-    left:
+    right:
         0;
 
     width:
         100%;
 
     height:
-        4px;
+        3px;
 
-    z-index:
-        10;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
 
     transform:
         scaleX(0);
 
     transform-origin:
-        right;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--gold-dark),
-            var(--gold-light),
-            var(--gold)
-        );
+        center;
 
     transition:
         transform 0.4s ease;
+
 }
 
 
@@ -1884,10 +1866,11 @@ header {
         translateY(-9px);
 
     border-color:
-        rgba(245,185,66,0.40);
+        rgba(212,175,55,0.42);
 
     box-shadow:
-        0 22px 45px rgba(15,23,42,0.13);
+        0 18px 40px rgba(15,23,42,0.13);
+
 }
 
 
@@ -1895,11 +1878,12 @@ header {
 
     transform:
         scaleX(1);
+
 }
 
 
 /* =========================================================
-   23. CARD IMAGE
+   24. CARD IMAGE
    ========================================================= */
 
 .card-image {
@@ -1916,31 +1900,6 @@ header {
     overflow:
         hidden;
 
-    background:
-        var(--navy-dark);
-}
-
-
-.card-image::after {
-
-    content:
-        '';
-
-    position:
-        absolute;
-
-    inset:
-        0;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(7,17,31,0.70),
-            rgba(7,17,31,0.03) 65%
-        );
-
-    pointer-events:
-        none;
 }
 
 
@@ -1959,20 +1918,38 @@ header {
         cover;
 
     transition:
-        transform 0.7s cubic-bezier(.2,.7,.2,1);
+        transform 0.6s ease;
+
 }
 
 
 .card:hover .card-image img {
 
     transform:
-        scale(1.09);
+        scale(1.08);
+
 }
 
 
-/* =========================================================
-   24. CARD NUMBER
-   ========================================================= */
+.card-image-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(4,10,20,0.65),
+            rgba(4,10,20,0.03) 65%
+        );
+
+}
+
+
+/* شماره */
 
 .service-number {
 
@@ -1980,13 +1957,13 @@ header {
         absolute;
 
     top:
-        14px;
+        12px;
 
     right:
-        14px;
+        13px;
 
     z-index:
-        5;
+        3;
 
     width:
         38px;
@@ -2003,32 +1980,35 @@ header {
     justify-content:
         center;
 
+    border:
+        1px solid rgba(255,255,255,0.45);
+
+    border-radius:
+        10px;
+
     color:
         #ffffff;
 
     background:
-        rgba(7,17,31,0.78);
-
-    border:
-        1px solid rgba(245,185,66,0.55);
-
-    border-radius:
-        50%;
+        rgba(5,12,24,0.55);
 
     backdrop-filter:
         blur(7px);
 
     font-family:
-        var(--font-accent);
+        Tahoma,
+        sans-serif;
 
     font-size:
-        0.9rem;
+        0.82rem;
+
+    font-weight:
+        700;
+
 }
 
 
-/* =========================================================
-   25. CARD ICON
-   ========================================================= */
+/* آیکون */
 
 .service-icon {
 
@@ -2036,19 +2016,19 @@ header {
         absolute;
 
     left:
-        18px;
+        15px;
 
     bottom:
-        -25px;
+        15px;
 
     z-index:
-        10;
+        3;
 
     width:
-        58px;
+        48px;
 
     height:
-        58px;
+        48px;
 
     display:
         flex;
@@ -2059,55 +2039,48 @@ header {
     justify-content:
         center;
 
+    border-radius:
+        50%;
+
     color:
-        #111827;
+        var(--navy);
 
     background:
         linear-gradient(
             135deg,
-            #ffe08a,
-            #f5b942,
-            #c58b16
+            var(--gold-light),
+            var(--gold)
         );
 
-    border:
-        4px solid #ffffff;
-
-    border-radius:
-        15px;
-
     box-shadow:
-        0 8px 20px rgba(15,23,42,0.16);
+        0 7px 20px rgba(0,0,0,0.22);
 
     font-size:
-        1.35rem;
+        1.15rem;
 
     transition:
-        var(--transition);
+        transform 0.35s ease;
+
 }
 
 
 .card:hover .service-icon {
 
     transform:
-        rotate(-5deg) scale(1.08);
+        rotate(-8deg)
+        scale(1.08);
+
 }
 
 
 /* =========================================================
-   26. CARD CONTENT
+   25. CARD CONTENT
    ========================================================= */
 
 .card-content {
 
-    position:
-        relative;
-
     flex:
         1;
-
-    padding:
-        2.1rem 1.35rem 1.3rem;
 
     display:
         flex;
@@ -2115,93 +2088,121 @@ header {
     flex-direction:
         column;
 
-    text-align:
-        right;
+    padding:
+        20px 20px 19px;
+
+}
+
+
+.card-title-row {
+
+    min-height:
+        48px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
 }
 
 
 .card-content h3 {
 
-    margin-bottom:
-        0.55rem;
+    position:
+        relative;
 
-    padding-left:
-        0.7rem;
+    padding-right:
+        13px;
 
     color:
-        var(--navy-dark);
-
-    font-family:
-        var(--font-heading);
+        var(--navy);
 
     font-size:
         1.18rem;
 
     line-height:
-        1.7;
+        1.6;
 
-    border-right:
-        3px solid var(--gold);
+}
 
-    border-left:
-        none;
+
+.card-content h3::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        5px;
+
+    right:
+        0;
+
+    width:
+        3px;
+
+    height:
+        calc(100% - 10px);
+
+    border-radius:
+        5px;
+
+    background:
+        var(--gold);
+
 }
 
 
 .card-content p {
 
-    margin:
-        0.3rem 0 1rem;
+    margin-top:
+        10px;
 
     color:
-        var(--text-secondary);
+        var(--text-gray);
 
     font-size:
-        0.92rem;
+        0.91rem;
 
     line-height:
-        1.9;
+        1.8;
+
 }
 
 
-/* =========================================================
-   27. CARD LINK
-   ========================================================= */
-
 .service-link {
 
-    margin-top:
-        auto;
-
     display:
-        inline-flex;
+        flex;
 
     align-items:
         center;
 
     justify-content:
-        flex-start;
+        space-between;
 
-    gap:
-        7px;
+    margin-top:
+        auto;
 
-    width:
-        fit-content;
+    padding-top:
+        15px;
 
     color:
         var(--gold-dark);
 
-    text-decoration:
-        none;
+    border-top:
+        1px solid #edf0f3;
 
     font-size:
-        0.9rem;
+        0.86rem;
 
     font-weight:
-        800;
+        700;
 
-    transition:
-        var(--transition);
 }
 
 
@@ -2209,25 +2210,20 @@ header {
 
     transition:
         transform 0.3s ease;
+
 }
 
 
-.service-link:hover {
-
-    color:
-        var(--navy-dark);
-}
-
-
-.service-link:hover i {
+.card:hover .service-link i {
 
     transform:
         translateX(-5px);
+
 }
 
 
 /* =========================================================
-   28. CONTACT SECTION
+   26. CONTACT
    ========================================================= */
 
 .contact {
@@ -2239,7 +2235,8 @@ header {
         0 auto;
 
     padding:
-        85px 1.5rem;
+        75px 25px;
+
 }
 
 
@@ -2252,13 +2249,10 @@ header {
         1fr 1fr;
 
     gap:
-        3rem;
+        35px;
 
     padding:
-        2.5rem;
-
-    background:
-        #ffffff;
+        35px;
 
     border:
         1px solid var(--border);
@@ -2266,26 +2260,35 @@ header {
     border-radius:
         20px;
 
+    background:
+        #ffffff;
+
     box-shadow:
-        var(--shadow-sm);
+        var(--shadow-small);
+
 }
 
 
 .contact-info h3 {
 
     margin-bottom:
-        1.5rem;
+        25px;
 
     color:
-        var(--navy-dark);
+        var(--navy);
 
     font-family:
         var(--font-accent);
 
     font-size:
-        1.35rem;
+        1.3rem;
+
 }
 
+
+/* =========================================================
+   27. CONTACT INFO
+   ========================================================= */
 
 .info-item {
 
@@ -2296,98 +2299,62 @@ header {
         flex-start;
 
     gap:
-        0.8rem;
+        12px;
 
     margin-bottom:
-        1.15rem;
+        18px;
 
     color:
-        var(--text-primary);
+        var(--text-dark);
+
+    font-size:
+        1rem;
 
     font-weight:
         600;
 
-    line-height:
-        1.9;
 }
 
 
-.info-item i {
+.activity-arrow {
+
+    flex-shrink:
+        0;
 
     color:
         var(--gold-dark);
 
-    margin-top:
-        5px;
+    font-size:
+        2.5rem;
+
+    line-height:
+        0.8;
+
+    animation:
+        pulseArrowReverse 1.5s infinite ease-in-out;
+
 }
 
-
-/* =========================================================
-   29. ACTIVITY ARROW
-   ========================================================= */
 
 @keyframes pulseArrowReverse {
 
     0% {
-
         transform:
             translateX(0);
     }
 
     50% {
-
         transform:
-            translateX(6px);
+            translateX(5px);
     }
 
     100% {
-
         transform:
             translateX(0);
     }
+
 }
 
-
-.info-item .activity-arrow {
-
-    display:
-        inline-block !important;
-
-    width:
-        auto !important;
-
-    height:
-        auto !important;
-
-    margin-top:
-        2px !important;
-
-    color:
-        var(--gold-dark) !important;
-
-    background:
-        none !important;
-
-    border:
-        none !important;
-
-    box-shadow:
-        none !important;
-
-    font-size:
-        2.6rem !important;
-
-    line-height:
-        0.8 !important;
-
-    animation:
-        pulseArrowReverse 1.5s infinite ease-in-out !important;
-}
-
-
-/* =========================================================
-   30. PHONE
-   ========================================================= */
 
 .phone-wrapper {
 
@@ -2396,6 +2363,7 @@ header {
 
     flex-direction:
         column;
+
 }
 
 
@@ -2411,14 +2379,12 @@ header {
         wrap;
 
     gap:
-        10px;
+        9px;
+
 }
 
 
 .phone-link {
-
-    display:
-        inline-block;
 
     direction:
         ltr;
@@ -2426,40 +2392,27 @@ header {
     color:
         var(--gold-dark);
 
+    font-family:
+        Tahoma,
+        sans-serif;
+
     font-size:
-        1.5rem;
+        1.4rem;
 
     font-weight:
-        900;
+        800;
 
-    line-height:
-        1.3;
-
-    text-decoration:
-        none;
-
-    transition:
-        color 0.3s ease;
-}
-
-
-.phone-link:hover {
-
-    color:
-        var(--navy-dark);
 }
 
 
 .inline-call-btn {
 
     width:
-        44px;
+        42px;
 
     height:
-        44px;
+        42px;
 
-    margin-right:
-        4px;
 }
 
 
@@ -2475,24 +2428,26 @@ header {
         var(--gold-dark);
 
     font-size:
-        0.85rem;
+        0.8rem;
+
 }
 
 
 /* =========================================================
-   31. CONTACT SOCIAL
+   28. CONTACT SOCIAL
    ========================================================= */
 
 .contact-social-section {
 
     margin-top:
-        1.5rem;
+        28px;
 
     padding-top:
-        1.2rem;
+        18px;
 
     border-top:
         1px dashed var(--border);
+
 }
 
 
@@ -2502,37 +2457,36 @@ header {
         block;
 
     margin-bottom:
-        0.8rem;
+        12px;
 
     color:
-        var(--text-secondary);
+        var(--text-gray);
 
     font-size:
-        0.95rem;
+        0.92rem;
 
     font-weight:
         700;
+
 }
 
 
 .contact-social-bar {
 
-    display:
-        flex;
+    direction:
+        rtl;
 
     justify-content:
         flex-start;
 
     gap:
-        12px;
+        11px;
 
-    direction:
-        rtl;
 }
 
 
 /* =========================================================
-   32. GOLD BUTTON
+   29. BUTTON GOLD
    ========================================================= */
 
 .btn-gold {
@@ -2547,21 +2501,10 @@ header {
         center;
 
     gap:
-        8px;
+        9px;
 
     padding:
-        0.8rem 1.7rem;
-
-    color:
-        #111827 !important;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ffe08a,
-            #f5b942,
-            #c58b16
-        );
+        12px 20px;
 
     border:
         none;
@@ -2569,11 +2512,15 @@ header {
     border-radius:
         9px;
 
-    text-decoration:
-        none;
+    color:
+        #111827 !important;
 
-    font-family:
-        var(--font-accent);
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-light),
+            var(--gold)
+        );
 
     font-size:
         1rem;
@@ -2581,26 +2528,31 @@ header {
     font-weight:
         800;
 
+    cursor:
+        pointer;
+
     box-shadow:
-        var(--gold-shadow);
+        0 7px 20px rgba(212,175,55,0.20);
 
     transition:
-        var(--transition);
+        all 0.3s ease;
+
 }
 
 
 .btn-gold:hover {
 
     transform:
-        translateY(-3px);
+        translateY(-2px);
 
     box-shadow:
-        0 12px 30px rgba(245,185,66,0.38);
+        0 10px 25px rgba(212,175,55,0.30);
+
 }
 
 
 /* =========================================================
-   33. CONTACT FORM
+   30. FORM
    ========================================================= */
 
 .contact-form form {
@@ -2612,14 +2564,8 @@ header {
         column;
 
     gap:
-        1rem;
-}
+        15px;
 
-
-.form-group {
-
-    width:
-        100%;
 }
 
 
@@ -2630,16 +2576,10 @@ header {
         100%;
 
     padding:
-        0.85rem 1rem;
-
-    color:
-        var(--text-primary);
-
-    background:
-        #ffffff !important;
+        13px 15px;
 
     border:
-        1px solid #1f2937 !important;
+        1px solid #17202d;
 
     border-radius:
         9px;
@@ -2647,8 +2587,11 @@ header {
     outline:
         none;
 
-    font-family:
-        var(--font-body);
+    color:
+        var(--text-dark);
+
+    background:
+        #ffffff;
 
     font-size:
         1rem;
@@ -2659,18 +2602,12 @@ header {
     direction:
         rtl;
 
-    transition:
-        var(--transition);
-}
-
-
-.form-group textarea {
-
-    min-height:
-        150px;
-
     resize:
         vertical;
+
+    transition:
+        all 0.3s ease;
+
 }
 
 
@@ -2681,7 +2618,8 @@ header {
         #64748b;
 
     font-size:
-        0.88rem;
+        0.87rem;
+
 }
 
 
@@ -2689,10 +2627,11 @@ header {
 .form-group textarea:focus {
 
     border-color:
-        var(--gold-dark) !important;
+        var(--gold) !important;
 
     box-shadow:
-        0 0 0 3px rgba(245,185,66,0.15);
+        0 0 0 3px rgba(212,175,55,0.15);
+
 }
 
 
@@ -2701,159 +2640,181 @@ header {
     width:
         100%;
 
-    border:
-        none;
-
-    cursor:
-        pointer;
 }
 
 
 .form-status {
 
     margin-top:
-        1rem;
+        12px;
 
     text-align:
         center;
 
-    font-size:
-        1rem;
-
     font-weight:
-        600;
+        700;
+
 }
 
 
 /* =========================================================
-   34. FOOTER
+   31. FOOTER
    ========================================================= */
 
 footer {
 
     padding:
-        2rem 1.5rem;
-
-    color:
-        #cbd5e1;
-
-    background:
-        linear-gradient(
-            135deg,
-            #050b14,
-            #0b132b
-        );
+        25px 20px;
 
     text-align:
         center;
 
-    font-family:
-        var(--font-body);
+    color:
+        rgba(255,255,255,0.80);
+
+    background:
+        var(--navy-dark);
 
     font-size:
-        0.95rem;
+        0.9rem;
 
-    border-top:
-        1px solid rgba(245,185,66,0.15);
 }
 
 
 /* =========================================================
-   35. TABLET
+   32. RESPONSIVE - TABLET
    ========================================================= */
 
 @media screen and (max-width: 1100px) {
 
-    .hero-modern {
-
-        min-height:
-            auto;
-
-        padding-top:
-            115px;
-
-        padding-bottom:
-            70px;
-    }
-
-
     .hero-modern-container {
 
-        grid-template-columns:
-            1fr 0.9fr;
-
         gap:
-            2rem;
-    }
+            25px;
 
-
-    .hero-profile-wrapper {
-
-        width:
-            380px;
-    }
-
-
-    .cards-grid {
-
-        gap:
-            1.3rem;
-    }
-}
-
-
-/* =========================================================
-   36. TABLET / MOBILE
-   ========================================================= */
-
-@media screen and (max-width: 992px) {
-
-    .nav-container {
-
-        padding:
-            0.65rem 1rem;
-    }
-
-
-    /* HERO */
-
-    .hero-modern {
-
-        padding:
-            105px 1.3rem 60px;
-    }
-
-
-    .hero-modern-container {
-
-        display:
-            flex;
-
-        flex-direction:
-            column-reverse;
-
-        text-align:
-            center;
-
-        gap:
-            1rem;
-    }
-
-
-    .hero-modern-content {
-
-        width:
-            100%;
-
-        text-align:
-            center;
     }
 
 
     .hero-modern-content h1 {
 
         font-size:
-            clamp(2rem, 6vw, 3rem);
+            clamp(2rem, 4vw, 3.2rem);
+
+    }
+
+
+    .hero-modern-visual {
+
+        min-height:
+            500px;
+
+    }
+
+
+    .hero-circle-one {
+
+        width:
+            430px;
+
+        height:
+            430px;
+
+    }
+
+
+    .hero-circle-two {
+
+        width:
+            350px;
+
+        height:
+            350px;
+
+    }
+
+
+    .hero-circle-three {
+
+        width:
+            270px;
+
+        height:
+            270px;
+
+    }
+
+
+    .hero-badge {
+
+        min-width:
+            155px;
+
+    }
+
+}
+
+
+/* =========================================================
+   33. RESPONSIVE - 992
+   ========================================================= */
+
+@media screen and (max-width: 992px) {
+
+    .hero-modern {
+
+        min-height:
+            auto;
+
+        padding:
+            95px 20px 65px;
+
+    }
+
+
+    .hero-modern-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            20px;
+
+    }
+
+
+    .hero-modern-content {
+
+        order:
+            2;
+
+        align-items:
+            center;
+
+        text-align:
+            center;
+
+    }
+
+
+    .hero-modern-visual {
+
+        order:
+            1;
+
+        min-height:
+            500px;
+
+    }
+
+
+    .hero-modern-content h1::after {
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+
     }
 
 
@@ -2861,13 +2822,7 @@ footer {
 
         justify-content:
             center;
-    }
 
-
-    .hero-description {
-
-        margin:
-            1.2rem auto;
     }
 
 
@@ -2875,6 +2830,7 @@ footer {
 
         justify-content:
             center;
+
     }
 
 
@@ -2882,6 +2838,7 @@ footer {
 
         justify-content:
             center;
+
     }
 
 
@@ -2889,56 +2846,39 @@ footer {
 
         justify-content:
             center;
-    }
 
-
-    .hero-modern-visual {
-
-        min-height:
-            480px;
-
-        width:
-            100%;
     }
 
 
     .hero-profile-wrapper {
 
-        width:
-            360px;
+        max-width:
+            420px;
+
     }
 
 
     .hero-modern-logo {
 
         right:
-            8%;
+            14%;
 
-        top:
-            4%;
     }
 
 
     .hero-badge-one {
 
         left:
-            8%;
+            12%;
+
     }
 
 
     .hero-badge-two {
 
         right:
-            7%;
-    }
+            12%;
 
-
-    /* SERVICES */
-
-    .services {
-
-        padding:
-            65px 1.2rem;
     }
 
 
@@ -2947,49 +2887,30 @@ footer {
         grid-template-columns:
             repeat(2, 1fr);
 
-        gap:
-            1.4rem;
     }
 
-
-    /* CONTACT */
 
     .contact-container {
 
         grid-template-columns:
             1fr;
 
-        gap:
-            2rem;
-
-        padding:
-            2rem;
     }
 
-
-    .mobile-only-msg {
-
-        display:
-            block;
-    }
 }
 
 
 /* =========================================================
-   37. MOBILE
+   34. RESPONSIVE - 700
    ========================================================= */
 
-@media screen and (max-width: 600px) {
-
-    /* HEADER */
+@media screen and (max-width: 700px) {
 
     .nav-container {
 
         padding:
-            0.55rem 0.7rem;
+            7px 12px;
 
-        gap:
-            0.5rem;
     }
 
 
@@ -2997,16 +2918,18 @@ footer {
 
         gap:
             6px;
+
     }
 
 
     .header-social-item {
 
         width:
-            31px;
+            32px;
 
         height:
-            31px;
+            32px;
+
     }
 
 
@@ -3014,22 +2937,184 @@ footer {
 
         font-size:
             0.82rem;
+
     }
 
 
-    /* HERO */
+    .hero-modern {
+
+        padding-top:
+            85px;
+
+    }
+
+
+    .hero-modern-visual {
+
+        min-height:
+            430px;
+
+    }
+
+
+    .hero-profile-wrapper {
+
+        max-width:
+            350px;
+
+    }
+
+
+    .hero-circle-one {
+
+        width:
+            370px;
+
+        height:
+            370px;
+
+    }
+
+
+    .hero-circle-two {
+
+        width:
+            300px;
+
+        height:
+            300px;
+
+    }
+
+
+    .hero-circle-three {
+
+        width:
+            230px;
+
+        height:
+            230px;
+
+    }
+
+
+    .hero-modern-logo {
+
+        width:
+            90px;
+
+        height:
+            90px;
+
+        top:
+            15px;
+
+        right:
+            8%;
+
+    }
+
+
+    .hero-badge {
+
+        padding:
+            8px 10px;
+
+        min-width:
+            145px;
+
+    }
+
+
+    .hero-badge i {
+
+        width:
+            30px;
+
+        height:
+            30px;
+
+        font-size:
+            0.85rem;
+
+    }
+
+
+    .hero-badge strong {
+
+        font-size:
+            0.76rem;
+
+    }
+
+
+    .hero-badge span {
+
+        font-size:
+            0.68rem;
+
+    }
+
+
+    .hero-badge-one {
+
+        left:
+            2%;
+
+        bottom:
+            45px;
+
+    }
+
+
+    .hero-badge-two {
+
+        right:
+            2%;
+
+        bottom:
+            5px;
+
+    }
+
+
+    .cards-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .contact-container {
+
+        padding:
+            25px 20px;
+
+    }
+
+}
+
+
+/* =========================================================
+   35. RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
 
     .hero-modern {
 
         padding:
-            90px 1rem 50px;
+            82px 15px 60px;
+
     }
 
 
     .hero-modern-container {
 
         gap:
-            0;
+            5px;
+
     }
 
 
@@ -3037,13 +3122,15 @@ footer {
 
         min-height:
             390px;
+
     }
 
 
     .hero-profile-wrapper {
 
-        width:
-            290px;
+        max-width:
+            310px;
+
     }
 
 
@@ -3054,6 +3141,7 @@ footer {
 
         height:
             330px;
+
     }
 
 
@@ -3064,6 +3152,7 @@ footer {
 
         height:
             270px;
+
     }
 
 
@@ -3074,183 +3163,134 @@ footer {
 
         height:
             210px;
-    }
 
-
-    .hero-modern-logo {
-
-        width:
-            75px;
-
-        height:
-            75px;
-
-        right:
-            3%;
-    }
-
-
-    .hero-badge {
-
-        padding:
-            0.45rem 0.65rem;
-
-        font-size:
-            0.72rem;
-    }
-
-
-    .hero-badge-one {
-
-        left:
-            0;
-
-        top:
-            20%;
-    }
-
-
-    .hero-badge-two {
-
-        right:
-            0;
-
-        bottom:
-            15%;
     }
 
 
     .hero-modern-content h1 {
 
         font-size:
-            1.75rem;
+            1.9rem;
 
-        line-height:
-            1.6;
-    }
+        margin-bottom:
+            10px;
 
-
-    .hero-eyebrow {
-
-        font-size:
-            0.85rem;
     }
 
 
     .hero-title-line {
 
         font-size:
-            0.95rem;
-    }
-
-
-    .hero-description {
-
-        font-size:
-            0.92rem;
+            0.98rem;
 
         line-height:
-            2;
+            1.7;
+
     }
 
 
-    .credential {
+    .hero-credentials {
 
-        width:
-            100%;
+        gap:
+            7px;
 
-        justify-content:
-            center;
+        margin-top:
+            13px;
+
+    }
+
+
+    .hero-credentials span {
+
+        padding:
+            6px 9px;
 
         font-size:
-            0.82rem;
+            0.78rem;
+
     }
 
 
     .hero-actions {
 
-        flex-direction:
-            column;
-
         width:
             100%;
+
+        gap:
+            8px;
+
+        margin-top:
+            18px;
+
     }
 
 
-    .hero-btn {
-
-        width:
-            100%;
+    .hero-actions a {
 
         min-width:
             0;
+
+        flex:
+            1;
+
+        padding:
+            10px 12px;
+
+        font-size:
+            0.88rem;
+
     }
 
 
     .hero-locations {
 
+        margin-top:
+            14px;
+
         font-size:
-            0.8rem;
+            0.78rem;
 
-        line-height:
-            2;
-    }
-
-
-    /* SERVICES */
-
-    .services {
-
-        padding:
-            55px 1rem;
     }
 
 
     .section-title {
 
         margin-bottom:
-            2rem;
+            30px;
+
     }
 
 
     .section-title h2 {
 
         font-size:
-            1.45rem;
+            1.5rem;
+
     }
 
 
-    .cards-grid {
+    .services,
+    .contact {
 
-        grid-template-columns:
-            1fr;
+        padding:
+            55px 15px;
 
-        gap:
-            1.3rem;
-    }
-
-
-    .card {
-
-        min-height:
-            360px;
-
-        border-radius:
-            16px;
     }
 
 
     .card-image {
 
         height:
-            205px;
+            200px;
+
     }
 
 
     .card-content {
 
         padding:
-            2rem 1.1rem 1.2rem;
+            17px;
+
     }
 
 
@@ -3258,67 +3298,41 @@ footer {
 
         font-size:
             1.08rem;
-    }
 
-
-    .card-content p {
-
-        font-size:
-            0.88rem;
-    }
-
-
-    /* CONTACT */
-
-    .contact {
-
-        padding:
-            55px 1rem;
-    }
-
-
-    .contact-container {
-
-        padding:
-            1.3rem;
-
-        border-radius:
-            15px;
-    }
-
-
-    .contact-info h3 {
-
-        font-size:
-            1.15rem;
     }
 
 
     .phone-link {
 
         font-size:
-            1.35rem;
+            1.3rem;
+
     }
 
 
-    /* FOOTER */
+    .mobile-only-msg {
 
-    footer {
+        display:
+            block;
 
-        padding:
-            1.5rem 1rem;
-
-        font-size:
-            0.85rem;
     }
+
 }
 
 
 /* =========================================================
-   38. VERY SMALL MOBILE
+   36. SMALL MOBILE
    ========================================================= */
 
 @media screen and (max-width: 400px) {
+
+    .logo {
+
+        font-size:
+            0.75rem;
+
+    }
+
 
     .header-social-item {
 
@@ -3327,6 +3341,7 @@ footer {
 
         height:
             29px;
+
     }
 
 
@@ -3334,50 +3349,108 @@ footer {
 
         min-height:
             350px;
+
     }
 
 
     .hero-profile-wrapper {
 
-        width:
-            260px;
+        max-width:
+            280px;
+
     }
 
 
     .hero-modern-logo {
 
         width:
-            65px;
+            72px;
 
         height:
-            65px;
+            72px;
+
     }
 
 
     .hero-badge {
 
-        font-size:
-            0.67rem;
+        min-width:
+            125px;
+
+        padding:
+            6px 8px;
+
+    }
+
+
+    .hero-badge-one {
+
+        left:
+            0;
+
+    }
+
+
+    .hero-badge-two {
+
+        right:
+            0;
+
     }
 
 
     .hero-modern-content h1 {
 
         font-size:
-            1.55rem;
+            1.65rem;
+
     }
 
 
-    .card-image {
+    .hero-title-line {
 
-        height:
-            190px;
+        font-size:
+            0.88rem;
+
     }
+
+
+    .hero-credentials span {
+
+        font-size:
+            0.72rem;
+
+    }
+
+
+    .hero-actions {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .hero-actions a {
+
+        width:
+            100%;
+
+    }
+
+
+    .phone-row {
+
+        align-items:
+            flex-start;
+
+    }
+
 }
 
 
 /* =========================================================
-   39. REDUCED MOTION
+   37. REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -3386,6 +3459,7 @@ footer {
 
         scroll-behavior:
             auto;
+
     }
 
 
@@ -3401,5 +3475,7 @@ footer {
 
         transition-duration:
             0.01ms !important;
+
     }
+
 }
