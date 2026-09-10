@@ -753,10 +753,10 @@ header {
 
     margin: 0 0 12px;
 
-    color: #fff;
+    color: #ffffff;
 
     font-size:
-        clamp(2.1rem,4vw,3.4rem);
+        clamp(2.1rem,4vw,2.7rem);
 
     font-weight: 900;
 
@@ -804,7 +804,7 @@ header {
 
     margin: 2px 0;
 
-    color: rgba(255,255,255,.94);
+    color: #ffffff !important;
 
     font-size: 1.7rem;
 
@@ -859,7 +859,7 @@ header {
 
     background: transparent;
 
-    color: #fff;
+    color: #ffffff !important;
 
     font-size: 1.4rem;
 
