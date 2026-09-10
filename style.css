@@ -804,7 +804,7 @@ header {
 
     margin: 2px 0;
 
-    color: #fff;
+    color: rgba(255,255,255,.94);
 
     font-size: 1.1rem;
 
@@ -832,7 +832,9 @@ header {
 
     display: flex;
 
-    flex-wrap: wrap;
+    flex-direction: column;
+
+    align-items: flex-start;
 
     gap: 8px;
 
@@ -860,24 +862,12 @@ header {
         rgba(255,255,255,.055);
 
     color:
-        #fff;
+        rgba(255,255,255,.88);
 
     font-size: .86rem;
 
     backdrop-filter:
         blur(8px);
-
-}
-
-
-/* انتقال متن مدرک حسابداری به سطر بعد، داخل همان باکس */
-.hero-credentials span:nth-child(2) {
-
-    flex-direction: column;
-
-    align-items: center;
-
-    text-align: center;
 
 }
 
@@ -1163,7 +1153,7 @@ header {
 
 .hero-badge span {
 
-    color: #fff;
+    color: rgba(255,255,255,.65);
 
     font-size: .74rem;
 
@@ -1210,7 +1200,7 @@ header {
 
     align-items: center;
 
-    color: #fff;
+    color: rgba(255,255,255,.55);
 
     font-size: .75rem;
 
