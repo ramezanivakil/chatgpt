@@ -756,7 +756,7 @@ header {
     color: #fff;
 
     font-size:
-        clamp(2.1rem,4vw,2.5rem);
+        clamp(2.1rem,4vw,3.4rem);
 
     font-weight: 900;
 
@@ -836,7 +836,7 @@ header {
 
     align-items: flex-start;
 
-    gap: 8px;
+    gap: 5px;
 
     margin-top: 15px;
 
@@ -851,23 +851,19 @@ header {
 
     gap: 7px;
 
-    padding: 7px 11px;
+    padding: 2px 0;
 
-    border:
-        1px solid rgba(212,175,55,.32);
+    border: none;
 
-    border-radius: 8px;
+    border-radius: 0;
 
-    background:
-        rgba(255,255,255,.055);
+    background: transparent;
 
-    color:
-        rgba(255,255,255,.88);
+    color: #fff;
 
     font-size: .86rem;
 
-    backdrop-filter:
-        blur(8px);
+    backdrop-filter: none;
 
 }
 
@@ -2070,6 +2066,8 @@ footer {
 
     .hero-credentials {
 
+        align-items: center;
+
         justify-content: center;
 
     }
@@ -2246,7 +2244,7 @@ footer {
 
     .hero-credentials span {
 
-        padding: 6px 8px;
+        padding: 2px 0;
 
         font-size: .75rem;
 
