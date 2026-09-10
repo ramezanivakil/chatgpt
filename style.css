@@ -554,7 +554,7 @@ header {
 
     border: 1px solid var(--border);
 
-    border-radius: 8px;
+    border-radius: 0;
 
     background: #fff;
 
@@ -749,14 +749,14 @@ header {
 
 /* نام */
 
- {
+.hero-modern-content h1 {
 
     margin: 0 0 12px;
 
-    color: #ffffff;
+    color: #ffffff !important;
 
     font-size:
-        clamp(2.1rem,4vw,2.7rem);
+        clamp(2.1rem, 4vw, 2.7rem);
 
     font-weight: 900;
 
@@ -806,7 +806,7 @@ header {
 
     color: #ffffff !important;
 
-    font-size: 1.7rem;
+    font-size: 1.1rem;
 
     font-weight: 700;
 
@@ -836,7 +836,7 @@ header {
 
     align-items: flex-start;
 
-    gap: 5px;
+    gap: 8px;
 
     margin-top: 15px;
 
@@ -855,13 +855,14 @@ header {
 
     border: none;
 
-    border-radius: 0;
+    border-radius: 8px;
 
     background: transparent;
 
-    color: #ffffff !important;
+    color:
+        #ffffff !important;
 
-    font-size: 1.4rem;
+    font-size: .86rem;
 
     backdrop-filter: none;
 
@@ -2066,8 +2067,6 @@ footer {
 
     .hero-credentials {
 
-        align-items: center;
-
         justify-content: center;
 
     }
@@ -2221,14 +2220,16 @@ footer {
 
     .hero-modern-content h1 {
 
-        font-size: 1.7rem;
+        font-size: 1.9rem;
+        color: #ffffff !important;
 
     }
 
 
     .hero-title-line {
 
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        color: #ffffff !important;
 
     }
 
@@ -2246,7 +2247,8 @@ footer {
 
         padding: 2px 0;
 
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        color: #ffffff !important;
 
     }
 
@@ -2381,21 +2383,21 @@ footer {
 
     .hero-modern-content h1 {
 
-        font-size: 1.55rem;
+        font-size: 1.7rem;
 
     }
 
 
     .hero-title-line {
 
-        font-size: .84rem;
+        font-size: .95rem.84rem;
 
     }
 
 
     .hero-credentials span {
 
-        font-size: .68rem;
+        font-size: .78rem.68rem;
 
     }
 
