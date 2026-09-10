@@ -1,510 +1,692 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>دفتر وکالت و مشاوره حقوقی | محمدرضا محمدی رمضانی</title>
 
-    <meta name="description"
-          content="وب سایت شخصی رضا رمضانی، وکیل دادگستری">
+    <!-- آیکون‌های FontAwesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <title>رضا رمضانی | وکیل دادگستری</title>
-
+    <!-- فایل استایل CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+    <!-- =========================================================
+         نوار بالای سایت
+         ========================================================= -->
+    <header>
+        <div class="nav-container">
 
-<header>
-
-    <nav class="navbar">
-
-        <div class="site-name">
-            رضا رمضانی
-        </div>
-
-        <div class="menu">
-
-            <a href="#about">درباره من</a>
-
-            <a href="#experience">سوابق</a>
-
-            <a href="#services">خدمات حقوقی</a>
-
-            <a href="#articles">مقالات</a>
-
-            <a href="#apps">برنامه‌ها</a>
-
-            <a href="#testimonials">نظرات</a>
-
-            <a href="#contact">تماس</a>
-
-        </div>
-
-    </nav>
-
-</header>
-
-
-<!-- ================= HERO ================= -->
-
-<section id="home" class="hero">
-
-    <div class="hero-content">
-
-
-        <!-- لوگوی بزرگ -->
-
-        <div class="hero-logo">
-
-            <img
-                src="images/logo.png"
-                alt="لوگوی رضا رمضانی"
-            >
-
-        </div>
-
-
-        <!-- متن معرفی -->
-
-        <div class="hero-text">
-
-            <h1>
-                رضا رمضانی
-            </h1>
-
-            <h2>
-                وکیل دادگستری
-            </h2>
-
-            <p>
-                ارائه خدمات و مشاوره حقوقی
-                با رویکردی دقیق، مسئولانه
-                و حرفه‌ای
-            </p>
-
-            <a href="#contact" class="btn">
-                ارتباط با من
+            <!-- عنوان راه‌های ارتباطی -->
+            <a href="#" class="logo">
+                <span>راه‌های ارتباطی</span>
             </a>
 
+            <!-- آیکون‌های پیام‌رسان‌ها و تماس -->
+            <div class="header-left-action">
+                <div class="header-social-bar">
+
+                    <!-- بله -->
+                    <a href="https://ble.ir/ramezanivakil1"
+                       target="_blank"
+                       rel="noopener"
+                       class="header-social-item"
+                       title="بله">
+                        <img src="images/bale.png" alt="بله">
+                    </a>
+
+                    <!-- ایتا -->
+                    <a href="https://eitaa.com/ramezanivakil"
+                       target="_blank"
+                       rel="noopener"
+                       class="header-social-item"
+                       title="ایتا">
+                        <img src="images/eitaa.png" alt="ایتا">
+                    </a>
+
+                    <!-- روبیکا -->
+                    <a href="https://rubika.ir/ramezanivakil"
+                       target="_blank"
+                       rel="noopener"
+                       class="header-social-item"
+                       title="روبیکا">
+                        <img src="images/rubika.png" alt="روبیکا">
+                    </a>
+
+                    <!-- واتساپ -->
+                    <a href="https://wa.me/+989127442394"
+                       target="_blank"
+                       rel="noopener"
+                       class="header-social-item"
+                       title="واتساپ">
+                        <img src="images/whatsapp.png" alt="واتساپ">
+                    </a>
+
+                    <!-- تلگرام -->
+                    <a href="https://t.me/ramezanivakil"
+                       target="_blank"
+                       rel="noopener"
+                       class="header-social-item"
+                       title="تلگرام">
+                        <img src="images/telegram.png" alt="تلگرام">
+                    </a>
+
+                    <!-- تماس -->
+                    <button type="button"
+                            class="header-social-item call-btn"
+                            id="headerCallBtn"
+                            title="تماس تلفنی">
+                        <img src="images/phone.png" alt="تماس تلفنی">
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- =========================================================
+         HERO جدید
+         ========================================================= -->
+    <section class="hero-modern" id="hero">
+
+        <!-- خطوط و المان‌های تزئینی -->
+        <div class="hero-decoration hero-decoration-one"></div>
+        <div class="hero-decoration hero-decoration-two"></div>
+        <div class="hero-pattern"></div>
+
+        <div class="hero-modern-container">
+
+            <!-- =================================================
+                 ستون اطلاعات
+                 ================================================= -->
+            <div class="hero-modern-content">
+
+                <!-- برچسب بالای معرفی -->
+                <div class="hero-eyebrow">
+                    <span class="hero-eyebrow-line"></span>
+                    <span>دفتر وکالت و مشاوره حقوقی</span>
+                </div>
+
+
+                <!-- نام -->
+                <h1 class="hero-modern-name">
+                    محمدرضا محمدی رمضانی
+                </h1>
+
+
+                <!-- عناوین -->
+                <div class="hero-modern-titles">
+
+                    <div class="hero-title-item">
+                        <span class="hero-title-icon">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </span>
+
+                        <span>
+                            وکیل پایه یک دادگستری
+                        </span>
+                    </div>
+
+
+                    <div class="hero-title-item">
+                        <span class="hero-title-icon">
+                            <i class="fa-solid fa-gavel"></i>
+                        </span>
+
+                        <span>
+                            کارشناس رسمی دادگستری
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- مشخصات تحصیلی -->
+                <div class="hero-credentials">
+
+                    <div class="credential-item">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>
+                            کارشناسی ارشد و کارشناسی حقوق خصوصی
+                        </span>
+                    </div>
+
+                    <div class="credential-item">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>
+                            دکتری، کارشناسی ارشد و کارشناسی حسابداری
+                        </span>
+                    </div>
+
+                    <div class="credential-item">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>
+                            هیأت علمی دانشگاه
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- توضیح کوتاه -->
+                <p class="hero-modern-description">
+                    ارائه خدمات تخصصی حقوقی، کیفری، خانواده، ملکی و ثبتی،
+                    امور شرکت‌ها و ورشکستگی با رویکردی دقیق، تخصصی و حرفه‌ای.
+                </p>
+
+
+                <!-- دکمه‌های اقدام -->
+                <div class="hero-modern-actions">
+
+                    <a href="#contact" class="hero-btn hero-btn-primary">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>درخواست مشاوره</span>
+                    </a>
+
+                    <a href="tel:09127442394"
+                       class="hero-btn hero-btn-secondary">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+                            تماس مستقیم
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- محل فعالیت -->
+                <div class="hero-locations">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        ابهر، خرمدره، هیدج، شریف‌آباد و صائین‌قلعه
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ستون تصویر و لوگو
+                 ================================================= -->
+            <div class="hero-modern-visual">
+
+                <!-- حلقه تزئینی -->
+                <div class="hero-circle hero-circle-outer"></div>
+                <div class="hero-circle hero-circle-middle"></div>
+
+
+                <!-- نور پشت تصویر -->
+                <div class="hero-glow"></div>
+
+
+                <!-- لوگوی دفتر -->
+                <div class="hero-modern-logo">
+
+                    <img src="images/logo.png"
+                         alt="لوگوی دفتر وکالت">
+
+                </div>
+
+
+                <!-- تصویر وکیل -->
+                <div class="hero-modern-image">
+
+                    <img src="images/profile.png"
+                         alt="محمدرضا محمدی رمضانی - وکیل پایه یک دادگستری">
+
+                </div>
+
+
+                <!-- برچسب شناور -->
+                <div class="hero-badge hero-badge-top">
+
+                    <span class="hero-badge-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </span>
+
+                    <span>
+                        خدمات تخصصی حقوقی
+                    </span>
+
+                </div>
+
+
+                <div class="hero-badge hero-badge-bottom">
+
+                    <span class="hero-badge-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </span>
+
+                    <span>
+                        مشاوره و پیگیری پرونده
+                    </span>
+
+                </div>
+
+            </div>
+
         </div>
 
-    </div>
 
-</section>
+        <!-- فلش اسکرول -->
+        <a href="#services"
+           class="hero-scroll-down"
+           aria-label="مشاهده حوزه‌های تخصصی">
+
+            <span>مشاهده حوزه‌های تخصصی</span>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </a>
+
+    </section>
 
 
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-    <div class="container">
+    <!-- =========================================================
+         بخش حوزه‌های تخصصی
+         ========================================================= -->
+    <section class="services" id="services">
 
         <div class="section-title">
+            <h2>حوزه‌های تخصصی فعالیت</h2>
+        </div>
 
-            <h2>درباره من</h2>
+        <div class="cards-grid">
 
-            <span></span>
+            <!-- ورشکستگی و شرکت‌ها -->
+            <div class="card">
+
+                <div class="card-image">
+                    <img src="images/sherkat.jpg"
+                         alt="مدیر تصفیه ورشکستگی و انحلال شرکت‌ها">
+                </div>
+
+                <div class="card-content">
+                    <h3>
+                        مدیر تصفیه ورشکستگی و انحلال شرکت‌ها
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <!-- دعاوی حقوقی -->
+            <div class="card">
+
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80"
+                         alt="دعاوی حقوقی">
+                </div>
+
+                <div class="card-content">
+                    <h3>
+                        دعاوی حقوقی
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <!-- دعاوی کیفری -->
+            <div class="card">
+
+                <div class="card-image">
+                    <img src="images/kifari.jpg"
+                         alt="دعاوی کیفری">
+                </div>
+
+                <div class="card-content">
+                    <h3>
+                        دعاوی کیفری
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <!-- دعاوی خانواده -->
+            <div class="card">
+
+                <div class="card-image">
+                    <img src="images/khanevade.jpg"
+                         alt="دعاوی خانواده">
+                </div>
+
+                <div class="card-content">
+                    <h3>
+                        دعاوی خانواده
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <!-- دعاوی شرکت‌ها -->
+            <div class="card">
+
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80"
+                         alt="دعاوی شرکت‌ها">
+                </div>
+
+                <div class="card-content">
+                    <h3>
+                        دعاوی شرکت‌ها
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <!-- امور ملکی و ثبتی -->
+            <div class="card">
+
+                <div class="card-image">
+                    <img src="images/sabt.jpg"
+                         alt="امور ملکی و ثبتی">
+                </div>
+
+                <div class="card-content">
+                    <h3>
+                        امور ملکی و ثبتی
+                    </h3>
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="about-box">
+    </section>
+
+
+    <!-- =========================================================
+         بخش تماس و مشاوره
+         ========================================================= -->
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+            <h2>فرم تماس و مشاوره</h2>
+        </div>
+
+
+        <div class="contact-container">
+
+            <!-- اطلاعات تماس -->
+            <div class="contact-info">
+
+                <h3>
+                    محل فعالیت و شماره تماس
+                </h3>
+
+
+                <!-- محل فعالیت -->
+                <div class="info-item">
+
+                    <span class="activity-arrow">
+                        &raquo;
+                    </span>
+
+                    <span>
+                        ابهر، خرمدره، هیدج، شریف‌آباد، صائین‌قلعه
+                    </span>
+
+                </div>
+
+
+                <!-- شماره تماس -->
+                <div class="info-item phone-item">
+
+                    <span class="activity-arrow">
+                        &raquo;
+                    </span>
+
+                    <div class="phone-wrapper">
+
+                        <div class="phone-row">
+
+                            <span>
+                                شماره تماس:
+                            </span>
+
+                            <a href="tel:09127442394"
+                               class="phone-link">
+                                ۰۹۱۲۷۴۴۲۳۹۴
+                            </a>
+
+                            <a href="tel:09127442394"
+                               class="header-social-item call-btn inline-call-btn"
+                               title="تماس مستقیم">
+
+                                <img src="images/phone.png"
+                                     alt="تماس مستقیم">
+
+                            </a>
+
+                        </div>
+
+                        <small class="mobile-only-msg">
+                            برای تماس مستقیم روی شماره یا آیکون ضربه بزنید
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- پیام‌رسان‌ها -->
+                <div class="contact-social-section">
+
+                    <span>
+                        راه‌های ارتباطی در پیام‌رسان‌ها:
+                    </span>
+
+                    <div class="header-social-bar contact-social-bar">
+
+                        <a href="https://ble.ir/ramezanivakil1"
+                           target="_blank"
+                           rel="noopener"
+                           class="header-social-item"
+                           title="بله">
+
+                            <img src="images/bale.png"
+                                 alt="بله">
+
+                        </a>
+
+
+                        <a href="https://eitaa.com/ramezanivakil"
+                           target="_blank"
+                           rel="noopener"
+                           class="header-social-item"
+                           title="ایتا">
+
+                            <img src="images/eitaa.png"
+                                 alt="ایتا">
+
+                        </a>
+
+
+                        <a href="https://rubika.ir/ramezanivakil"
+                           target="_blank"
+                           rel="noopener"
+                           class="header-social-item"
+                           title="روبیکا">
+
+                            <img src="images/rubika.png"
+                                 alt="روبیکا">
+
+                        </a>
+
+
+                        <a href="https://wa.me/+989127442394"
+                           target="_blank"
+                           rel="noopener"
+                           class="header-social-item"
+                           title="واتساپ">
+
+                            <img src="images/whatsapp.png"
+                                 alt="واتساپ">
+
+                        </a>
+
+
+                        <a href="https://t.me/ramezanivakil"
+                           target="_blank"
+                           rel="noopener"
+                           class="header-social-item"
+                           title="تلگرام">
+
+                            <img src="images/telegram.png"
+                                 alt="تلگرام">
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- فرم -->
+            <div class="contact-form">
+
+                <form id="consultationForm">
+
+                    <div class="form-group">
+
+                        <input type="text"
+                               id="name"
+                               placeholder="نام و نام خانوادگی"
+                               required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <input type="tel"
+                               id="phone"
+                               placeholder="شماره تماس"
+                               required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <textarea id="message"
+                                  rows="4"
+                                  placeholder="شرح کوتاه موضوع حقوقی شما، با ثبت شماره همراه خود در کوتاه‌ترین زمان با شما تماس گرفته خواهد شد"
+                                  required></textarea>
+
+                    </div>
+
+
+                    <button type="submit"
+                            class="btn-gold form-btn">
+
+                        ارسال درخواست مشاوره
+
+                    </button>
+
+                </form>
+
+
+                <div id="formStatus"
+                     class="form-status">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         پاپ‌آپ تماس
+         ========================================================= -->
+    <div id="phoneModal"
+         class="modal-overlay">
+
+        <div class="modal-card">
+
+            <button class="modal-close"
+                    id="modalCloseBtn">
+                &times;
+            </button>
+
+
+            <div class="modal-icon">
+                <i class="fa-solid fa-phone-volume"></i>
+            </div>
+
+
+            <h3>
+                شماره تماس وکیل
+            </h3>
+
 
             <p>
-                در این قسمت معرفی کامل شما،
-                سوابق حرفه‌ای، زمینه‌های فعالیت
-                و سایر اطلاعات مورد نظر شما
-                قرار خواهد گرفت.
+                جهت هماهنگی و دریافت مشاوره تماس بگیرید:
             </p>
 
-            <br>
 
-            <p>
-                هدف من ارائه خدمات حقوقی دقیق
-                و حرفه‌ای و پیگیری مسئولانه
-                امور موکلین است.
-            </p>
+            <div class="modal-phone-box">
+
+                <span id="modalPhoneNumber">
+                    09127442394
+                </span>
+
+                <button id="copyPhoneBtn"
+                        class="copy-btn"
+                        title="کپی شماره">
+
+                    <i class="fa-regular fa-copy"></i>
+
+                </button>
+
+            </div>
+
+
+            <span id="copyToast"
+                  class="copy-toast">
+                شماره کپی شد!
+            </span>
 
         </div>
 
     </div>
 
-</section>
 
+    <!-- =========================================================
+         فوتر
+         ========================================================= -->
+    <footer>
 
-<!-- ================= EXPERIENCE ================= -->
+        <p>
+            © تمامی حقوق این وب‌سایت متعلق به دفتر وکالت می‌باشد.
+        </p>
 
-<section id="experience">
+    </footer>
 
-    <div class="container">
 
-        <div class="section-title">
-
-            <h2>سوابق</h2>
-
-            <span></span>
-
-        </div>
-
-        <div class="experience-box">
-
-            <div class="experience-item">
-
-                <h3>وکیل دادگستری</h3>
-
-                <p>
-                    ارائه خدمات و مشاوره حقوقی
-                </p>
-
-            </div>
-
-            <div class="experience-item">
-
-                <h3>فعالیت حرفه‌ای حقوقی</h3>
-
-                <p>
-                    پیگیری و دفاع از پرونده‌های
-                    حقوقی و کیفری
-                </p>
-
-            </div>
-
-            <div class="experience-item">
-
-                <h3>مشاوره حقوقی</h3>
-
-                <p>
-                    ارائه راهکارهای حقوقی متناسب
-                    با شرایط هر پرونده
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SERVICES ================= -->
-
-<section id="services" class="services">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>خدمات حقوقی</h2>
-
-            <span></span>
-
-        </div>
-
-        <div class="services-grid">
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    ⚖️
-                </div>
-
-                <h3>
-                    مشاوره حقوقی
-                </h3>
-
-                <p>
-                    ارائه مشاوره تخصصی
-                    در موضوعات مختلف حقوقی.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    📄
-                </div>
-
-                <h3>
-                    دعاوی حقوقی
-                </h3>
-
-                <p>
-                    پیگیری و دفاع در
-                    پرونده‌های حقوقی.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    ⚖️
-                </div>
-
-                <h3>
-                    دعاوی کیفری
-                </h3>
-
-                <p>
-                    دفاع و پیگیری پرونده‌های
-                    کیفری.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ARTICLES ================= -->
-
-<section id="articles" class="articles">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>مقالات حقوقی</h2>
-
-            <span></span>
-
-        </div>
-
-        <div class="articles-grid">
-
-
-            <article class="article-card">
-
-                <h3>
-                    مقاله حقوقی اول
-                </h3>
-
-                <p>
-                    در این قسمت خلاصه‌ای
-                    از مقاله حقوقی قرار می‌گیرد.
-                </p>
-
-            </article>
-
-
-            <article class="article-card">
-
-                <h3>
-                    مقاله حقوقی دوم
-                </h3>
-
-                <p>
-                    در این قسمت خلاصه‌ای
-                    از مقاله حقوقی قرار می‌گیرد.
-                </p>
-
-            </article>
-
-
-            <article class="article-card">
-
-                <h3>
-                    مقاله حقوقی سوم
-                </h3>
-
-                <p>
-                    در این قسمت خلاصه‌ای
-                    از مقاله حقوقی قرار می‌گیرد.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= APPS ================= -->
-
-<section id="apps">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>برنامه‌های من</h2>
-
-            <span></span>
-
-        </div>
-
-        <div class="apps-box">
-
-            <div class="apps-text">
-
-                <h3>
-                    برنامه کاربردی
-                </h3>
-
-                <p>
-                    در این قسمت برنامه‌هایی
-                    که برای دانلود ارائه می‌کنید
-                    قرار خواهد گرفت.
-                </p>
-
-            </div>
-
-            <a href="#" class="btn">
-                دانلود برنامه
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= TESTIMONIALS ================= -->
-
-<section id="testimonials" class="testimonials">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>نظرات کاربران</h2>
-
-            <span></span>
-
-        </div>
-
-        <div class="testimonials-grid">
-
-
-            <div class="testimonial">
-
-                <p>
-                    نظر کاربران سایت در این قسمت
-                    نمایش داده خواهد شد.
-                </p>
-
-                <div class="testimonial-name">
-                    کاربر سایت
-                </div>
-
-            </div>
-
-
-            <div class="testimonial">
-
-                <p>
-                    نظر کاربران سایت در این قسمت
-                    نمایش داده خواهد شد.
-                </p>
-
-                <div class="testimonial-name">
-                    کاربر سایت
-                </div>
-
-            </div>
-
-
-            <div class="testimonial">
-
-                <p>
-                    نظر کاربران سایت در این قسمت
-                    نمایش داده خواهد شد.
-                </p>
-
-                <div class="testimonial-name">
-                    کاربر سایت
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="send-review">
-
-            <a href="#" class="btn">
-                ارسال نظر
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="contact">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>تماس با من</h2>
-
-            <span></span>
-
-        </div>
-
-        <div class="contact-info">
-
-            <div class="contact-item">
-
-                <strong>تلفن:</strong>
-
-                09xxxxxxxxx
-
-            </div>
-
-            <div class="contact-item">
-
-                <strong>ایمیل:</strong>
-
-                your@email.com
-
-            </div>
-
-            <div class="contact-item">
-
-                <strong>آدرس:</strong>
-
-                در این قسمت آدرس دفتر
-                قرار می‌گیرد.
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    © 2026 رضا رمضانی
-    - تمامی حقوق محفوظ است.
-
-</footer>
-
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
-
 </html>
