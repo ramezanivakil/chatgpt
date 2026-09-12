@@ -1,3 +1,4 @@
+```css
 /* =========================================================
    محمدرضا محمدی رمضانی
    PERSONAL LAWYER WEBSITE
@@ -25,13 +26,11 @@
     --text-gray: #64748b;
 
     --border: #e2e8f0;
-
     --background: #f7f8fa;
 
     --font-heading: 'CustomTitr', Tahoma, sans-serif;
     --font-accent: 'CustomComps', Tahoma, sans-serif;
     --font-body: 'CustomZar', Tahoma, sans-serif;
-
 }
 
 
@@ -48,7 +47,6 @@
         url('fonts/titr.ttf') format('truetype');
 
     font-display: swap;
-
 }
 
 
@@ -61,7 +59,6 @@
         url('fonts/comps.ttf') format('truetype');
 
     font-display: swap;
-
 }
 
 
@@ -74,7 +71,6 @@
         url('fonts/zar.ttf') format('truetype');
 
     font-display: swap;
-
 }
 
 
@@ -85,51 +81,42 @@
 * {
 
     box-sizing: border-box;
-
     margin: 0;
-
     padding: 0;
-
 }
 
 
 html {
 
     scroll-behavior: smooth;
-
 }
 
 
 body {
 
     margin: 0;
-
     padding: 0;
 
     overflow-x: hidden;
 
     background: var(--background);
-
     color: var(--text-dark);
 
     font-family: var(--font-body);
 
     line-height: 1.8;
-
 }
 
 
 img {
 
     max-width: 100%;
-
 }
 
 
 a {
 
     text-decoration: none;
-
 }
 
 
@@ -138,7 +125,6 @@ input,
 textarea {
 
     font-family: inherit;
-
 }
 
 
@@ -150,7 +136,6 @@ h5,
 h6 {
 
     font-family: var(--font-heading);
-
 }
 
 
@@ -170,28 +155,20 @@ header {
 
     width: 100%;
 
-    background:
-        rgba(255,255,255,0.94);
+    background: rgba(255,255,255,0.94);
 
-    backdrop-filter:
-        blur(14px);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 
-    -webkit-backdrop-filter:
-        blur(14px);
+    border-bottom: 1px solid rgba(15,23,42,0.08);
 
-    border-bottom:
-        1px solid rgba(15,23,42,0.08);
-
-    box-shadow:
-        0 4px 25px rgba(15,23,42,0.06);
-
+    box-shadow: 0 4px 25px rgba(15,23,42,0.06);
 }
 
 
 .nav-container {
 
     width: 100%;
-
     max-width: 1350px;
 
     margin: auto;
@@ -203,7 +180,6 @@ header {
     align-items: center;
 
     justify-content: space-between;
-
 }
 
 
@@ -218,7 +194,6 @@ header {
     font-weight: 700;
 
     white-space: nowrap;
-
 }
 
 
@@ -227,7 +202,6 @@ header {
     display: flex;
 
     align-items: center;
-
 }
 
 
@@ -244,14 +218,12 @@ header {
     gap: 9px;
 
     direction: ltr;
-
 }
 
 
 .header-social-item {
 
     width: 37px;
-
     height: 37px;
 
     padding: 0;
@@ -261,11 +233,9 @@ header {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    border:
-        1px solid var(--navy);
+    border: 1px solid var(--navy);
 
     border-radius: 50%;
 
@@ -273,37 +243,28 @@ header {
 
     cursor: pointer;
 
-    box-shadow:
-        0 3px 10px rgba(15,23,42,0.08);
+    box-shadow: 0 3px 10px rgba(15,23,42,0.08);
 
-    transition:
-        all .3s ease;
-
+    transition: all .3s ease;
 }
 
 
 .header-social-item img {
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
 
     display: block;
-
 }
 
 
 .header-social-item:hover {
 
-    transform:
-        translateY(-3px)
-        scale(1.08);
+    transform: translateY(-3px) scale(1.08);
 
-    box-shadow:
-        0 8px 18px rgba(15,23,42,0.18);
-
+    box-shadow: 0 8px 18px rgba(15,23,42,0.18);
 }
 
 
@@ -344,15 +305,12 @@ header {
     100% {
         transform: rotate(0);
     }
-
 }
 
 
 .header-social-item.call-btn {
 
-    animation:
-        ringBell 2.5s infinite ease-in-out;
-
+    animation: ringBell 2.5s infinite ease-in-out;
 }
 
 
@@ -371,24 +329,19 @@ header {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     padding: 20px;
 
-    background:
-        rgba(3,10,20,.70);
+    background: rgba(3,10,20,.70);
 
-    backdrop-filter:
-        blur(6px);
+    backdrop-filter: blur(6px);
 
     opacity: 0;
 
     visibility: hidden;
 
-    transition:
-        all .3s ease;
-
+    transition: all .3s ease;
 }
 
 
@@ -397,7 +350,6 @@ header {
     opacity: 1;
 
     visibility: visible;
-
 }
 
 
@@ -406,7 +358,6 @@ header {
     position: relative;
 
     width: 100%;
-
     max-width: 390px;
 
     padding: 38px 25px 30px;
@@ -417,25 +368,17 @@ header {
 
     text-align: center;
 
-    box-shadow:
-        0 25px 60px rgba(15,23,42,.30);
+    box-shadow: 0 25px 60px rgba(15,23,42,.30);
 
-    transform:
-        scale(.85)
-        translateY(20px);
+    transform: scale(.85) translateY(20px);
 
-    transition:
-        transform .3s ease;
-
+    transition: transform .3s ease;
 }
 
 
 .modal-overlay.active .modal-card {
 
-    transform:
-        scale(1)
-        translateY(0);
-
+    transform: scale(1) translateY(0);
 }
 
 
@@ -444,11 +387,9 @@ header {
     position: absolute;
 
     top: 10px;
-
     left: 15px;
 
     width: 35px;
-
     height: 35px;
 
     border: 0;
@@ -460,14 +401,12 @@ header {
     font-size: 28px;
 
     cursor: pointer;
-
 }
 
 
 .modal-icon {
 
     width: 65px;
-
     height: 65px;
 
     margin: 0 auto 15px;
@@ -475,22 +414,19 @@ header {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border-radius: 50%;
 
     color: var(--navy);
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--gold-light),
-            var(--gold)
-        );
+    background: linear-gradient(
+        135deg,
+        var(--gold-light),
+        var(--gold)
+    );
 
     font-size: 25px;
-
 }
 
 
@@ -499,7 +435,6 @@ header {
     margin-bottom: 8px;
 
     font-size: 1.35rem;
-
 }
 
 
@@ -508,7 +443,6 @@ header {
     margin-bottom: 18px;
 
     color: var(--text-gray);
-
 }
 
 
@@ -529,7 +463,6 @@ header {
     border-radius: 10px;
 
     background: #f8fafc;
-
 }
 
 
@@ -542,14 +475,12 @@ header {
     font-size: 1.25rem;
 
     font-weight: 800;
-
 }
 
 
 .copy-btn {
 
     width: 38px;
-
     height: 38px;
 
     border: 1px solid var(--border);
@@ -559,7 +490,6 @@ header {
     background: #fff;
 
     cursor: pointer;
-
 }
 
 
@@ -572,20 +502,17 @@ header {
     color: #16a34a;
 
     opacity: 0;
-
 }
 
 
 .copy-toast.show {
 
     opacity: 1;
-
 }
 
 
 /* =========================================================
    HERO
-   ارتفاع کاهش یافته
    ========================================================= */
 
 .hero-modern {
@@ -616,13 +543,8 @@ header {
             #0b132b 45%,
             #17233d 100%
         );
-
 }
 
-
-/* =========================================================
-   HERO PATTERN
-   ========================================================= */
 
 .hero-pattern {
 
@@ -644,64 +566,48 @@ header {
         );
 
     background-size: 55px 55px;
-
 }
 
-
-/* =========================================================
-   DECORATIONS
-   ========================================================= */
 
 .hero-decoration {
 
     position: absolute;
 
-    border:
-        1px solid rgba(212,175,55,.18);
+    border: 1px solid rgba(212,175,55,.18);
 
     border-radius: 50%;
-
 }
 
 
 .hero-decoration-one {
 
     width: 500px;
-
     height: 500px;
 
     right: -230px;
-
     top: -180px;
-
 }
 
 
 .hero-decoration-two {
 
     width: 300px;
-
     height: 300px;
 
     left: -170px;
-
     bottom: -150px;
-
 }
 
 
 .hero-decoration-three {
 
     width: 150px;
-
     height: 150px;
 
     left: 15%;
-
     top: 15%;
 
     border-style: dashed;
-
 }
 
 
@@ -716,7 +622,6 @@ header {
     z-index: 5;
 
     width: 100%;
-
     max-width: 1250px;
 
     margin: auto;
@@ -728,7 +633,6 @@ header {
     gap: 35px;
 
     align-items: center;
-
 }
 
 
@@ -743,11 +647,8 @@ header {
     flex-direction: column;
 
     align-items: flex-start;
-
 }
 
-
-/* نام */
 
 .hero-modern-content h1 {
 
@@ -755,8 +656,11 @@ header {
 
     color: #ffffff !important;
 
-    font-size:
-        clamp(2.1rem, 4vw, 2.7rem);
+    font-size: clamp(
+        2.1rem,
+        4vw,
+        2.7rem
+    );
 
     font-weight: 900;
 
@@ -764,7 +668,6 @@ header {
 
     text-shadow:
         0 4px 20px rgba(0,0,0,.3);
-
 }
 
 
@@ -788,11 +691,13 @@ header {
             var(--gold-light),
             var(--gold)
         );
-
 }
 
 
-/* عنوان */
+/* =========================================================
+   HERO TITLE LINE
+   آیکون‌های عنوان با دایره توپر طلایی
+   ========================================================= */
 
 .hero-title-line {
 
@@ -802,30 +707,68 @@ header {
 
     gap: 10px;
 
-    margin: 2px 0;
+    margin: 5px 0;
 
     color: #ffffff !important;
 
     font-size: 1.1rem;
 
     font-weight: 700;
-
 }
 
 
+/*
+   تبدیل آیکون‌های بدون دایره
+   به همان سبک آیکون‌های داخل Badge
+*/
+
 .hero-title-line i {
 
-    width: 27px;
+    flex-shrink: 0;
 
-    color: var(--gold-light);
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: var(--navy);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-light),
+            var(--gold)
+        );
 
     text-align: center;
 
+    font-size: 16px;
+
+    box-shadow:
+        0 5px 14px rgba(0,0,0,.20);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.hero-title-line:hover i {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 7px 18px rgba(0,0,0,.28);
 }
 
 
 /* =========================================================
-   CREDENTIALS
+   HERO CREDENTIALS
    ========================================================= */
 
 .hero-credentials {
@@ -839,7 +782,6 @@ header {
     gap: 8px;
 
     margin-top: 15px;
-
 }
 
 
@@ -859,20 +801,17 @@ header {
 
     background: transparent;
 
-    color:
-        #ffffff !important;
+    color: #ffffff !important;
 
     font-size: .86rem;
 
     backdrop-filter: none;
-
 }
 
 
 .hero-credentials i {
 
     color: var(--gold-light);
-
 }
 
 
@@ -891,7 +830,6 @@ header {
     align-items: center;
 
     justify-content: center;
-
 }
 
 
@@ -900,7 +838,6 @@ header {
     position: absolute;
 
     width: 390px;
-
     height: 390px;
 
     border-radius: 50%;
@@ -912,13 +849,8 @@ header {
             rgba(212,175,55,.07) 40%,
             transparent 70%
         );
-
 }
 
-
-/* =========================================================
-   CIRCLES
-   ========================================================= */
 
 .hero-circle {
 
@@ -926,41 +858,32 @@ header {
 
     border-radius: 50%;
 
-    border:
-        1px solid rgba(212,175,55,.25);
-
+    border: 1px solid rgba(212,175,55,.25);
 }
 
 
 .hero-circle-one {
 
     width: 430px;
-
     height: 430px;
-
 }
 
 
 .hero-circle-two {
 
     width: 350px;
-
     height: 350px;
 
     border-style: dashed;
-
 }
 
 
 .hero-circle-three {
 
     width: 275px;
-
     height: 275px;
 
-    border:
-        2px solid rgba(212,175,55,.12);
-
+    border: 2px solid rgba(212,175,55,.12);
 }
 
 
@@ -977,7 +900,6 @@ header {
     width: 100%;
 
     max-width: 400px;
-
 }
 
 
@@ -995,7 +917,6 @@ header {
         drop-shadow(
             0 20px 30px rgba(0,0,0,.45)
         );
-
 }
 
 
@@ -1010,28 +931,23 @@ header {
     z-index: 7;
 
     top: 5px;
-
     right: 10px;
 
     width: 105px;
-
     height: 105px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     perspective: 1000px;
-
 }
 
 
 .hero-modern-logo img {
 
     width: 100%;
-
     height: 100%;
 
     object-fit: contain;
@@ -1045,26 +961,18 @@ header {
         drop-shadow(
             0 0 14px rgba(212,175,55,.45)
         );
-
 }
 
 
 @keyframes flipCoin {
 
     0% {
-
-        transform:
-            rotateY(0deg);
-
+        transform: rotateY(0deg);
     }
 
     100% {
-
-        transform:
-            rotateY(360deg);
-
+        transform: rotateY(360deg);
     }
-
 }
 
 
@@ -1088,43 +996,41 @@ header {
 
     min-width: 160px;
 
-    border:
-        1px solid rgba(212,175,55,.35);
+    border: 1px solid rgba(212,175,55,.35);
 
     border-radius: 11px;
 
-    background:
-        rgba(7,17,31,.84);
+    background: rgba(7,17,31,.84);
 
     color: #fff;
 
     box-shadow:
         0 12px 30px rgba(0,0,0,.28);
 
-    backdrop-filter:
-        blur(12px);
-
+    backdrop-filter: blur(12px);
 }
 
 
 .hero-badge i {
 
     width: 33px;
-
     height: 33px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border-radius: 50%;
 
     color: var(--navy);
 
-    background: var(--gold-light);
-
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-light),
+            var(--gold)
+        );
 }
 
 
@@ -1135,7 +1041,6 @@ header {
     flex-direction: column;
 
     line-height: 1.35;
-
 }
 
 
@@ -1144,7 +1049,6 @@ header {
     color: #fff;
 
     font-size: .84rem;
-
 }
 
 
@@ -1153,7 +1057,6 @@ header {
     color: rgba(255,255,255,.65);
 
     font-size: .74rem;
-
 }
 
 
@@ -1162,7 +1065,6 @@ header {
     left: 0;
 
     bottom: 40px;
-
 }
 
 
@@ -1171,7 +1073,6 @@ header {
     right: 0;
 
     bottom: 5px;
-
 }
 
 
@@ -1186,7 +1087,6 @@ header {
     z-index: 10;
 
     bottom: 10px;
-
     left: 50%;
 
     transform: translateX(-50%);
@@ -1200,7 +1100,6 @@ header {
     color: rgba(255,255,255,.55);
 
     font-size: .75rem;
-
 }
 
 
@@ -1210,7 +1109,6 @@ header {
 
     animation:
         scrollDown 1.5s infinite ease-in-out;
-
 }
 
 
@@ -1227,7 +1125,6 @@ header {
     100% {
         transform: translateY(0);
     }
-
 }
 
 
@@ -1240,7 +1137,6 @@ header {
     margin-bottom: 40px;
 
     text-align: center;
-
 }
 
 
@@ -1255,7 +1151,6 @@ header {
     font-size: .9rem;
 
     font-weight: 700;
-
 }
 
 
@@ -1270,7 +1165,6 @@ header {
     color: var(--navy);
 
     font-size: 1.85rem;
-
 }
 
 
@@ -1285,7 +1179,6 @@ header {
     bottom: 0;
 
     width: 75px;
-
     height: 4px;
 
     transform: translateX(50%);
@@ -1298,7 +1191,6 @@ header {
             var(--gold-dark),
             var(--gold-light)
         );
-
 }
 
 
@@ -1313,16 +1205,13 @@ header {
     background: #f5f7fa;
 
     border-top: 1px solid #e8edf2;
-
     border-bottom: 1px solid #e8edf2;
-
 }
 
 
 .cards-grid {
 
     width: 100%;
-
     max-width: 1250px;
 
     margin: auto;
@@ -1333,13 +1222,8 @@ header {
         repeat(3,1fr);
 
     gap: 25px;
-
 }
 
-
-/* =========================================================
-   CARD
-   ========================================================= */
 
 .card {
 
@@ -1351,8 +1235,7 @@ header {
 
     flex-direction: column;
 
-    border:
-        1px solid #e4e8ee;
+    border: 1px solid #e4e8ee;
 
     border-radius: 17px;
 
@@ -1365,7 +1248,6 @@ header {
         transform .35s ease,
         box-shadow .35s ease,
         border-color .35s ease;
-
 }
 
 
@@ -1376,11 +1258,9 @@ header {
     position: absolute;
 
     top: 0;
-
     right: 0;
 
     width: 100%;
-
     height: 3px;
 
     background:
@@ -1395,52 +1275,41 @@ header {
 
     transition:
         transform .4s ease;
-
 }
 
 
 .card:hover {
 
-    transform:
-        translateY(-9px);
+    transform: translateY(-9px);
 
     border-color:
         rgba(212,175,55,.42);
 
     box-shadow:
         0 18px 40px rgba(15,23,42,.13);
-
 }
 
 
 .card:hover::before {
 
     transform: scaleX(1);
-
 }
 
-
-/* =========================================================
-   CARD IMAGE
-   ========================================================= */
 
 .card-image {
 
     position: relative;
 
     width: 100%;
-
     height: 215px;
 
     overflow: hidden;
-
 }
 
 
 .card-image img {
 
     width: 100%;
-
     height: 100%;
 
     display: block;
@@ -1449,15 +1318,12 @@ header {
 
     transition:
         transform .6s ease;
-
 }
 
 
 .card:hover .card-image img {
 
-    transform:
-        scale(1.08);
-
+    transform: scale(1.08);
 }
 
 
@@ -1473,7 +1339,6 @@ header {
             rgba(4,10,20,.65),
             rgba(4,10,20,.03) 65%
         );
-
 }
 
 
@@ -1482,23 +1347,19 @@ header {
     position: absolute;
 
     top: 12px;
-
     right: 13px;
 
     z-index: 3;
 
     width: 38px;
-
     height: 38px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    border:
-        1px solid rgba(255,255,255,.45);
+    border: 1px solid rgba(255,255,255,.45);
 
     border-radius: 10px;
 
@@ -1507,15 +1368,13 @@ header {
     background:
         rgba(5,12,24,.55);
 
-    backdrop-filter:
-        blur(7px);
+    backdrop-filter: blur(7px);
 
-    font-family: Tahoma, sans-serif;
+    font-family: Tahoma,sans-serif;
 
     font-size: .82rem;
 
     font-weight: 700;
-
 }
 
 
@@ -1524,19 +1383,16 @@ header {
     position: absolute;
 
     left: 15px;
-
     bottom: 15px;
 
     z-index: 3;
 
     width: 48px;
-
     height: 48px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border-radius: 50%;
@@ -1555,22 +1411,15 @@ header {
 
     transition:
         transform .35s ease;
-
 }
 
 
 .card:hover .service-icon {
 
     transform:
-        rotate(-8deg)
-        scale(1.08);
-
+        rotate(-8deg) scale(1.08);
 }
 
-
-/* =========================================================
-   CARD CONTENT
-   ========================================================= */
 
 .card-content {
 
@@ -1581,7 +1430,6 @@ header {
     flex-direction: column;
 
     padding: 20px;
-
 }
 
 
@@ -1592,7 +1440,6 @@ header {
     display: flex;
 
     align-items: center;
-
 }
 
 
@@ -1607,7 +1454,6 @@ header {
     font-size: 1.18rem;
 
     line-height: 1.6;
-
 }
 
 
@@ -1618,7 +1464,6 @@ header {
     position: absolute;
 
     top: 5px;
-
     right: 0;
 
     width: 3px;
@@ -1628,7 +1473,6 @@ header {
     border-radius: 5px;
 
     background: var(--gold);
-
 }
 
 
@@ -1641,7 +1485,6 @@ header {
     font-size: .91rem;
 
     line-height: 1.8;
-
 }
 
 
@@ -1664,7 +1507,6 @@ header {
     font-size: .86rem;
 
     font-weight: 700;
-
 }
 
 
@@ -1672,7 +1514,6 @@ header {
 
     transition:
         transform .3s ease;
-
 }
 
 
@@ -1680,7 +1521,6 @@ header {
 
     transform:
         translateX(-5px);
-
 }
 
 
@@ -1695,7 +1535,6 @@ header {
     margin: auto;
 
     padding: 70px 25px;
-
 }
 
 
@@ -1710,8 +1549,7 @@ header {
 
     padding: 35px;
 
-    border:
-        1px solid var(--border);
+    border: 1px solid var(--border);
 
     border-radius: 20px;
 
@@ -1719,7 +1557,6 @@ header {
 
     box-shadow:
         0 5px 18px rgba(15,23,42,.07);
-
 }
 
 
@@ -1730,7 +1567,6 @@ header {
     color: var(--navy);
 
     font-size: 1.3rem;
-
 }
 
 
@@ -1747,7 +1583,6 @@ header {
     font-size: 1rem;
 
     font-weight: 600;
-
 }
 
 
@@ -1760,7 +1595,6 @@ header {
     font-size: 2.5rem;
 
     line-height: .8;
-
 }
 
 
@@ -1769,7 +1603,6 @@ header {
     display: flex;
 
     flex-direction: column;
-
 }
 
 
@@ -1782,7 +1615,6 @@ header {
     flex-wrap: wrap;
 
     gap: 9px;
-
 }
 
 
@@ -1792,21 +1624,18 @@ header {
 
     color: var(--gold-dark);
 
-    font-family: Tahoma, sans-serif;
+    font-family: Tahoma,sans-serif;
 
     font-size: 1.4rem;
 
     font-weight: 800;
-
 }
 
 
 .inline-call-btn {
 
     width: 42px;
-
     height: 42px;
-
 }
 
 
@@ -1819,7 +1648,6 @@ header {
     color: var(--gold-dark);
 
     font-size: .8rem;
-
 }
 
 
@@ -1833,9 +1661,7 @@ header {
 
     padding-top: 18px;
 
-    border-top:
-        1px dashed var(--border);
-
+    border-top: 1px dashed var(--border);
 }
 
 
@@ -1850,7 +1676,6 @@ header {
     font-size: .92rem;
 
     font-weight: 700;
-
 }
 
 
@@ -1859,7 +1684,6 @@ header {
     direction: rtl;
 
     justify-content: flex-start;
-
 }
 
 
@@ -1874,8 +1698,7 @@ header {
 
     padding: 13px 15px;
 
-    border:
-        1px solid #17202d;
+    border: 1px solid #17202d;
 
     border-radius: 9px;
 
@@ -1893,9 +1716,7 @@ header {
 
     resize: vertical;
 
-    transition:
-        all .3s ease;
-
+    transition: all .3s ease;
 }
 
 
@@ -1906,7 +1727,6 @@ header {
     flex-direction: column;
 
     gap: 15px;
-
 }
 
 
@@ -1916,19 +1736,16 @@ header {
     color: #64748b;
 
     font-size: .87rem;
-
 }
 
 
 .form-group input:focus,
 .form-group textarea:focus {
 
-    border-color:
-        var(--gold);
+    border-color: var(--gold);
 
     box-shadow:
         0 0 0 3px rgba(212,175,55,.15);
-
 }
 
 
@@ -1937,7 +1754,6 @@ header {
     display: inline-flex;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 9px;
@@ -1962,14 +1778,12 @@ header {
     font-weight: 800;
 
     cursor: pointer;
-
 }
 
 
 .form-btn {
 
     width: 100%;
-
 }
 
 
@@ -1980,7 +1794,6 @@ header {
     text-align: center;
 
     font-weight: 700;
-
 }
 
 
@@ -1996,11 +1809,9 @@ footer {
 
     color: rgba(255,255,255,.8);
 
-    background:
-        var(--navy-dark);
+    background: var(--navy-dark);
 
     font-size: .9rem;
-
 }
 
 
@@ -2016,7 +1827,6 @@ footer {
 
         padding:
             85px 20px 45px;
-
     }
 
 
@@ -2025,7 +1835,6 @@ footer {
         grid-template-columns: 1fr;
 
         gap: 0;
-
     }
 
 
@@ -2034,7 +1843,6 @@ footer {
         order: 1;
 
         min-height: 390px;
-
     }
 
 
@@ -2045,23 +1853,19 @@ footer {
         align-items: center;
 
         text-align: center;
-
     }
 
 
     .hero-modern-content h1::after {
 
         margin-left: auto;
-
         margin-right: auto;
-
     }
 
 
     .hero-title-line {
 
         justify-content: center;
-
     }
 
 
@@ -2069,34 +1873,31 @@ footer {
 
         justify-content: center;
 
+        align-items: center;
     }
 
 
     .hero-profile-wrapper {
 
         max-width: 350px;
-
     }
 
 
     .hero-modern-logo {
 
         right: 12%;
-
     }
 
 
     .hero-badge-one {
 
         left: 10%;
-
     }
 
 
     .hero-badge-two {
 
         right: 10%;
-
     }
 
 
@@ -2104,16 +1905,13 @@ footer {
 
         grid-template-columns:
             repeat(2,1fr);
-
     }
 
 
     .contact-container {
 
         grid-template-columns: 1fr;
-
     }
-
 }
 
 
@@ -2125,32 +1923,26 @@ footer {
 
     .nav-container {
 
-        padding:
-            6px 12px;
-
+        padding: 6px 12px;
     }
 
 
     .header-social-bar {
 
         gap: 6px;
-
     }
 
 
     .header-social-item {
 
         width: 32px;
-
         height: 32px;
-
     }
 
 
     .logo {
 
         font-size: .82rem;
-
     }
 
 
@@ -2160,77 +1952,82 @@ footer {
 
         padding:
             78px 15px 40px;
-
     }
 
 
     .hero-modern-visual {
 
         min-height: 340px;
-
     }
 
 
     .hero-profile-wrapper {
 
         max-width: 300px;
-
     }
 
 
     .hero-circle-one {
 
         width: 330px;
-
         height: 330px;
-
     }
 
 
     .hero-circle-two {
 
         width: 275px;
-
         height: 275px;
-
     }
 
 
     .hero-circle-three {
 
         width: 215px;
-
         height: 215px;
-
     }
 
 
     .hero-modern-logo {
 
         width: 78px;
-
         height: 78px;
 
         top: 3px;
 
         right: 8%;
-
     }
 
 
     .hero-modern-content h1 {
 
         font-size: 1.6rem;
-        color: #ffffff !important;
 
+        color: #ffffff !important;
     }
 
 
+    /*
+       آیکون‌های عنوان در موبایل
+       همچنان دایره توپر باقی می‌مانند
+    */
+
     .hero-title-line {
 
-        font-size: 1.0rem;
-        color: #ffffff !important;
+        gap: 8px;
 
+        font-size: 1rem;
+
+        color: #ffffff !important;
+    }
+
+
+    .hero-title-line i {
+
+        width: 31px;
+        height: 31px;
+
+        font-size: 14px;
     }
 
 
@@ -2239,7 +2036,6 @@ footer {
         gap: 6px;
 
         margin-top: 12px;
-
     }
 
 
@@ -2247,9 +2043,9 @@ footer {
 
         padding: 2px 0;
 
-        font-size: 0.9rem;
-        color: #ffffff !important;
+        font-size: .9rem;
 
+        color: #ffffff !important;
     }
 
 
@@ -2258,7 +2054,6 @@ footer {
         min-width: 135px;
 
         padding: 7px 9px;
-
     }
 
 
@@ -2267,7 +2062,6 @@ footer {
         left: 0;
 
         bottom: 28px;
-
     }
 
 
@@ -2276,14 +2070,12 @@ footer {
         right: 0;
 
         bottom: 0;
-
     }
 
 
     .cards-grid {
 
         grid-template-columns: 1fr;
-
     }
 
 
@@ -2292,7 +2084,6 @@ footer {
 
         padding:
             55px 15px;
-
     }
 
 
@@ -2300,16 +2091,13 @@ footer {
 
         padding:
             25px 20px;
-
     }
 
 
     .mobile-only-msg {
 
         display: block;
-
     }
-
 }
 
 
@@ -2322,39 +2110,32 @@ footer {
     .header-social-item {
 
         width: 29px;
-
         height: 29px;
-
     }
 
 
     .hero-modern {
 
         min-height: 550px;
-
     }
 
 
     .hero-modern-visual {
 
         min-height: 315px;
-
     }
 
 
     .hero-profile-wrapper {
 
         max-width: 270px;
-
     }
 
 
     .hero-modern-logo {
 
         width: 68px;
-
         height: 68px;
-
     }
 
 
@@ -2363,44 +2144,60 @@ footer {
         min-width: 120px;
 
         padding: 6px 7px;
-
     }
 
 
     .hero-badge strong {
 
         font-size: .72rem;
-
     }
 
 
     .hero-badge span {
 
         font-size: .65rem;
-
     }
 
 
     .hero-modern-content h1 {
 
         font-size: 1.7rem;
-
     }
 
+
+    /*
+       اصلاح مقدار اشتباه قبلی:
+       .95rem.84rem  ← نامعتبر
+    */
 
     .hero-title-line {
 
-        font-size: .95rem.84rem;
-
+        font-size: .84rem;
     }
 
+
+    /*
+       اصلاح مقدار اشتباه قبلی:
+       .78rem.68rem  ← نامعتبر
+    */
 
     .hero-credentials span {
 
-        font-size: .78rem.68rem;
-
+        font-size: .68rem;
     }
 
+
+    /*
+       اندازه آیکون‌های دایره‌ای در موبایل کوچک
+    */
+
+    .hero-title-line i {
+
+        width: 29px;
+        height: 29px;
+
+        font-size: 13px;
+    }
 }
 
 
@@ -2413,7 +2210,6 @@ footer {
     html {
 
         scroll-behavior: auto;
-
     }
 
 
@@ -2426,7 +2222,6 @@ footer {
         animation-iteration-count: 1 !important;
 
         transition-duration: .01ms !important;
-
     }
-
 }
+```
