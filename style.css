@@ -954,10 +954,6 @@ footer {
         color: #ffffff !important;
     }
     .hero-title-line {
-        justify-content: flex-start;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
         font-size: 1.0rem;
         color: #ffffff !important;
     }
