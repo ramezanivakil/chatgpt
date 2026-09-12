@@ -1,3 +1,4 @@
+```css
 /* =========================================================
    محمدرضا محمدی رمضانی
    PERSONAL LAWYER WEBSITE
@@ -815,11 +816,35 @@ header {
 
 .hero-title-line i {
 
-    width: 27px;
+    width: 34px;
 
-    color: var(--gold-light);
+    height: 34px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 34px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-light),
+            var(--gold)
+        );
+
+    border-radius: 50%;
 
     text-align: center;
+
+    font-size: .9rem;
+
+    box-shadow:
+        0 4px 12px rgba(212,175,55,.28);
 
 }
 
@@ -849,7 +874,7 @@ header {
 
     align-items: center;
 
-    gap: 7px;
+    gap: 10px;
 
     padding: 2px 0;
 
@@ -871,7 +896,33 @@ header {
 
 .hero-credentials i {
 
-    color: var(--gold-light);
+    width: 34px;
+
+    height: 34px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 34px;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-light),
+            var(--gold)
+        );
+
+    font-size: .9rem;
+
+    box-shadow:
+        0 4px 12px rgba(212,175,55,.28);
 
 }
 
@@ -2234,6 +2285,19 @@ footer {
     }
 
 
+    .hero-title-line i {
+
+        width: 30px;
+
+        height: 30px;
+
+        flex-basis: 30px;
+
+        font-size: .82rem;
+
+    }
+
+
     .hero-credentials {
 
         gap: 6px;
@@ -2249,6 +2313,19 @@ footer {
 
         font-size: 0.9rem;
         color: #ffffff !important;
+
+    }
+
+
+    .hero-credentials i {
+
+        width: 30px;
+
+        height: 30px;
+
+        flex-basis: 30px;
+
+        font-size: .82rem;
 
     }
 
@@ -2390,14 +2467,40 @@ footer {
 
     .hero-title-line {
 
-        font-size: .95rem.84rem;
+        font-size: .95rem;
+
+    }
+
+
+    .hero-title-line i {
+
+        width: 28px;
+
+        height: 28px;
+
+        flex-basis: 28px;
+
+        font-size: .78rem;
 
     }
 
 
     .hero-credentials span {
 
-        font-size: .78rem.68rem;
+        font-size: .78rem;
+
+    }
+
+
+    .hero-credentials i {
+
+        width: 28px;
+
+        height: 28px;
+
+        flex-basis: 28px;
+
+        font-size: .78rem;
 
     }
 
@@ -2430,3 +2533,6 @@ footer {
     }
 
 }
+```
+
+این نسخه را می‌توانید مستقیماً جایگزین `style.css` فعلی کنید. بقیه ساختار، اندازه‌ها، رنگ‌ها، فاصله‌ها، هیرو، کارت‌ها و بخش تماس دست‌نخورده باقی مانده‌اند.
