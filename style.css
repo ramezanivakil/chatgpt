@@ -207,7 +207,7 @@ header {
 
 
 /* =========================================================
-   CALL BUTTON ANIMATION
+   CALL ANIMATION
    ========================================================= */
 
 @keyframes ringBell {
@@ -489,34 +489,27 @@ header {
    ========================================================= */
 
 .hero-title-line i {
-
     width: 32px;
-
     height: 32px;
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     flex-shrink: 0;
 
-    color: #ffffff;
+    color: #ffffff !important;
 
-    text-align: center;
-
-    border: none;
-
+    border: none !important;
+    outline: none !important;
     border-radius: 50%;
 
-    background: var(--gold-light);
+    background: var(--gold-light) !important;
+    background-color: var(--gold-light) !important;
 
     font-size: 15px;
+    text-align: center;
 
     box-shadow:
         0 0 8px rgba(243,211,106,.30);
-
 }
 
 
@@ -546,35 +539,24 @@ header {
     backdrop-filter: none;
 }
 
-
-/* =========================================================
-   HERO CREDENTIAL ICONS
-   ========================================================= */
-
 .hero-credentials i {
-
     width: 27px;
-
     height: 27px;
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     flex-shrink: 0;
 
-    color: #ffffff;
+    color: #ffffff !important;
 
-    border: none;
-
+    border: none !important;
+    outline: none !important;
     border-radius: 50%;
 
-    background: var(--gold-light);
+    background: var(--gold-light) !important;
+    background-color: var(--gold-light) !important;
 
     font-size: 12px;
-
 }
 
 
@@ -718,33 +700,24 @@ header {
         blur(12px);
 }
 
-
-/* =========================================================
-   HERO BADGE ICONS
-   ========================================================= */
-
 .hero-badge i {
-
     width: 33px;
-
     height: 33px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border-radius: 50%;
 
-    color: #ffffff;
+    color: #ffffff !important;
 
-    background: var(--gold-light);
+    border: none !important;
+    outline: none !important;
 
-    border: none;
+    background: var(--gold-light) !important;
+    background-color: var(--gold-light) !important;
 
     font-size: 15px;
-
 }
 
 .hero-badge div {
@@ -791,36 +764,26 @@ header {
     font-size: .75rem;
 }
 
-
-/* =========================================================
-   HERO SCROLL ICON
-   ========================================================= */
-
 .hero-scroll i {
-
     width: 25px;
-
     height: 25px;
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
 
-    border: none;
-
+    border: none !important;
+    outline: none !important;
     border-radius: 50%;
 
-    color: #ffffff;
+    color: #ffffff !important;
 
-    background: var(--gold-light);
+    background: var(--gold-light) !important;
+    background-color: var(--gold-light) !important;
 
     font-size: 11px;
 
     animation:
         scrollDown 1.5s infinite ease-in-out;
-
 }
 
 @keyframes scrollDown {
@@ -1359,7 +1322,6 @@ footer {
     .contact-container {
         grid-template-columns: 1fr;
     }
-
 }
 
 
@@ -1477,7 +1439,6 @@ footer {
     .mobile-only-msg {
         display: block;
     }
-
 }
 
 
@@ -1533,7 +1494,6 @@ footer {
     .hero-credentials span {
         font-size: .78rem.68rem;
     }
-
 }
 
 
@@ -1554,6 +1514,5 @@ footer {
         animation-iteration-count: 1 !important;
         transition-duration: .01ms !important;
     }
-
 }
 ```
