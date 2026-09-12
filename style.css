@@ -81,6 +81,7 @@
 * {
 
     box-sizing: border-box;
+
     margin: 0;
     padding: 0;
 }
@@ -100,6 +101,7 @@ body {
     overflow-x: hidden;
 
     background: var(--background);
+
     color: var(--text-dark);
 
     font-family: var(--font-body);
@@ -162,13 +164,15 @@ header {
 
     border-bottom: 1px solid rgba(15,23,42,0.08);
 
-    box-shadow: 0 4px 25px rgba(15,23,42,0.06);
+    box-shadow:
+        0 4px 25px rgba(15,23,42,0.06);
 }
 
 
 .nav-container {
 
     width: 100%;
+
     max-width: 1350px;
 
     margin: auto;
@@ -243,9 +247,11 @@ header {
 
     cursor: pointer;
 
-    box-shadow: 0 3px 10px rgba(15,23,42,0.08);
+    box-shadow:
+        0 3px 10px rgba(15,23,42,0.08);
 
-    transition: all .3s ease;
+    transition:
+        all .3s ease;
 }
 
 
@@ -262,9 +268,12 @@ header {
 
 .header-social-item:hover {
 
-    transform: translateY(-3px) scale(1.08);
+    transform:
+        translateY(-3px)
+        scale(1.08);
 
-    box-shadow: 0 8px 18px rgba(15,23,42,0.18);
+    box-shadow:
+        0 8px 18px rgba(15,23,42,0.18);
 }
 
 
@@ -310,7 +319,8 @@ header {
 
 .header-social-item.call-btn {
 
-    animation: ringBell 2.5s infinite ease-in-out;
+    animation:
+        ringBell 2.5s infinite ease-in-out;
 }
 
 
@@ -341,7 +351,8 @@ header {
 
     visibility: hidden;
 
-    transition: all .3s ease;
+    transition:
+        all .3s ease;
 }
 
 
@@ -358,9 +369,11 @@ header {
     position: relative;
 
     width: 100%;
+
     max-width: 390px;
 
-    padding: 38px 25px 30px;
+    padding:
+        38px 25px 30px;
 
     border-radius: 20px;
 
@@ -368,17 +381,23 @@ header {
 
     text-align: center;
 
-    box-shadow: 0 25px 60px rgba(15,23,42,.30);
+    box-shadow:
+        0 25px 60px rgba(15,23,42,.30);
 
-    transform: scale(.85) translateY(20px);
+    transform:
+        scale(.85)
+        translateY(20px);
 
-    transition: transform .3s ease;
+    transition:
+        transform .3s ease;
 }
 
 
 .modal-overlay.active .modal-card {
 
-    transform: scale(1) translateY(0);
+    transform:
+        scale(1)
+        translateY(0);
 }
 
 
@@ -409,7 +428,8 @@ header {
     width: 65px;
     height: 65px;
 
-    margin: 0 auto 15px;
+    margin:
+        0 auto 15px;
 
     display: flex;
 
@@ -420,11 +440,12 @@ header {
 
     color: var(--navy);
 
-    background: linear-gradient(
-        135deg,
-        var(--gold-light),
-        var(--gold)
-    );
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-light),
+            var(--gold)
+        );
 
     font-size: 25px;
 }
@@ -523,7 +544,8 @@ header {
 
     min-height: 570px;
 
-    padding: 85px 25px 45px;
+    padding:
+        85px 25px 45px;
 
     overflow: hidden;
 
@@ -532,11 +554,13 @@ header {
     align-items: center;
 
     background:
+
         radial-gradient(
             circle at 78% 45%,
             rgba(212,175,55,.12),
             transparent 25%
         ),
+
         linear-gradient(
             135deg,
             #050c18 0%,
@@ -555,10 +579,12 @@ header {
     opacity: .07;
 
     background-image:
+
         linear-gradient(
             rgba(255,255,255,.5) 1px,
             transparent 1px
         ),
+
         linear-gradient(
             90deg,
             rgba(255,255,255,.5) 1px,
@@ -573,7 +599,8 @@ header {
 
     position: absolute;
 
-    border: 1px solid rgba(212,175,55,.18);
+    border:
+        1px solid rgba(212,175,55,.18);
 
     border-radius: 50%;
 }
@@ -622,13 +649,15 @@ header {
     z-index: 5;
 
     width: 100%;
+
     max-width: 1250px;
 
     margin: auto;
 
     display: grid;
 
-    grid-template-columns: 1fr .9fr;
+    grid-template-columns:
+        1fr .9fr;
 
     gap: 35px;
 
@@ -652,15 +681,13 @@ header {
 
 .hero-modern-content h1 {
 
-    margin: 0 0 12px;
+    margin:
+        0 0 12px;
 
     color: #ffffff !important;
 
-    font-size: clamp(
-        2.1rem,
-        4vw,
-        2.7rem
-    );
+    font-size:
+        clamp(2.1rem, 4vw, 2.7rem);
 
     font-weight: 900;
 
@@ -695,8 +722,7 @@ header {
 
 
 /* =========================================================
-   HERO TITLE LINE
-   آیکون‌های عنوان با دایره توپر طلایی
+   HERO TITLE LINES
    ========================================================= */
 
 .hero-title-line {
@@ -707,7 +733,7 @@ header {
 
     gap: 10px;
 
-    margin: 5px 0;
+    margin: 2px 0;
 
     color: #ffffff !important;
 
@@ -717,17 +743,17 @@ header {
 }
 
 
-/*
-   تبدیل آیکون‌های بدون دایره
-   به همان سبک آیکون‌های داخل Badge
-*/
+/* =========================================================
+   HERO TITLE ICONS
+   دایره طلایی توپر
+   ========================================================= */
 
 .hero-title-line i {
 
-    flex-shrink: 0;
-
     width: 34px;
     height: 34px;
+
+    flex-shrink: 0;
 
     display: flex;
 
@@ -745,25 +771,12 @@ header {
             var(--gold)
         );
 
+    box-shadow:
+        0 5px 14px rgba(212,175,55,.25);
+
+    font-size: .85rem;
+
     text-align: center;
-
-    font-size: 16px;
-
-    box-shadow:
-        0 5px 14px rgba(0,0,0,.20);
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
-}
-
-
-.hero-title-line:hover i {
-
-    transform: scale(1.08);
-
-    box-shadow:
-        0 7px 18px rgba(0,0,0,.28);
 }
 
 
@@ -809,9 +822,38 @@ header {
 }
 
 
+/* =========================================================
+   CREDENTIAL ICONS
+   دایره طلایی توپر
+   ========================================================= */
+
 .hero-credentials i {
 
-    color: var(--gold-light);
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: var(--navy);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-light),
+            var(--gold)
+        );
+
+    box-shadow:
+        0 4px 12px rgba(212,175,55,.22);
+
+    font-size: .78rem;
 }
 
 
@@ -828,7 +870,6 @@ header {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 }
 
@@ -843,6 +884,7 @@ header {
     border-radius: 50%;
 
     background:
+
         radial-gradient(
             circle,
             rgba(212,175,55,.24),
@@ -858,7 +900,8 @@ header {
 
     border-radius: 50%;
 
-    border: 1px solid rgba(212,175,55,.25);
+    border:
+        1px solid rgba(212,175,55,.25);
 }
 
 
@@ -883,7 +926,8 @@ header {
     width: 275px;
     height: 275px;
 
-    border: 2px solid rgba(212,175,55,.12);
+    border:
+        2px solid rgba(212,175,55,.12);
 }
 
 
@@ -996,11 +1040,13 @@ header {
 
     min-width: 160px;
 
-    border: 1px solid rgba(212,175,55,.35);
+    border:
+        1px solid rgba(212,175,55,.35);
 
     border-radius: 11px;
 
-    background: rgba(7,17,31,.84);
+    background:
+        rgba(7,17,31,.84);
 
     color: #fff;
 
@@ -1087,9 +1133,11 @@ header {
     z-index: 10;
 
     bottom: 10px;
+
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     display: flex;
 
@@ -1181,7 +1229,8 @@ header {
     width: 75px;
     height: 4px;
 
-    transform: translateX(50%);
+    transform:
+        translateX(50%);
 
     border-radius: 10px;
 
@@ -1204,14 +1253,18 @@ header {
 
     background: #f5f7fa;
 
-    border-top: 1px solid #e8edf2;
-    border-bottom: 1px solid #e8edf2;
+    border-top:
+        1px solid #e8edf2;
+
+    border-bottom:
+        1px solid #e8edf2;
 }
 
 
 .cards-grid {
 
     width: 100%;
+
     max-width: 1250px;
 
     margin: auto;
@@ -1219,7 +1272,7 @@ header {
     display: grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(3, 1fr);
 
     gap: 25px;
 }
@@ -1235,7 +1288,8 @@ header {
 
     flex-direction: column;
 
-    border: 1px solid #e4e8ee;
+    border:
+        1px solid #e4e8ee;
 
     border-radius: 17px;
 
@@ -1271,7 +1325,8 @@ header {
             transparent
         );
 
-    transform: scaleX(0);
+    transform:
+        scaleX(0);
 
     transition:
         transform .4s ease;
@@ -1280,7 +1335,8 @@ header {
 
 .card:hover {
 
-    transform: translateY(-9px);
+    transform:
+        translateY(-9px);
 
     border-color:
         rgba(212,175,55,.42);
@@ -1292,7 +1348,8 @@ header {
 
 .card:hover::before {
 
-    transform: scaleX(1);
+    transform:
+        scaleX(1);
 }
 
 
@@ -1301,6 +1358,7 @@ header {
     position: relative;
 
     width: 100%;
+
     height: 215px;
 
     overflow: hidden;
@@ -1323,7 +1381,8 @@ header {
 
 .card:hover .card-image img {
 
-    transform: scale(1.08);
+    transform:
+        scale(1.08);
 }
 
 
@@ -1359,7 +1418,8 @@ header {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(255,255,255,.45);
+    border:
+        1px solid rgba(255,255,255,.45);
 
     border-radius: 10px;
 
@@ -1370,7 +1430,8 @@ header {
 
     backdrop-filter: blur(7px);
 
-    font-family: Tahoma,sans-serif;
+    font-family:
+        Tahoma, sans-serif;
 
     font-size: .82rem;
 
@@ -1417,7 +1478,8 @@ header {
 .card:hover .service-icon {
 
     transform:
-        rotate(-8deg) scale(1.08);
+        rotate(-8deg)
+        scale(1.08);
 }
 
 
@@ -1468,11 +1530,13 @@ header {
 
     width: 3px;
 
-    height: calc(100% - 10px);
+    height:
+        calc(100% - 10px);
 
     border-radius: 5px;
 
-    background: var(--gold);
+    background:
+        var(--gold);
 }
 
 
@@ -1500,7 +1564,8 @@ header {
 
     padding-top: 15px;
 
-    border-top: 1px solid #edf0f3;
+    border-top:
+        1px solid #edf0f3;
 
     color: var(--gold-dark);
 
@@ -1549,7 +1614,8 @@ header {
 
     padding: 35px;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: 20px;
 
@@ -1624,7 +1690,8 @@ header {
 
     color: var(--gold-dark);
 
-    font-family: Tahoma,sans-serif;
+    font-family:
+        Tahoma, sans-serif;
 
     font-size: 1.4rem;
 
@@ -1661,7 +1728,8 @@ header {
 
     padding-top: 18px;
 
-    border-top: 1px dashed var(--border);
+    border-top:
+        1px dashed var(--border);
 }
 
 
@@ -1698,7 +1766,8 @@ header {
 
     padding: 13px 15px;
 
-    border: 1px solid #17202d;
+    border:
+        1px solid #17202d;
 
     border-radius: 9px;
 
@@ -1716,7 +1785,8 @@ header {
 
     resize: vertical;
 
-    transition: all .3s ease;
+    transition:
+        all .3s ease;
 }
 
 
@@ -1742,7 +1812,8 @@ header {
 .form-group input:focus,
 .form-group textarea:focus {
 
-    border-color: var(--gold);
+    border-color:
+        var(--gold);
 
     box-shadow:
         0 0 0 3px rgba(212,175,55,.15);
@@ -1809,7 +1880,8 @@ footer {
 
     color: rgba(255,255,255,.8);
 
-    background: var(--navy-dark);
+    background:
+        var(--navy-dark);
 
     font-size: .9rem;
 }
@@ -1872,8 +1944,6 @@ footer {
     .hero-credentials {
 
         justify-content: center;
-
-        align-items: center;
     }
 
 
@@ -1923,7 +1993,8 @@ footer {
 
     .nav-container {
 
-        padding: 6px 12px;
+        padding:
+            6px 12px;
     }
 
 
@@ -1994,10 +2065,11 @@ footer {
         height: 78px;
 
         top: 3px;
-
         right: 8%;
     }
 
+
+    /* عنوان اصلی */
 
     .hero-modern-content h1 {
 
@@ -2007,14 +2079,9 @@ footer {
     }
 
 
-    /*
-       آیکون‌های عنوان در موبایل
-       همچنان دایره توپر باقی می‌مانند
-    */
+    /* آیکون‌های کنار عناوین */
 
     .hero-title-line {
-
-        gap: 8px;
 
         font-size: 1rem;
 
@@ -2024,12 +2091,14 @@ footer {
 
     .hero-title-line i {
 
-        width: 31px;
-        height: 31px;
+        width: 30px;
+        height: 30px;
 
-        font-size: 14px;
+        font-size: .78rem;
     }
 
+
+    /* مدارک */
 
     .hero-credentials {
 
@@ -2049,11 +2118,23 @@ footer {
     }
 
 
+    .hero-credentials i {
+
+        width: 27px;
+        height: 27px;
+
+        font-size: .72rem;
+    }
+
+
+    /* Badge */
+
     .hero-badge {
 
         min-width: 135px;
 
-        padding: 7px 9px;
+        padding:
+            7px 9px;
     }
 
 
@@ -2143,7 +2224,8 @@ footer {
 
         min-width: 120px;
 
-        padding: 6px 7px;
+        padding:
+            6px 7px;
     }
 
 
@@ -2165,10 +2247,7 @@ footer {
     }
 
 
-    /*
-       اصلاح مقدار اشتباه قبلی:
-       .95rem.84rem  ← نامعتبر
-    */
+    /* اصلاح خطای CSS قبلی */
 
     .hero-title-line {
 
@@ -2176,27 +2255,29 @@ footer {
     }
 
 
-    /*
-       اصلاح مقدار اشتباه قبلی:
-       .78rem.68rem  ← نامعتبر
-    */
-
     .hero-credentials span {
 
         font-size: .68rem;
     }
 
 
-    /*
-       اندازه آیکون‌های دایره‌ای در موبایل کوچک
-    */
+    /* آیکون‌های کوچک موبایل */
 
     .hero-title-line i {
 
-        width: 29px;
-        height: 29px;
+        width: 28px;
+        height: 28px;
 
-        font-size: 13px;
+        font-size: .72rem;
+    }
+
+
+    .hero-credentials i {
+
+        width: 25px;
+        height: 25px;
+
+        font-size: .68rem;
     }
 }
 
