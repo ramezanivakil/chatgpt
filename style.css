@@ -1515,4 +1515,156 @@ footer {
         transition-duration: .01ms !important;
     }
 }
+```css
+/* =========================================================
+   FINAL HERO ICON STYLE
+   آیکون سفید + دایره طلایی کاملاً توپر
+   ========================================================= */
+
+
+/* آیکون‌های کنار عناوین */
+
+.hero-modern .hero-title-line > i {
+    width: 32px !important;
+    height: 32px !important;
+
+    min-width: 32px !important;
+    min-height: 32px !important;
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-shrink: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    color: #ffffff !important;
+
+    background: #f3d36a !important;
+    background-color: #f3d36a !important;
+    background-image: none !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+
+    border-radius: 50% !important;
+
+    box-shadow: none !important;
+
+    font-size: 15px !important;
+    line-height: 1 !important;
+}
+
+
+/* آیکون‌های بخش مدارک */
+
+.hero-modern .hero-credentials span > i {
+    width: 27px !important;
+    height: 27px !important;
+
+    min-width: 27px !important;
+    min-height: 27px !important;
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-shrink: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    color: #ffffff !important;
+
+    background: #f3d36a !important;
+    background-color: #f3d36a !important;
+    background-image: none !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+
+    border-radius: 50% !important;
+
+    box-shadow: none !important;
+
+    font-size: 12px !important;
+    line-height: 1 !important;
+}
+
+
+/* آیکون‌های روی تصویر */
+
+.hero-modern .hero-badge > i {
+    width: 33px !important;
+    height: 33px !important;
+
+    min-width: 33px !important;
+    min-height: 33px !important;
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-shrink: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    color: #ffffff !important;
+
+    background: #f3d36a !important;
+    background-color: #f3d36a !important;
+    background-image: none !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+
+    border-radius: 50% !important;
+
+    box-shadow: none !important;
+
+    font-size: 15px !important;
+    line-height: 1 !important;
+}
+
+
+/* آیکون فلش پایین هیرو */
+
+.hero-modern .hero-scroll > i {
+    width: 25px !important;
+    height: 25px !important;
+
+    min-width: 25px !important;
+    min-height: 25px !important;
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    color: #ffffff !important;
+
+    background: #f3d36a !important;
+    background-color: #f3d36a !important;
+    background-image: none !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+
+    border-radius: 50% !important;
+
+    box-shadow: none !important;
+
+    font-size: 11px !important;
+    line-height: 1 !important;
+}
 ```
+
