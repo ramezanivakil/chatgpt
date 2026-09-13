@@ -1,4 +1,3 @@
-```css
 /* =========================================================
    محمدرضا محمدی رمضانی
    PERSONAL LAWYER WEBSITE
@@ -282,8 +281,8 @@ header {
 .hero-modern {
     position: relative;
     width: 100%;
-    min-height: 510px;
-    padding: 80px 25px 40px;
+    min-height: 570px;
+    padding: 85px 25px 45px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -422,7 +421,7 @@ header {
    ========================================================= */
 .hero-modern-visual {
     position: relative;
-    min-height: 400px;
+    min-height: 430px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -954,10 +953,6 @@ footer {
         color: #ffffff !important;
     }
     .hero-title-line {
-        justify-content: flex-start;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
         font-size: 1.0rem;
         color: #ffffff !important;
     }
@@ -1032,4 +1027,3 @@ footer {
         transition-duration: .01ms !important;
     }
 }
-```
