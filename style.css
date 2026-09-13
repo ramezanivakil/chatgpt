@@ -351,6 +351,8 @@ header {
     border-radius: 10px;
     background: linear-gradient(90deg, var(--gold-light), var(--gold));
 }
+
+/* ===== تراز یکسان سطرهای عنوان و مدارک ===== */
 .hero-title-line {
     display: flex;
     align-items: center;
@@ -361,17 +363,18 @@ header {
     font-weight: 700;
 }
 .hero-title-line i {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     color: var(--navy);
     background: var(--gold-light);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     flex-shrink: 0;
 }
+
 /* =========================================================
    CREDENTIALS
    ========================================================= */
@@ -383,9 +386,9 @@ header {
     margin-top: 15px;
 }
 .hero-credentials span {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 10px;
     padding: 2px 0;
     border: none;
     border-radius: 8px;
@@ -394,8 +397,8 @@ header {
     font-size: .86rem;
 }
 .hero-credentials i {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
