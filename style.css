@@ -167,107 +167,6 @@ header {
     animation: ringBell 2.5s infinite ease-in-out;
 }
 /* =========================================================
-   MODAL
-   ========================================================= */
-.modal-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 3000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: rgba(3,10,20,.70);
-    backdrop-filter: blur(6px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all .3s ease;
-}
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-.modal-card {
-    position: relative;
-    width: 100%;
-    max-width: 390px;
-    padding: 38px 25px 30px;
-    border-radius: 20px;
-    background: #fff;
-    text-align: center;
-    box-shadow: 0 25px 60px rgba(15,23,42,.30);
-    transform: scale(.85) translateY(20px);
-    transition: transform .3s ease;
-}
-.modal-overlay.active .modal-card {
-    transform: scale(1) translateY(0);
-}
-.modal-close {
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    width: 35px;
-    height: 35px;
-    border: 0;
-    background: transparent;
-    color: var(--text-gray);
-    font-size: 28px;
-    cursor: pointer;
-}
-.modal-icon {
-    width: 65px;
-    height: 65px;
-    margin: 0 auto 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: var(--navy);
-    background: linear-gradient(135deg, var(--gold-light), var(--gold));
-    font-size: 25px;
-}
-.modal-card h3 {
-    margin-bottom: 8px;
-    font-size: 1.35rem;
-}
-.modal-card p {
-    margin-bottom: 18px;
-    color: var(--text-gray);
-}
-.modal-phone-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    direction: ltr;
-    padding: 10px 13px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: #f8fafc;
-}
-.modal-phone-box span {
-    color: var(--gold-dark);
-    font-family: Tahoma, sans-serif;
-    font-size: 1.25rem;
-    font-weight: 800;
-}
-.copy-btn {
-    width: 38px;
-    height: 38px;
-    border: 1px solid var(--border);
-    border-radius: 0;
-    background: #fff;
-    cursor: pointer;
-}
-.copy-toast {
-    display: block;
-    margin-top: 10px;
-    color: #16a34a;
-    opacity: 0;
-}
-.copy-toast.show {
-    opacity: 1;
-}
-/* =========================================================
    HERO
    ========================================================= */
 .hero-modern {
@@ -544,7 +443,7 @@ header {
    SERVICES
    ========================================================= */
 .services {
-    padding: 70px 25px;
+    padding: 70px 25px 40px;
     background: #f5f7fa;
     border-top: 1px solid #e8edf2;
     border-bottom: 1px solid #e8edf2;
@@ -706,7 +605,7 @@ header {
 .contact {
     max-width: 1250px;
     margin: auto;
-    padding: 70px 25px;
+    padding: 40px 25px 70px;
 }
 .contact-container {
     display: grid;
@@ -968,9 +867,11 @@ footer {
     .cards-grid {
         grid-template-columns: 1fr;
     }
-    .services,
+    .services {
+        padding: 55px 15px 30px;
+    }
     .contact {
-        padding: 55px 15px;
+        padding: 30px 15px 55px;
     }
     .contact-container {
         padding: 25px 20px;
