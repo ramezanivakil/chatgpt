@@ -273,8 +273,8 @@ header {
 .hero-modern {
     position: relative;
     width: 100%;
-    min-height: 480px;
-    padding: 85px 25px 45px;
+    min-height: 450px;
+    padding: 80px 25px 35px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -410,7 +410,7 @@ header {
    ========================================================= */
 .hero-modern-visual {
     position: relative;
-    min-height: 360px;
+    min-height: 340px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -844,8 +844,8 @@ footer {
    ========================================================= */
 @media screen and (max-width: 992px) {
     .hero-modern {
-        min-height: 560px;
-        padding: 85px 20px 45px;
+        min-height: 530px;
+        padding: 80px 20px 35px;
     }
     .hero-modern-container {
         grid-template-columns: 1fr;
@@ -853,7 +853,7 @@ footer {
     }
     .hero-modern-visual {
         order: 1;
-        min-height: 320px;
+        min-height: 300px;
     }
     .hero-modern-content {
         order: 2;
@@ -901,11 +901,11 @@ footer {
         font-size: .82rem;
     }
     .hero-modern {
-        min-height: 480px;
-        padding: 78px 15px 40px;
+        min-height: 460px;
+        padding: 75px 15px 35px;
     }
     .hero-modern-visual {
-        min-height: 280px;
+        min-height: 270px;
     }
     .hero-profile-wrapper {
         max-width: 300px;
@@ -968,10 +968,10 @@ footer {
         height: 29px;
     }
     .hero-modern {
-        min-height: 440px;
+        min-height: 420px;
     }
     .hero-modern-visual {
-        min-height: 250px;
+        min-height: 240px;
     }
     .hero-profile-wrapper {
         max-width: 270px;
