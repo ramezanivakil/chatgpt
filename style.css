@@ -2,7 +2,6 @@
    محمدرضا محمدی رمضانی
    PERSONAL LAWYER WEBSITE
    ========================================================= */
-
 /* =========================================================
    VARIABLES
    ========================================================= */
@@ -23,7 +22,6 @@
     --font-accent: 'CustomComps', Tahoma, sans-serif;
     --font-body: 'CustomZar', Tahoma, sans-serif;
 }
-
 /* =========================================================
    FONTS
    ========================================================= */
@@ -48,7 +46,6 @@
         url('fonts/zar.ttf') format('truetype');
     font-display: swap;
 }
-
 /* =========================================================
    RESET
    ========================================================= */
@@ -83,7 +80,6 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
 }
-
 /* =========================================================
    HEADER
    ========================================================= */
@@ -120,7 +116,6 @@ header {
     display: flex;
     align-items: center;
 }
-
 /* =========================================================
    SOCIAL
    ========================================================= */
@@ -155,7 +150,6 @@ header {
     transform: translateY(-3px) scale(1.08);
     box-shadow: 0 8px 18px rgba(15,23,42,0.18);
 }
-
 /* =========================================================
    CALL ANIMATION
    ========================================================= */
@@ -172,7 +166,6 @@ header {
 .header-social-item.call-btn {
     animation: ringBell 2.5s infinite ease-in-out;
 }
-
 /* =========================================================
    MODAL
    ========================================================= */
@@ -274,14 +267,13 @@ header {
 .copy-toast.show {
     opacity: 1;
 }
-
 /* =========================================================
    HERO
    ========================================================= */
 .hero-modern {
     position: relative;
     width: 100%;
-    min-height: 570px;
+    min-height: 480px;
     padding: 85px 25px 45px;
     overflow: hidden;
     display: flex;
@@ -334,7 +326,6 @@ header {
     gap: 35px;
     align-items: center;
 }
-
 /* =========================================================
    HERO CONTENT
    ========================================================= */
@@ -381,7 +372,6 @@ header {
     font-size: 0.9rem;
     flex-shrink: 0;
 }
-
 /* =========================================================
    CREDENTIALS
    ========================================================= */
@@ -415,13 +405,12 @@ header {
     font-size: 0.8rem;
     flex-shrink: 0;
 }
-
 /* =========================================================
    HERO VISUAL
    ========================================================= */
 .hero-modern-visual {
     position: relative;
-    min-height: 430px;
+    min-height: 360px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -461,7 +450,7 @@ header {
 .hero-profile {
     display: block;
     width: 100%;
-    max-height: 475px;
+    max-height: 400px;
     object-fit: contain;
     filter: drop-shadow(0 20px 30px rgba(0,0,0,.45));
 }
@@ -489,7 +478,6 @@ header {
     0%   { transform: rotateY(0deg); }
     100% { transform: rotateY(360deg); }
 }
-
 /* =========================================================
    SCROLL
    ========================================================= */
@@ -514,7 +502,6 @@ header {
     50%  { transform: translateY(5px); }
     100% { transform: translateY(0); }
 }
-
 /* =========================================================
    SECTION TITLE
    ========================================================= */
@@ -547,7 +534,6 @@ header {
     border-radius: 10px;
     background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
 }
-
 /* =========================================================
    SERVICES
    ========================================================= */
@@ -565,7 +551,6 @@ header {
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
-
 /* =========================================================
    CARD
    ========================================================= */
@@ -709,7 +694,6 @@ header {
 .card:hover .service-link i {
     transform: translateX(-5px);
 }
-
 /* =========================================================
    CONTACT
    ========================================================= */
@@ -790,7 +774,6 @@ header {
     direction: rtl;
     justify-content: flex-start;
 }
-
 /* =========================================================
    FORM
    ========================================================= */
@@ -846,7 +829,6 @@ header {
     text-align: center;
     font-weight: 700;
 }
-
 /* =========================================================
    FOOTER
    ========================================================= */
@@ -857,13 +839,12 @@ footer {
     background: var(--navy-dark);
     font-size: .9rem;
 }
-
 /* =========================================================
    TABLET
    ========================================================= */
 @media screen and (max-width: 992px) {
     .hero-modern {
-        min-height: 700px;
+        min-height: 560px;
         padding: 85px 20px 45px;
     }
     .hero-modern-container {
@@ -872,7 +853,7 @@ footer {
     }
     .hero-modern-visual {
         order: 1;
-        min-height: 390px;
+        min-height: 320px;
     }
     .hero-modern-content {
         order: 2;
@@ -902,7 +883,6 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-
 /* =========================================================
    MOBILE
    ========================================================= */
@@ -921,11 +901,11 @@ footer {
         font-size: .82rem;
     }
     .hero-modern {
-        min-height: 590px;
+        min-height: 480px;
         padding: 78px 15px 40px;
     }
     .hero-modern-visual {
-        min-height: 340px;
+        min-height: 280px;
     }
     .hero-profile-wrapper {
         max-width: 300px;
@@ -979,7 +959,6 @@ footer {
         display: block;
     }
 }
-
 /* =========================================================
    SMALL MOBILE
    ========================================================= */
@@ -989,10 +968,10 @@ footer {
         height: 29px;
     }
     .hero-modern {
-        min-height: 550px;
+        min-height: 440px;
     }
     .hero-modern-visual {
-        min-height: 315px;
+        min-height: 250px;
     }
     .hero-profile-wrapper {
         max-width: 270px;
@@ -1011,7 +990,6 @@ footer {
         font-size: .78rem;
     }
 }
-
 /* =========================================================
    REDUCED MOTION
    ========================================================= */
