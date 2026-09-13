@@ -352,7 +352,7 @@ header {
     background: linear-gradient(90deg, var(--gold-light), var(--gold));
 }
 
-/* ===== تراز یکسان سطرهای عنوان و مدارک ===== */
+/* ===== تراز یکسان همه سطرها ===== */
 .hero-title-line {
     display: flex;
     align-items: center;
@@ -361,6 +361,7 @@ header {
     color: #ffffff !important;
     font-size: 1.1rem;
     font-weight: 700;
+    width: 100%;
 }
 .hero-title-line i {
     width: 30px;
@@ -384,6 +385,7 @@ header {
     align-items: flex-start;
     gap: 8px;
     margin-top: 15px;
+    width: 100%;
 }
 .hero-credentials span {
     display: flex;
@@ -395,6 +397,7 @@ header {
     background: transparent;
     color: #ffffff !important;
     font-size: .86rem;
+    width: 100%;
 }
 .hero-credentials i {
     width: 30px;
@@ -867,12 +870,24 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
+
+    /* تراز راست‌چین حتی در حالت وسط‌چین شدن کل بلاک */
     .hero-title-line {
-        justify-content: center;
+        justify-content: flex-start;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .hero-credentials {
-        justify-content: center;
+        align-items: flex-start;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
     }
+    .hero-credentials span {
+        justify-content: flex-start;
+    }
+
     .hero-profile-wrapper {
         max-width: 350px;
     }
@@ -938,10 +953,12 @@ footer {
     .hero-title-line {
         font-size: 1.0rem;
         color: #ffffff !important;
+        max-width: 300px;
     }
     .hero-credentials {
         gap: 6px;
         margin-top: 12px;
+        max-width: 300px;
     }
     .hero-credentials span {
         padding: 2px 0;
@@ -988,6 +1005,10 @@ footer {
     }
     .hero-title-line {
         font-size: .95rem;
+        max-width: 270px;
+    }
+    .hero-credentials {
+        max-width: 270px;
     }
     .hero-credentials span {
         font-size: .78rem;
