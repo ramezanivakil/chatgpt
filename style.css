@@ -230,7 +230,7 @@ header {
     gap: 10px;
     margin: 2px 0;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 700;
     width: 100%;
 }
@@ -753,7 +753,7 @@ footer {
         font-size: 1.55rem;
     }
     .hero-title-line {
-        font-size: .95rem;
+        font-size: 1.1rem;
         max-width: 300px;
     }
     .hero-credentials {
@@ -866,7 +866,7 @@ footer {
         font-size: 1.4rem;
     }
     .hero-title-line {
-        font-size: .9rem;
+        font-size: 1.05rem;
         max-width: 260px;
         gap: 8px;
     }
