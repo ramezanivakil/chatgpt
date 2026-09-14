@@ -230,7 +230,7 @@ header {
     gap: 10px;
     margin: 2px 0;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.4rem;          /* یک سایز بزرگ‌تر شد */
     font-weight: 700;
     width: 100%;
 }
@@ -259,7 +259,7 @@ header {
     align-items: center;
     gap: 10px;
     color: #fff;
-    font-size: .86rem;
+    font-size: 1.05rem;         /* دو سایز بزرگ‌تر شد */
     width: 100%;
 }
 .hero-credentials i {
@@ -753,7 +753,7 @@ footer {
         font-size: 1.55rem;
     }
     .hero-title-line {
-        font-size: 1.1rem;
+        font-size: 1.2rem;       /* یک سایز بزرگ‌تر در موبایل */
         max-width: 300px;
     }
     .hero-credentials {
@@ -762,7 +762,7 @@ footer {
         max-width: 300px;
     }
     .hero-credentials span {
-        font-size: .85rem;
+        font-size: 1rem;         /* دو سایز بزرگ‌تر در موبایل */
     }
 
     .section-title {
@@ -866,7 +866,7 @@ footer {
         font-size: 1.4rem;
     }
     .hero-title-line {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
         max-width: 260px;
         gap: 8px;
     }
@@ -880,7 +880,7 @@ footer {
         max-width: 260px;
     }
     .hero-credentials span {
-        font-size: .78rem;
+        font-size: .92rem;
         gap: 8px;
     }
 
