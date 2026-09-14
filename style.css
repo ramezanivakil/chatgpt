@@ -230,7 +230,7 @@ header {
     gap: 10px;
     margin: 2px 0;
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.5rem;          /* یک سایز بزرگ‌تر شد */
     font-weight: 700;
     width: 100%;
 }
@@ -769,7 +769,7 @@ footer {
         width: 100%;
     }
     .hero-title-line {
-        font-size: 1.2rem;
+        font-size: 1.3rem;       /* یک سایز بزرگ‌تر در موبایل */
         justify-content: flex-start;
         width: 100%;
         max-width: 310px;
@@ -892,7 +892,7 @@ footer {
         font-size: 1.4rem;
     }
     .hero-title-line {
-        font-size: 1.1rem;
+        font-size: 1.2rem;       /* یک سایز بزرگ‌تر در موبایل کوچک */
         max-width: 270px;
         gap: 8px;
     }
