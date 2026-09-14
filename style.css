@@ -246,6 +246,12 @@ header {
     font-size: 0.85rem;
     flex-shrink: 0;
 }
+.hero-title-line .title-sub {
+    font-size: 0.85em;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-right: 4px;
+}
 .hero-credentials {
     display: flex;
     flex-direction: column;
