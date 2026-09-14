@@ -1,66 +1,48 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // عناصر مودال
-    const phoneModal = document.getElementById('phoneModal');
-    const headerCallBtn = document.getElementById('headerCallBtn');
-    const modalCloseBtn = document.getElementById('modalCloseBtn');
-    const copyPhoneBtn = document.getElementById('copyPhoneBtn');
-    const modalPhoneNumber = document.getElementById('modalPhoneNumber');
-    const copyToast = document.getElementById('copyToast');
+    // دکمه‌های شناور پیمایش
+    const scrollUp = document.getElementById('scrollUp');
+    const scrollDown = document.getElementById('scrollDown');
 
-    // باز کردن مودال با کلیک روی دکمه تماس هدر
-    if (headerCallBtn) {
-        headerCallBtn.addEventListener('click', function () {
-            phoneModal.classList.add('active');
+    if (scrollUp) {
+        scrollUp.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
-    // بستن مودال
-    if (modalCloseBtn) {
-        modalCloseBtn.addEventListener('click', function () {
-            phoneModal.classList.remove('active');
+    if (scrollDown) {
+        scrollDown.addEventListener('click', function () {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         });
     }
 
-    // بستن مودال با کلیک روی پس‌زمینه
-    if (phoneModal) {
-        phoneModal.addEventListener('click', function (e) {
-            if (e.target === phoneModal) {
-                phoneModal.classList.remove('active');
+    // فرم مشاوره (نمونه ساده)
+    const form = document.getElementById('consultationForm');
+    const formStatus = document.getElementById('formStatus');
+
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !phone || !message) {
+                if (formStatus) {
+                    formStatus.textContent = 'لطفاً تمام فیلدها را پر کنید.';
+                    formStatus.style.color = '#dc2626';
+                }
+                return;
             }
+
+            if (formStatus) {
+                formStatus.textContent = 'درخواست شما با موفقیت ثبت شد. به زودی تماس گرفته می‌شود.';
+                formStatus.style.color = '#16a34a';
+            }
+
+            form.reset();
         });
     }
-
-    // کپی کردن شماره تلفن
-    if (copyPhoneBtn && modalPhoneNumber) {
-        copyPhoneBtn.addEventListener('click', function () {
-            const phone = modalPhoneNumber.textContent.trim();
-            navigator.clipboard.writeText(phone).then(function () {
-                copyToast.classList.add('show');
-                setTimeout(function () {
-                    copyToast.classList.remove('show');
-                }, 2000);
-            }).catch(function () {
-                // روش جایگزین برای مرورگرهای قدیمی
-                const tempInput = document.createElement('input');
-                tempInput.value = phone;
-                document.body.appendChild(tempInput);
-                tempInput.select();
-                document.execCommand('copy');
-                document.body.removeChild(tempInput);
-                copyToast.classList.add('show');
-                setTimeout(function () {
-                    copyToast.classList.remove('show');
-                }, 2000);
-            });
-        });
-    }
-
-    // بستن مودال با کلید Escape
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && phoneModal.classList.contains('active')) {
-            phoneModal.classList.remove('active');
-        }
-    });
 
 });
