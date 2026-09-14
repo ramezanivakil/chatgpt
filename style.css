@@ -1,9 +1,5 @@
 /* =========================================================
-   محمدرضا محمدی رمضانی
-   PERSONAL LAWYER WEBSITE
-   ========================================================= */
-/* =========================================================
-   VARIABLES
+   محمدرضا محمدی رمضانی - PERSONAL LAWYER WEBSITE
    ========================================================= */
 :root {
     --navy-dark: #07111f;
@@ -13,7 +9,6 @@
     --gold-light: #f3d36a;
     --gold-dark: #a77d18;
     --white: #ffffff;
-    --white-soft: #f8fafc;
     --text-dark: #0f172a;
     --text-gray: #64748b;
     --border: #e2e8f0;
@@ -22,33 +17,23 @@
     --font-accent: 'CustomComps', Tahoma, sans-serif;
     --font-body: 'CustomZar', Tahoma, sans-serif;
 }
-/* =========================================================
-   FONTS
-   ========================================================= */
+
 @font-face {
     font-family: 'CustomTitr';
-    src:
-        url('fonts/titr.woff2') format('woff2'),
-        url('fonts/titr.ttf') format('truetype');
+    src: url('fonts/titr.woff2') format('woff2'), url('fonts/titr.ttf') format('truetype');
     font-display: swap;
 }
 @font-face {
     font-family: 'CustomComps';
-    src:
-        url('fonts/comps.woff2') format('woff2'),
-        url('fonts/comps.ttf') format('truetype');
+    src: url('fonts/comps.woff2') format('woff2'), url('fonts/comps.ttf') format('truetype');
     font-display: swap;
 }
 @font-face {
     font-family: 'CustomZar';
-    src:
-        url('fonts/zar.woff2') format('woff2'),
-        url('fonts/zar.ttf') format('truetype');
+    src: url('fonts/zar.woff2') format('woff2'), url('fonts/zar.ttf') format('truetype');
     font-display: swap;
 }
-/* =========================================================
-   RESET
-   ========================================================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -58,38 +43,33 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
     background: var(--background);
     color: var(--text-dark);
     font-family: var(--font-body);
     line-height: 1.8;
+    overflow-x: hidden;
 }
 img {
     max-width: 100%;
+    height: auto;
 }
 a {
     text-decoration: none;
 }
-button,
-input,
-textarea {
+button, input, textarea {
     font-family: inherit;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
 }
-/* =========================================================
-   HEADER
-   ========================================================= */
+
+/* HEADER */
 header {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1000;
-    width: 100%;
     background: rgba(255,255,255,0.94);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
@@ -97,7 +77,6 @@ header {
     box-shadow: 0 4px 25px rgba(15,23,42,0.06);
 }
 .nav-container {
-    width: 100%;
     max-width: 1350px;
     margin: auto;
     padding: 7px 24px;
@@ -116,9 +95,8 @@ header {
     display: flex;
     align-items: center;
 }
-/* =========================================================
-   SOCIAL
-   ========================================================= */
+
+/* SOCIAL */
 .header-social-bar {
     display: flex;
     align-items: center;
@@ -128,55 +106,47 @@ header {
 .header-social-item {
     width: 37px;
     height: 37px;
-    padding: 0;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--navy);
     border-radius: 50%;
     background: #fff;
-    cursor: pointer;
+    overflow: hidden;
     box-shadow: 0 3px 10px rgba(15,23,42,0.08);
-    transition: all .3s ease;
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 .header-social-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 .header-social-item:hover {
     transform: translateY(-3px) scale(1.08);
     box-shadow: 0 8px 18px rgba(15,23,42,0.18);
 }
-/* =========================================================
-   CALL ANIMATION
-   ========================================================= */
+
+/* CALL ANIMATION */
 @keyframes ringBell {
-    0%   { transform: rotate(0); }
-    8%   { transform: rotate(12deg); }
-    16%  { transform: rotate(-12deg); }
-    24%  { transform: rotate(10deg); }
-    32%  { transform: rotate(-10deg); }
-    40%  { transform: rotate(5deg); }
-    48%  { transform: rotate(0); }
-    100% { transform: rotate(0); }
+    0%, 48%, 100% { transform: rotate(0); }
+    8% { transform: rotate(12deg); }
+    16% { transform: rotate(-12deg); }
+    24% { transform: rotate(10deg); }
+    32% { transform: rotate(-10deg); }
+    40% { transform: rotate(5deg); }
 }
 .header-social-item.call-btn {
     animation: ringBell 2.5s infinite ease-in-out;
 }
-/* =========================================================
-   HERO
-   ========================================================= */
+
+/* HERO */
 .hero-modern {
     position: relative;
-    width: 100%;
     min-height: 450px;
     padding: 80px 25px 35px;
-    overflow: hidden;
     display: flex;
     align-items: center;
+    overflow: hidden;
     background:
         radial-gradient(circle at 78% 45%, rgba(212,175,55,.12), transparent 25%),
         linear-gradient(135deg, #050c18 0%, #0b132b 45%, #17233d 100%);
@@ -225,9 +195,6 @@ header {
     gap: 35px;
     align-items: center;
 }
-/* =========================================================
-   HERO CONTENT
-   ========================================================= */
 .hero-modern-content {
     display: flex;
     flex-direction: column;
@@ -235,7 +202,7 @@ header {
 }
 .hero-modern-content h1 {
     margin: 0 0 12px;
-    color: #ffffff !important;
+    color: #fff;
     font-size: clamp(2.1rem, 4vw, 2.7rem);
     font-weight: 900;
     line-height: 1.3;
@@ -250,14 +217,12 @@ header {
     border-radius: 10px;
     background: linear-gradient(90deg, var(--gold-light), var(--gold));
 }
-
-/* ===== تراز یکسان همه سطرها ===== */
 .hero-title-line {
     display: flex;
     align-items: center;
     gap: 10px;
     margin: 2px 0;
-    color: #ffffff !important;
+    color: #fff;
     font-size: 1.1rem;
     font-weight: 700;
     width: 100%;
@@ -274,10 +239,6 @@ header {
     font-size: 0.85rem;
     flex-shrink: 0;
 }
-
-/* =========================================================
-   CREDENTIALS
-   ========================================================= */
 .hero-credentials {
     display: flex;
     flex-direction: column;
@@ -290,11 +251,7 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 2px 0;
-    border: none;
-    border-radius: 8px;
-    background: transparent;
-    color: #ffffff !important;
+    color: #fff;
     font-size: .86rem;
     width: 100%;
 }
@@ -310,9 +267,6 @@ header {
     font-size: 0.8rem;
     flex-shrink: 0;
 }
-/* =========================================================
-   HERO VISUAL
-   ========================================================= */
 .hero-modern-visual {
     position: relative;
     min-height: 340px;
@@ -332,20 +286,9 @@ header {
     border-radius: 50%;
     border: 1px solid rgba(212,175,55,.25);
 }
-.hero-circle-one {
-    width: 430px;
-    height: 430px;
-}
-.hero-circle-two {
-    width: 350px;
-    height: 350px;
-    border-style: dashed;
-}
-.hero-circle-three {
-    width: 275px;
-    height: 275px;
-    border: 2px solid rgba(212,175,55,.12);
-}
+.hero-circle-one { width: 430px; height: 430px; }
+.hero-circle-two { width: 350px; height: 350px; border-style: dashed; }
+.hero-circle-three { width: 275px; height: 275px; border: 2px solid rgba(212,175,55,.12); }
 .hero-profile-wrapper {
     position: relative;
     z-index: 4;
@@ -366,26 +309,18 @@ header {
     right: 10px;
     width: 105px;
     height: 105px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     perspective: 1000px;
 }
 .hero-modern-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transform-style: preserve-3d;
     animation: flipCoin 6s linear infinite;
     filter: drop-shadow(0 0 14px rgba(212,175,55,.45));
 }
 @keyframes flipCoin {
-    0%   { transform: rotateY(0deg); }
-    100% { transform: rotateY(360deg); }
+    to { transform: rotateY(360deg); }
 }
-/* =========================================================
-   SCROLL
-   ========================================================= */
 .hero-scroll {
     position: absolute;
     z-index: 10;
@@ -403,13 +338,10 @@ header {
     animation: scrollDown 1.5s infinite ease-in-out;
 }
 @keyframes scrollDown {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(5px); }
-    100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
 }
-/* =========================================================
-   SECTION TITLE
-   ========================================================= */
+
+/* SECTION TITLE */
 .section-title {
     margin-bottom: 40px;
     text-align: center;
@@ -439,9 +371,8 @@ header {
     border-radius: 10px;
     background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
 }
-/* =========================================================
-   SERVICES
-   ========================================================= */
+
+/* SERVICES */
 .services {
     padding: 70px 25px 40px;
     background: #f5f7fa;
@@ -449,24 +380,20 @@ header {
     border-bottom: 1px solid #e8edf2;
 }
 .cards-grid {
-    width: 100%;
     max-width: 1250px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
-/* =========================================================
-   CARD
-   ========================================================= */
 .card {
     position: relative;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     border: 1px solid #e4e8ee;
     border-radius: 17px;
     background: #fff;
+    overflow: hidden;
     box-shadow: 0 7px 25px rgba(15,23,42,.055);
     transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
 }
@@ -491,14 +418,12 @@ header {
 }
 .card-image {
     position: relative;
-    width: 100%;
     height: 215px;
     overflow: hidden;
 }
 .card-image img {
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
     transition: transform .6s ease;
 }
@@ -549,9 +474,6 @@ header {
     transform: rotate(-8deg) scale(1.08);
 }
 .card-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
     padding: 20px;
 }
 .card-title-row {
@@ -576,32 +498,8 @@ header {
     border-radius: 5px;
     background: var(--gold);
 }
-.card-content p {
-    margin-top: 10px;
-    color: var(--text-gray);
-    font-size: .91rem;
-    line-height: 1.8;
-}
-.service-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: auto;
-    padding-top: 15px;
-    border-top: 1px solid #edf0f3;
-    color: var(--gold-dark);
-    font-size: .86rem;
-    font-weight: 700;
-}
-.service-link i {
-    transition: transform .3s ease;
-}
-.card:hover .service-link i {
-    transform: translateX(-5px);
-}
-/* =========================================================
-   CONTACT
-   ========================================================= */
+
+/* CONTACT */
 .contact {
     max-width: 1250px;
     margin: auto;
@@ -679,9 +577,13 @@ header {
     direction: rtl;
     justify-content: flex-start;
 }
-/* =========================================================
-   FORM
-   ========================================================= */
+
+/* FORM */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -695,12 +597,7 @@ header {
     direction: rtl;
     text-align: right;
     resize: vertical;
-    transition: all .3s ease;
-}
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    transition: border-color .3s ease, box-shadow .3s ease;
 }
 .form-group input::placeholder,
 .form-group textarea::placeholder {
@@ -734,9 +631,8 @@ header {
     text-align: center;
     font-weight: 700;
 }
-/* =========================================================
-   FOOTER
-   ========================================================= */
+
+/* FOOTER */
 footer {
     padding: 25px 20px;
     text-align: center;
@@ -744,10 +640,9 @@ footer {
     background: var(--navy-dark);
     font-size: .9rem;
 }
-/* =========================================================
-   TABLET
-   ========================================================= */
-@media screen and (max-width: 992px) {
+
+/* TABLET */
+@media (max-width: 992px) {
     .hero-modern {
         min-height: 530px;
         padding: 80px 20px 35px;
@@ -769,8 +664,6 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
-
-    /* تراز راست‌چین حتی در حالت وسط‌چین شدن کل بلاک */
     .hero-title-line {
         justify-content: flex-start;
         max-width: 340px;
@@ -783,10 +676,6 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
-    .hero-credentials span {
-        justify-content: flex-start;
-    }
-
     .hero-profile-wrapper {
         max-width: 350px;
     }
@@ -800,10 +689,9 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-/* =========================================================
-   MOBILE
-   ========================================================= */
-@media screen and (max-width: 700px) {
+
+/* MOBILE */
+@media (max-width: 700px) {
     .nav-container {
         padding: 6px 12px;
     }
@@ -827,18 +715,9 @@ footer {
     .hero-profile-wrapper {
         max-width: 300px;
     }
-    .hero-circle-one {
-        width: 330px;
-        height: 330px;
-    }
-    .hero-circle-two {
-        width: 275px;
-        height: 275px;
-    }
-    .hero-circle-three {
-        width: 215px;
-        height: 215px;
-    }
+    .hero-circle-one { width: 330px; height: 330px; }
+    .hero-circle-two { width: 275px; height: 275px; }
+    .hero-circle-three { width: 215px; height: 215px; }
     .hero-modern-logo {
         width: 78px;
         height: 78px;
@@ -847,11 +726,9 @@ footer {
     }
     .hero-modern-content h1 {
         font-size: 1.6rem;
-        color: #ffffff !important;
     }
     .hero-title-line {
-        font-size: 1.0rem;
-        color: #ffffff !important;
+        font-size: 1rem;
         max-width: 300px;
     }
     .hero-credentials {
@@ -860,9 +737,7 @@ footer {
         max-width: 300px;
     }
     .hero-credentials span {
-        padding: 2px 0;
-        font-size: 0.9rem;
-        color: #ffffff !important;
+        font-size: .9rem;
     }
     .cards-grid {
         grid-template-columns: 1fr;
@@ -880,10 +755,9 @@ footer {
         display: block;
     }
 }
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-@media screen and (max-width: 400px) {
+
+/* SMALL MOBILE */
+@media (max-width: 400px) {
     .header-social-item {
         width: 29px;
         height: 29px;
@@ -915,9 +789,8 @@ footer {
         font-size: .78rem;
     }
 }
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
+
+/* REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
