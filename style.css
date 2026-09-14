@@ -1,5 +1,6 @@
 /* =========================================================
    محمدرضا محمدی رمضانی - PERSONAL LAWYER WEBSITE
+   Optimized + Improved Responsive
    ========================================================= */
 :root {
     --navy-dark: #07111f;
@@ -52,6 +53,7 @@ body {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 a {
     text-decoration: none;
@@ -63,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
 }
 
-/* HEADER */
+/* ========== HEADER ========== */
 header {
     position: fixed;
     top: 0;
@@ -83,6 +85,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
 }
 .logo {
     color: var(--navy);
@@ -94,18 +97,21 @@ header {
 .header-left-action {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
-/* SOCIAL */
+/* ========== SOCIAL ========== */
 .header-social-bar {
     display: flex;
     align-items: center;
     gap: 9px;
     direction: ltr;
+    flex-wrap: nowrap;
 }
 .header-social-item {
     width: 37px;
     height: 37px;
+    min-width: 37px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,7 +145,7 @@ header {
     animation: ringBell 2.5s infinite ease-in-out;
 }
 
-/* HERO */
+/* ========== HERO ========== */
 .hero-modern {
     position: relative;
     min-height: 450px;
@@ -164,6 +170,7 @@ header {
     position: absolute;
     border: 1px solid rgba(212,175,55,.18);
     border-radius: 50%;
+    pointer-events: none;
 }
 .hero-decoration-one {
     width: 500px;
@@ -280,11 +287,13 @@ header {
     height: 390px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(212,175,55,.24), rgba(212,175,55,.07) 40%, transparent 70%);
+    pointer-events: none;
 }
 .hero-circle {
     position: absolute;
     border-radius: 50%;
     border: 1px solid rgba(212,175,55,.25);
+    pointer-events: none;
 }
 .hero-circle-one { width: 430px; height: 430px; }
 .hero-circle-two { width: 350px; height: 350px; border-style: dashed; }
@@ -296,7 +305,6 @@ header {
     max-width: 400px;
 }
 .hero-profile {
-    display: block;
     width: 100%;
     max-height: 400px;
     object-fit: contain;
@@ -341,7 +349,7 @@ header {
     50% { transform: translateY(5px); }
 }
 
-/* SECTION TITLE */
+/* ========== SECTION TITLE ========== */
 .section-title {
     margin-bottom: 40px;
     text-align: center;
@@ -372,7 +380,7 @@ header {
     background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
 }
 
-/* SERVICES */
+/* ========== SERVICES ========== */
 .services {
     padding: 70px 25px 40px;
     background: #f5f7fa;
@@ -418,7 +426,7 @@ header {
 }
 .card-image {
     position: relative;
-    height: 215px;
+    height: 200px;
     overflow: hidden;
 }
 .card-image img {
@@ -474,10 +482,9 @@ header {
     transform: rotate(-8deg) scale(1.08);
 }
 .card-content {
-    padding: 20px;
+    padding: 18px 20px;
 }
 .card-title-row {
-    min-height: 48px;
     display: flex;
     align-items: center;
 }
@@ -485,7 +492,7 @@ header {
     position: relative;
     padding-right: 13px;
     color: var(--navy);
-    font-size: 1.18rem;
+    font-size: 1.15rem;
     line-height: 1.6;
 }
 .card-content h3::before {
@@ -499,7 +506,7 @@ header {
     background: var(--gold);
 }
 
-/* CONTACT */
+/* ========== CONTACT ========== */
 .contact {
     max-width: 1250px;
     margin: auto;
@@ -554,6 +561,7 @@ header {
 .inline-call-btn {
     width: 42px;
     height: 42px;
+    min-width: 42px;
 }
 .mobile-only-msg {
     display: none;
@@ -576,9 +584,11 @@ header {
 .contact-social-bar {
     direction: rtl;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* FORM */
+/* ========== FORM ========== */
 .contact-form form {
     display: flex;
     flex-direction: column;
@@ -614,7 +624,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 9px;
-    padding: 12px 20px;
+    padding: 14px 20px;
     border: none;
     border-radius: 9px;
     color: #111827;
@@ -622,6 +632,10 @@ header {
     font-size: 1rem;
     font-weight: 800;
     cursor: pointer;
+    transition: opacity .25s ease;
+}
+.btn-gold:hover {
+    opacity: .92;
 }
 .form-btn {
     width: 100%;
@@ -632,7 +646,7 @@ header {
     font-weight: 700;
 }
 
-/* FOOTER */
+/* ========== FOOTER ========== */
 footer {
     padding: 25px 20px;
     text-align: center;
@@ -641,15 +655,17 @@ footer {
     font-size: .9rem;
 }
 
-/* TABLET */
+/* =========================================================
+   TABLET (max-width: 992px)
+   ========================================================= */
 @media (max-width: 992px) {
     .hero-modern {
-        min-height: 530px;
+        min-height: 520px;
         padding: 80px 20px 35px;
     }
     .hero-modern-container {
         grid-template-columns: 1fr;
-        gap: 0;
+        gap: 10px;
     }
     .hero-modern-visual {
         order: 1;
@@ -666,69 +682,78 @@ footer {
     }
     .hero-title-line {
         justify-content: flex-start;
-        max-width: 340px;
+        max-width: 360px;
         margin-left: auto;
         margin-right: auto;
     }
     .hero-credentials {
         align-items: flex-start;
-        max-width: 340px;
+        max-width: 360px;
         margin-left: auto;
         margin-right: auto;
     }
     .hero-profile-wrapper {
-        max-width: 350px;
+        max-width: 340px;
     }
     .hero-modern-logo {
         right: 12%;
+        width: 95px;
+        height: 95px;
     }
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     .contact-container {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
 
-/* MOBILE */
+/* =========================================================
+   MOBILE (max-width: 700px)
+   ========================================================= */
 @media (max-width: 700px) {
     .nav-container {
         padding: 6px 12px;
-    }
-    .header-social-bar {
-        gap: 6px;
-    }
-    .header-social-item {
-        width: 32px;
-        height: 32px;
+        gap: 8px;
     }
     .logo {
-        font-size: .82rem;
+        font-size: .8rem;
     }
+    .header-social-bar {
+        gap: 5px;
+    }
+    .header-social-item {
+        width: 31px;
+        height: 31px;
+        min-width: 31px;
+    }
+
     .hero-modern {
-        min-height: 460px;
-        padding: 75px 15px 35px;
+        min-height: 450px;
+        padding: 72px 15px 30px;
     }
     .hero-modern-visual {
-        min-height: 270px;
+        min-height: 260px;
     }
     .hero-profile-wrapper {
-        max-width: 300px;
+        max-width: 280px;
     }
-    .hero-circle-one { width: 330px; height: 330px; }
-    .hero-circle-two { width: 275px; height: 275px; }
-    .hero-circle-three { width: 215px; height: 215px; }
+    .hero-circle-one { width: 310px; height: 310px; }
+    .hero-circle-two { width: 255px; height: 255px; }
+    .hero-circle-three { width: 200px; height: 200px; }
     .hero-modern-logo {
-        width: 78px;
-        height: 78px;
-        top: 3px;
+        width: 72px;
+        height: 72px;
+        top: 2px;
         right: 8%;
     }
     .hero-modern-content h1 {
-        font-size: 1.6rem;
+        font-size: 1.55rem;
     }
     .hero-title-line {
-        font-size: 1rem;
+        font-size: .95rem;
         max-width: 300px;
     }
     .hero-credentials {
@@ -737,60 +762,157 @@ footer {
         max-width: 300px;
     }
     .hero-credentials span {
-        font-size: .9rem;
+        font-size: .85rem;
     }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+
     .cards-grid {
         grid-template-columns: 1fr;
+        gap: 18px;
+        max-width: 420px;
     }
+    .card-image {
+        height: 180px;
+    }
+    .card-content {
+        padding: 15px 18px;
+    }
+    .card-content h3 {
+        font-size: 1.08rem;
+    }
+
     .services {
-        padding: 55px 15px 30px;
+        padding: 50px 15px 25px;
     }
     .contact {
-        padding: 30px 15px 55px;
+        padding: 25px 15px 50px;
     }
     .contact-container {
-        padding: 25px 20px;
+        padding: 22px 18px;
+        gap: 25px;
+    }
+    .contact-info h3 {
+        font-size: 1.15rem;
+        margin-bottom: 18px;
+    }
+    .info-item {
+        font-size: .95rem;
+        margin-bottom: 14px;
+    }
+    .phone-link {
+        font-size: 1.25rem;
+    }
+    .inline-call-btn {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
     }
     .mobile-only-msg {
         display: block;
     }
+    .contact-social-bar {
+        gap: 8px;
+    }
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 14px;
+        font-size: .95rem;
+    }
+    .btn-gold {
+        padding: 13px 18px;
+    }
 }
 
-/* SMALL MOBILE */
+/* =========================================================
+   SMALL MOBILE (max-width: 400px)
+   ========================================================= */
 @media (max-width: 400px) {
-    .header-social-item {
-        width: 29px;
-        height: 29px;
+    .nav-container {
+        padding: 5px 10px;
     }
+    .logo {
+        font-size: .75rem;
+    }
+    .header-social-item {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+    }
+    .header-social-bar {
+        gap: 4px;
+    }
+
     .hero-modern {
-        min-height: 420px;
+        min-height: 410px;
+        padding: 68px 12px 25px;
     }
     .hero-modern-visual {
-        min-height: 240px;
+        min-height: 230px;
     }
     .hero-profile-wrapper {
-        max-width: 270px;
+        max-width: 250px;
     }
     .hero-modern-logo {
-        width: 68px;
-        height: 68px;
+        width: 64px;
+        height: 64px;
     }
     .hero-modern-content h1 {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
     .hero-title-line {
-        font-size: .95rem;
-        max-width: 270px;
+        font-size: .9rem;
+        max-width: 260px;
+        gap: 8px;
+    }
+    .hero-title-line i,
+    .hero-credentials i {
+        width: 26px;
+        height: 26px;
+        font-size: .75rem;
     }
     .hero-credentials {
-        max-width: 270px;
+        max-width: 260px;
     }
     .hero-credentials span {
         font-size: .78rem;
+        gap: 8px;
+    }
+
+    .card-image {
+        height: 160px;
+    }
+    .service-number {
+        width: 34px;
+        height: 34px;
+        font-size: .75rem;
+    }
+    .service-icon {
+        width: 42px;
+        height: 42px;
+        left: 12px;
+        bottom: 12px;
+    }
+    .card-content h3 {
+        font-size: 1rem;
+    }
+
+    .contact-container {
+        padding: 18px 14px;
+    }
+    .phone-link {
+        font-size: 1.15rem;
     }
 }
 
-/* REDUCED MOTION */
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
