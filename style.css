@@ -230,7 +230,7 @@ header {
     gap: 10px;
     margin: 2px 0;
     color: #fff;
-    font-size: 1.5rem;          /* یک سایز بزرگ‌تر شد */
+    font-size: 1.5rem;
     font-weight: 700;
     width: 100%;
 }
@@ -689,14 +689,14 @@ footer {
         width: 100%;
         max-width: 360px;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: 20px;
     }
     .hero-credentials {
         align-items: stretch;
         width: 100%;
         max-width: 360px;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: 20px;
     }
     .hero-credentials span {
         justify-content: flex-start;
@@ -769,12 +769,12 @@ footer {
         width: 100%;
     }
     .hero-title-line {
-        font-size: 1.3rem;       /* یک سایز بزرگ‌تر در موبایل */
+        font-size: 1.3rem;
         justify-content: flex-start;
         width: 100%;
         max-width: 310px;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: 18px;     /* به راست منتقل شد */
     }
     .hero-credentials {
         gap: 6px;
@@ -783,7 +783,7 @@ footer {
         width: 100%;
         max-width: 310px;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: 18px;     /* به راست منتقل شد */
     }
     .hero-credentials span {
         font-size: 1rem;
@@ -892,9 +892,10 @@ footer {
         font-size: 1.4rem;
     }
     .hero-title-line {
-        font-size: 1.2rem;       /* یک سایز بزرگ‌تر در موبایل کوچک */
+        font-size: 1.2rem;
         max-width: 270px;
         gap: 8px;
+        margin-right: 12px;     /* به راست منتقل شد */
     }
     .hero-title-line i,
     .hero-credentials i {
@@ -904,6 +905,7 @@ footer {
     }
     .hero-credentials {
         max-width: 270px;
+        margin-right: 12px;     /* به راست منتقل شد */
     }
     .hero-credentials span {
         font-size: .92rem;
