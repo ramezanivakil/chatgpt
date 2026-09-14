@@ -687,16 +687,16 @@ footer {
     .hero-title-line {
         justify-content: flex-start;
         width: 100%;
-        max-width: 360px;
-        margin-left: auto;
-        margin-right: 20px;
+        max-width: 420px;
+        margin-left: 10px;
+        margin-right: 15px;
     }
     .hero-credentials {
         align-items: stretch;
         width: 100%;
-        max-width: 360px;
-        margin-left: auto;
-        margin-right: 20px;
+        max-width: 420px;
+        margin-left: 10px;
+        margin-right: 15px;
     }
     .hero-credentials span {
         justify-content: flex-start;
@@ -772,18 +772,19 @@ footer {
         font-size: 1.3rem;
         justify-content: flex-start;
         width: 100%;
-        max-width: 310px;
-        margin-left: auto;
-        margin-right: 18px;     /* به راست منتقل شد */
+        max-width: 100%;
+        margin-left: 8px;       /* حاشیه چپ کم شد */
+        margin-right: 12px;
+        padding-left: 0;
     }
     .hero-credentials {
         gap: 6px;
         margin-top: 12px;
         align-items: stretch;
         width: 100%;
-        max-width: 310px;
-        margin-left: auto;
-        margin-right: 18px;     /* به راست منتقل شد */
+        max-width: 100%;
+        margin-left: 8px;       /* حاشیه چپ کم شد */
+        margin-right: 12px;
     }
     .hero-credentials span {
         font-size: 1rem;
@@ -893,9 +894,10 @@ footer {
     }
     .hero-title-line {
         font-size: 1.2rem;
-        max-width: 270px;
+        max-width: 100%;
         gap: 8px;
-        margin-right: 12px;     /* به راست منتقل شد */
+        margin-left: 5px;       /* حاشیه چپ کم شد */
+        margin-right: 10px;
     }
     .hero-title-line i,
     .hero-credentials i {
@@ -904,8 +906,9 @@ footer {
         font-size: .75rem;
     }
     .hero-credentials {
-        max-width: 270px;
-        margin-right: 12px;     /* به راست منتقل شد */
+        max-width: 100%;
+        margin-left: 5px;       /* حاشیه چپ کم شد */
+        margin-right: 10px;
     }
     .hero-credentials span {
         font-size: .92rem;
