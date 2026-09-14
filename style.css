@@ -773,7 +773,7 @@ footer {
         justify-content: flex-start;
         width: 100%;
         max-width: 100%;
-        margin-left: 8px;       /* حاشیه چپ کم شد */
+        margin-left: 8px;
         margin-right: 12px;
         padding-left: 0;
     }
@@ -783,13 +783,14 @@ footer {
         align-items: stretch;
         width: 100%;
         max-width: 100%;
-        margin-left: 8px;       /* حاشیه چپ کم شد */
+        margin-left: 8px;
         margin-right: 12px;
     }
     .hero-credentials span {
-        font-size: 1rem;
+        font-size: 0.95rem;
         justify-content: flex-start;
         width: 100%;
+        white-space: nowrap;
     }
 
     .section-title {
@@ -896,7 +897,7 @@ footer {
         font-size: 1.2rem;
         max-width: 100%;
         gap: 8px;
-        margin-left: 5px;       /* حاشیه چپ کم شد */
+        margin-left: 5px;
         margin-right: 10px;
     }
     .hero-title-line i,
@@ -907,12 +908,13 @@ footer {
     }
     .hero-credentials {
         max-width: 100%;
-        margin-left: 5px;       /* حاشیه چپ کم شد */
+        margin-left: 5px;
         margin-right: 10px;
     }
     .hero-credentials span {
-        font-size: .92rem;
+        font-size: 0.85rem;
         gap: 8px;
+        white-space: nowrap;
     }
 
     .card-image {
