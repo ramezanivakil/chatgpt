@@ -16,14 +16,58 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ========== تنظیمات تلگرام و واتساپ ==========
-    const TELEGRAM_BOT_TOKEN = '8810828685:AAGkevUapCVHQrn50KPozWhq5QXLFupNC-s';   // توکن ربات خودت را اینجا بگذار
+    // ========== تنظیمات تلگرام ==========
+    const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN';   // توکن واقعی ربات را اینجا بگذار
     const TELEGRAM_CHAT_ID   = '93672483';
-    const WHATSAPP_NUMBER    = '989127442394';
+
+    // ========== پاپ‌آپ ==========
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupMessage = document.getElementById('popupMessage');
+    const popupIcon = document.getElementById('popupIcon');
+    const popupClose = document.getElementById('popupClose');
+
+    function showPopup(message, type = 'success') {
+        popupMessage.textContent = message;
+        popupIcon.innerHTML = type === 'success'
+            ? '<i class="fa-solid fa-circle-check"></i>'
+            : '<i class="fa-solid fa-circle-xmark"></i>';
+        popupIcon.className = 'popup-icon ' + type;
+        popupOverlay.classList.add('active');
+    }
+
+    function hidePopup() {
+        popupOverlay.classList.remove('active');
+    }
+
+    if (popupClose) {
+        popupClose.addEventListener('click', hidePopup);
+    }
+
+    popupOverlay.addEventListener('click', function (e) {
+        if (e.target === popupOverlay) hidePopup();
+    });
+
+    // ========== محدود کردن ورودی شماره موبایل ==========
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function () {
+            // فقط عدد (فارسی و انگلیسی)
+            let value = this.value.replace(/[^0-9۰-۹]/g, '');
+
+            // تبدیل فارسی به انگلیسی
+            value = value.replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
+
+            // حداکثر ۱۱ رقم
+            if (value.length > 11) {
+                value = value.slice(0, 11);
+            }
+
+            this.value = value;
+        });
+    }
 
     // ========== فرم مشاوره ==========
     const form = document.getElementById('consultationForm');
-    const formStatus = document.getElementById('formStatus');
     const submitBtn = document.getElementById('submitBtn');
     const btnText = document.getElementById('btnText');
 
@@ -32,12 +76,11 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        // ضد اسپم
         const honeypot = document.getElementById('honeypot');
         if (honeypot && honeypot.value) return;
 
         const name    = document.getElementById('name').value.trim();
-        let phone     = document.getElementById('phone').value.trim().replace(/\s|-/g, '');
+        let phone     = document.getElementById('phone').value.trim();
         const city    = document.getElementById('city').value.trim();
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value.trim();
@@ -47,37 +90,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // ========== اعتبارسنجی ==========
         if (name.length < 3) {
-            showStatus('لطفاً نام و نام خانوادگی را به درستی وارد کنید.', 'error');
+            showPopup('لطفاً نام و نام خانوادگی را به درستی وارد کنید.', 'error');
             return;
         }
 
-        // اعتبارسنجی شماره موبایل ایرانی
-        const phoneRegex = /^09\d{9}$/;
-        if (!phoneRegex.test(phone)) {
-            showStatus('شماره موبایل باید ۱۱ رقم و با ۰۹ شروع شود (مثال: ۰۹۱۲۳۴۵۶۷۸۹).', 'error');
+        if (!/^09\d{9}$/.test(phone)) {
+            showPopup('شماره موبایل باید دقیقاً ۱۱ رقم باشد و با ۰۹ شروع شود.', 'error');
             return;
         }
 
         if (city.length < 2) {
-            showStatus('لطفاً نام شهر را وارد کنید.', 'error');
+            showPopup('لطفاً نام شهر را وارد کنید.', 'error');
             return;
         }
 
         if (!subject) {
-            showStatus('لطفاً موضوع مشاوره را انتخاب کنید.', 'error');
+            showPopup('لطفاً موضوع مشاوره را انتخاب کنید.', 'error');
             return;
         }
 
         if (message.length < 10) {
-            showStatus('لطفاً توضیحات بیشتری درباره موضوع بنویسید.', 'error');
+            showPopup('لطفاً توضیحات بیشتری درباره موضوع بنویسید.', 'error');
             return;
         }
 
         // حالت بارگذاری
         setLoading(true);
-        showStatus('در حال ارسال درخواست...', 'loading');
 
-        // ساخت متن پیام
         const fullMessage =
 `🔹 درخواست مشاوره جدید
 
@@ -92,56 +131,37 @@ ${message}
 ⏰ زمان: ${new Date().toLocaleString('fa-IR')}`;
 
         try {
-            // ۱. ارسال به تلگرام
+            if (TELEGRAM_BOT_TOKEN === 'YOUR_BOT_TOKEN') {
+                throw new Error('توکن تنظیم نشده');
+            }
+
             const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
-            const telegramResponse = await fetch(telegramUrl, {
+            const response = await fetch(telegramUrl, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     chat_id: TELEGRAM_CHAT_ID,
                     text: fullMessage
                 })
             });
 
-            const telegramResult = await telegramResponse.json();
+            const result = await response.json();
 
-            if (!telegramResult.ok) {
-                throw new Error('خطا در ارسال به تلگرام');
+            if (!result.ok) {
+                throw new Error('خطا در ارسال');
             }
 
-            // ۲. باز کردن واتساپ با متن آماده
-            const whatsappText = encodeURIComponent(fullMessage);
-            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappText}`;
-            window.open(whatsappUrl, '_blank');
-
-            // موفقیت
-            showStatus('درخواست شما با موفقیت ثبت شد. به زودی با شما تماس گرفته می‌شود.', 'success');
+            showPopup('درخواست شما با موفقیت ثبت شد.\nبه زودی با شما تماس گرفته می‌شود.', 'success');
             form.reset();
 
         } catch (error) {
             console.error(error);
-            showStatus('خطا در ارسال. لطفاً دوباره تلاش کنید یا مستقیماً تماس بگیرید.', 'error');
+            showPopup('خطا در ارسال پیام.\nلطفاً دوباره تلاش کنید یا مستقیماً تماس بگیرید.', 'error');
         } finally {
             setLoading(false);
         }
     });
-
-    // توابع کمکی
-    function showStatus(text, type) {
-        if (!formStatus) return;
-        formStatus.textContent = text;
-
-        if (type === 'success') {
-            formStatus.style.color = '#16a34a';
-        } else if (type === 'error') {
-            formStatus.style.color = '#dc2626';
-        } else {
-            formStatus.style.color = '#0f172a';
-        }
-    }
 
     function setLoading(isLoading) {
         if (!submitBtn || !btnText) return;
