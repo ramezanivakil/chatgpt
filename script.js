@@ -17,12 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ========== تنظیمات تلگرام و واتساپ ==========
-    // این دو مقدار را با اطلاعات ربات خودت جایگزین کن
-    const TELEGRAM_BOT_TOKEN = '8810828685:AAGkevUapCVHQrn50KPozWhq5QXLFupNC-s';   // مثال: 7123456789:AAHxxxxxxxxxxxxxxxxxxxxxxxx
-    const TELEGRAM_CHAT_ID   = '8810828685';     // مثال: 123456789
-
-    // شماره واتساپ (بدون صفر اول)
-    const WHATSAPP_NUMBER = '989127442394';
+    const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN';   // توکن ربات خودت را اینجا بگذار
+    const TELEGRAM_CHAT_ID   = '93672483';
+    const WHATSAPP_NUMBER    = '989127442394';
 
     // ========== فرم مشاوره ==========
     const form = document.getElementById('consultationForm');
@@ -41,21 +38,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const name    = document.getElementById('name').value.trim();
         let phone     = document.getElementById('phone').value.trim().replace(/\s|-/g, '');
+        const city    = document.getElementById('city').value.trim();
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value.trim();
 
         // تبدیل اعداد فارسی به انگلیسی
         phone = phone.replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
 
-        // اعتبارسنجی
+        // ========== اعتبارسنجی ==========
         if (name.length < 3) {
             showStatus('لطفاً نام و نام خانوادگی را به درستی وارد کنید.', 'error');
             return;
         }
 
+        // اعتبارسنجی شماره موبایل ایرانی
         const phoneRegex = /^09\d{9}$/;
         if (!phoneRegex.test(phone)) {
             showStatus('شماره موبایل باید ۱۱ رقم و با ۰۹ شروع شود (مثال: ۰۹۱۲۳۴۵۶۷۸۹).', 'error');
+            return;
+        }
+
+        if (city.length < 2) {
+            showStatus('لطفاً نام شهر را وارد کنید.', 'error');
             return;
         }
 
@@ -79,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 👤 نام: ${name}
 📱 موبایل: ${phone}
+🏙 شهر: ${city}
 📌 موضوع: ${subject}
 
 📝 توضیحات:
@@ -140,7 +145,6 @@ ${message}
 
     function setLoading(isLoading) {
         if (!submitBtn || !btnText) return;
-
         submitBtn.disabled = isLoading;
         btnText.textContent = isLoading ? 'در حال ارسال...' : 'ارسال درخواست مشاوره';
     }
