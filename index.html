@@ -233,20 +233,40 @@
                     </div>
                 </div>
             </div>
+
             <div class="contact-form">
                 <form id="consultationForm">
+                    <!-- فیلد مخفی ضد اسپم -->
+                    <input type="text" name="website" id="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+
                     <div class="form-group">
-                        <input type="text" id="name" placeholder="نام و نام خانوادگی" required>
+                        <input type="text" id="name" placeholder="نام و نام خانوادگی" required minlength="3">
                     </div>
+
                     <div class="form-group">
-                        <input type="tel" id="phone" placeholder="شماره تماس" required>
+                        <input type="tel" id="phone" placeholder="شماره موبایل (مثال: ۰۹۱۲۳۴۵۶۷۸۹)" required>
                     </div>
+
                     <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="شرح کوتاه موضوع حقوقی شما؛ با ثبت شماره همراه خود در کوتاه‌ترین زمان با شما تماس گرفته خواهد شد" required></textarea>
+                        <select id="subject" required>
+                            <option value="" disabled selected>موضوع مشاوره را انتخاب کنید</option>
+                            <option value="مدیر تصفیه ورشکستگی و انحلال شرکت‌ها">مدیر تصفیه ورشکستگی و انحلال شرکت‌ها</option>
+                            <option value="دعاوی شرکت‌ها">دعاوی شرکت‌ها</option>
+                            <option value="دعاوی حقوقی">دعاوی حقوقی</option>
+                            <option value="دعاوی کیفری">دعاوی کیفری</option>
+                            <option value="دعاوی خانواده">دعاوی خانواده</option>
+                            <option value="امور ملکی و ثبتی">امور ملکی و ثبتی</option>
+                            <option value="سایر موارد">سایر موارد</option>
+                        </select>
                     </div>
-                    <button type="submit" class="btn-gold form-btn">
+
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="شرح کوتاه موضوع حقوقی شما..." required minlength="10"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-gold form-btn" id="submitBtn">
                         <i class="fa-solid fa-paper-plane"></i>
-                        ارسال درخواست مشاوره
+                        <span id="btnText">ارسال درخواست مشاوره</span>
                     </button>
                 </form>
                 <div id="formStatus" class="form-status"></div>
