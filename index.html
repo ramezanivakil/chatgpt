@@ -236,7 +236,6 @@
 
             <div class="contact-form">
                 <form id="consultationForm">
-                    <!-- فیلد مخفی ضد اسپم -->
                     <input type="text" name="website" id="honeypot" style="display:none" tabindex="-1" autocomplete="off">
 
                     <div class="form-group">
@@ -244,7 +243,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="tel" id="phone" placeholder="شماره موبایل (مثال: ۰۹۱۲۳۴۵۶۷۸۹)" required>
+                        <input type="tel" id="phone" placeholder="شماره موبایل (مثال: ۰۹۱۲۳۴۵۶۷۸۹)" required maxlength="11">
                     </div>
 
                     <div class="form-group">
@@ -273,7 +272,6 @@
                         <span id="btnText">ارسال درخواست مشاوره</span>
                     </button>
                 </form>
-                <div id="formStatus" class="form-status"></div>
             </div>
         </div>
     </section>
@@ -291,6 +289,15 @@
         <button type="button" class="scroll-btn scroll-down" id="scrollDown" aria-label="رفتن به پایین">
             <i class="fa-solid fa-chevron-down"></i>
         </button>
+    </div>
+
+    <!-- پاپ‌آپ پیام -->
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-box">
+            <div class="popup-icon" id="popupIcon"></div>
+            <p id="popupMessage"></p>
+            <button type="button" id="popupClose" class="popup-close-btn">باشه</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
