@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ========== تنظیمات تلگرام و واتساپ ==========
     const TELEGRAM_BOT_TOKEN = '8810828685:AAGkevUapCVHQrn50KPozWhq5QXLFupNC-s';   // توکن ربات خودت را اینجا بگذار
-    const TELEGRAM_CHAT_ID   = '8810828685';
+    const TELEGRAM_CHAT_ID   = '93672483';
     const WHATSAPP_NUMBER    = '989127442394';
 
     // ========== فرم مشاوره ==========
