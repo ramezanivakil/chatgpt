@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ========== تنظیمات تلگرام و واتساپ ==========
     // این دو مقدار را با اطلاعات ربات خودت جایگزین کن
-    const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN';   // مثال: 7123456789:AAHxxxxxxxxxxxxxxxxxxxxxxxx
-    const TELEGRAM_CHAT_ID   = 'YOUR_CHAT_ID';     // مثال: 123456789
+    const TELEGRAM_BOT_TOKEN = '8810828685:AAGkevUapCVHQrn50KPozWhq5QXLFupNC-s';   // مثال: 7123456789:AAHxxxxxxxxxxxxxxxxxxxxxxxx
+    const TELEGRAM_CHAT_ID   = '8810828685';     // مثال: 123456789
 
     // شماره واتساپ (بدون صفر اول)
     const WHATSAPP_NUMBER = '989127442394';
@@ -88,7 +88,7 @@ ${message}
 
         try {
             // ۱. ارسال به تلگرام
-            const telegramUrl = `https://api.telegram.org/bot${8810828685:AAGkevUapCVHQrn50KPozWhq5QXLFupNC-s}/sendMessage`;
+            const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
             const telegramResponse = await fetch(telegramUrl, {
                 method: 'POST',
@@ -96,7 +96,7 @@ ${message}
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    chat_id: 8810828685,
+                    chat_id: TELEGRAM_CHAT_ID,
                     text: fullMessage
                 })
             });
