@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ========== تنظیمات تلگرام ==========
-    const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN';   // توکن واقعی ربات را اینجا بگذار
+    const TELEGRAM_BOT_TOKEN = '8810828685:AAGkevUapCVHQrn50KPozWhq5QXLFupNC-s';   // توکن واقعی ربات را اینجا بگذار
     const TELEGRAM_CHAT_ID   = '93672483';
 
     // ========== پاپ‌آپ ==========
