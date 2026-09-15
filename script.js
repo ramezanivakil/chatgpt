@@ -88,7 +88,7 @@ ${message}
 
         try {
             // ۱. ارسال به تلگرام
-            const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+            const telegramUrl = `https://api.telegram.org/bot${8810828685:AAGkevUapCVHQrn50KPozWhq5QXLFupNC-s}/sendMessage`;
 
             const telegramResponse = await fetch(telegramUrl, {
                 method: 'POST',
@@ -96,7 +96,7 @@ ${message}
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    chat_id: TELEGRAM_CHAT_ID,
+                    chat_id: 8810828685,
                     text: fullMessage
                 })
             });
